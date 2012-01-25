@@ -4,6 +4,8 @@
     <meta charset='utf-8'>
     <title>GroovyFX Project</title>
     <link rel="stylesheet" href="resources/css/main.css">
+    <link rel="stylesheet" href="http://yandex.st/highlightjs/6.1/styles/default.min.css">
+    <script src="http://yandex.st/highlightjs/6.1/highlight.min.js"></script>
 </head>
 
 <body>
@@ -57,30 +59,64 @@
         <p>
 
         <p>
-            GroovyFX is an API that makes working with JavaFX in Groovy much simpler and more natural to those
-            well-versed in Groovy. GroovyFX is focused on leveraging the Builder pattern for JavaFX applications, but
-            more than that, it leverages some of the DSL capabilities that Groovy provides and makes the Groovy based
-            JavaFX code easier to write and, just as important, easier to read. For example, JavaFX colors can be set
-            using pseudo variables, like red or blue.
+            GroovyFX is an API that makes working with JavaFX in Groovy much simpler and more natural. GroovyFX is
+            focused on exploiting the power of the Groovy Builder pattern to make JavaFX development simpler and more
+            concise than what is possible in Java. GroovyFX also leverages Groovy's powerful DSL features and AST
+            transformations to eliminate boilerplate, making GroovyFX code easier to write and, just as importantly,
+            easier to read.
         </p>
 
         <p>
-            The primary goal of GroovyFX is to make JavaFX development simpler and more concise than what it takes in
-            Java. This is done via numerous built-in features that Groovy provides, including the Tree Structured
-            Language supported through Groovy's Builder framework that allows you to declare a JavaFX scene graph in
-            such a way that closely resembles the structure of the actual scene graph itself. This is done through
-            GroovyFX's SceneGraphBuilder object, which supports all the Controls, Shapes, Effects, and other JavaFX
-            objects, as well as support for using Groovy closures for event handling.
+            GroovyFX provides the SceneGraphBuilder object, which supports all the controls, shapes, gradients,
+            effects, and other objects in the JavaFX 2.0 API such as enumerations and colors. Additionally, Groovy
+            closures can be used as event handlers, leading to clean and concise code.
+        </p>
+
+        <h2>Hello, World</h2>
+
+        <p>
+            A simple and complete "Hello, World" program is shown below. The general pattern for a GroovyFX application
+            is to define the JavaFX components within a Groovy closure that is passed to the static <code>start</code>
+            method of the GroovyFX class. Inside this closure, we instantiate our <code>SceneGraphBuilder</code>
+            and use it to start creating our scene graph nodes.
         </p>
 
         <p>
-            Features include the SceneGraphBuilder and Groovy DSL features to handle JavaFX objects, properties,
-            enumerations, binding, and paints/colors.
+            Each JavaFX class has a corresponding <code>SceneGraphBuilder</code> node. For example, the JavaFX
+            <code>Stage</code> class becomes the <code>stage</code> node. All <code>SceneGraphBuilder</code> node
+            names are exactly the same as their JavaFX counterparts with the start of their class names converted to
+            lowercase letters.
         </p>
+        <pre><code style="background: #D8E8F0">import groovyx.javafx.GroovyFX
+import groovyx.javafx.SceneGraphBuilder
+
+GroovyFX.start {
+    def sg = new SceneGraphBuilder();
+
+    sg.stage(title: "GroovyFX Hello World", visible: true) {
+        scene(fill: black, width: 650, height: 450) {
+            hbox(padding: 80) {
+                text(text: "Groovy", style: "-fx-font-size: 80pt") {
+                    fill linearGradient(endX: 0, stops: [palegreen, seagreen])
+                }
+                text(text: "FX", style: "-fx-font-size: 80pt") {
+                    fill linearGradient(endX: 0, stops: [cyan, dodgerblue])
+                    effect dropShadow(color: dodgerblue, radius: 25, spread: 0.25)
+                }
+            }
+        }
+    }
+}
+</code></pre>
+
+        <p>The result of running this program is shown in the image below.</p>
+        <img class="screenshot" src="resources/img/hello_world.png" alt="GroovyFX Hello World"/>
 
         <h2>License</h2>
-
-        <p>GroovyFx is licensed under the Apache License, Version 2.0.</p>
+        <p>
+            GroovyFx is licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0.html">
+            Apache License, Version 2.0.</a>
+        </p>
 
         <h2>Download</h2>
 
@@ -92,7 +128,7 @@
 
         <p>
             You can also clone the project with <a href="http://git-scm.com">Git</a> by running:
-        <pre>$ git clone git://github.com/groovyfx-project/groovyfx</pre>
+        <pre class="screen">$ git clone git://github.com/groovyfx-project/groovyfx</pre>
         </p>
     </section>
 
@@ -101,5 +137,6 @@
         <a href="https://github.com/groovyfx-project/groovyfx">groovyfx-project/groovyfx</a>
     </footer>
 </div>
+<script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>
