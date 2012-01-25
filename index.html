@@ -1,86 +1,102 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset='utf-8'>
-
-  <title>GroovyFX Project</title>
-
-  <style type="text/css">
-    body {
-      margin-top: 1.0em;
-      background-color: #e8eef4;
-      font-family: Helvetica, Arial, FreeSans, san-serif;
-      color: #000000;
-    }
-    #container {
-      margin: 0 auto;
-      width: 800px;
-    }
-    h1 { font-size: 3.8em; color: #17110d; margin-bottom: 3px; }
-    h1 .small { font-size: 0.4em; }
-    h1 a { text-decoration: none }
-    h2 { font-size: 1.5em; color: #17110d; }
-    h3 { text-align: center; color: #17110d; }
-    a { color: #17110d; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-    pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-  </style>
+    <meta charset='utf-8'>
+    <title>GroovyFX Project</title>
+    <link rel="stylesheet" href="resources/css/main.css">
 </head>
 
 <body>
-  <a href="https://github.com/groovyfx-project/groovyfx"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+<a href="https://github.com/groovyfx-project/groovyfx">
+    <img style="position: absolute; top: 0; right: 0; border: 0;" src="resources/img/fork_me.png"
+         alt="Fork me on GitHub"/>
+</a>
 
-  <div id="container">
+<div id="container">
 
-    <div class="download">
-      <a href="https://github.com/groovyfx-project/groovyfx/zipball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/zip.png"></a>
-      <a href="https://github.com/groovyfx-project/groovyfx/tarball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/tar.png"></a>
-    </div>
+    <!--<div class="download">-->
+    <!--<a href="https://github.com/groovyfx-project/groovyfx/zipball/master">-->
+    <!--<img border="0" width="90" src="https://github.com/images/modules/download/zip.png"></a>-->
+    <!--<a href="https://github.com/groovyfx-project/groovyfx/tarball/master">-->
+    <!--<img border="0" width="90" src="https://github.com/images/modules/download/tar.png"></a>-->
+    <!--</div>-->
 
-    <h1><a href="https://github.com/groovyfx-project/groovyfx">GroovyFX</a>
-      <span class="small">by <a href="https://github.com/groovyfx-project">The GroovyFX Project</a></span></h1>
+    <header>
+        <a id="logo" href="https://github.com/groovyfx-project/groovyfx">
+            <img src="resources/img/GroovyFX_logo.png" width="120"/>
+        </a>
 
-    <div class="description">
-      A library for writing JavaFX 2.0 applications in the Groovy language.
-    </div>
+        <h1>
+            <a href="https://github.com/groovyfx-project/groovyfx">Groovy<span id="fx">FX</span></a>
+        </h1>
 
-    
+        <div class="description">
+            The easiest way to write JavaFX 2.0 applications in the Groovy language.
+        </div>
+    </header>
 
-    
+    <nav>
+        <div id="community" class="nav-div">
+            <h3>Community</h3>
 
-    
+            <p>Documentation</p>
 
-    
-      <h2>License</h2>
-      <p>Apache License, Version 2.0</p>
-    
+            <p><a href="http://jira.codehaus.org/browse/GFX">Issue Tracker</a></p>
 
-    
-      <h2>Authors</h2>
-      <p>Jim Clarke<br/> Dean Iverson<br/> Dierk Konig<br/>     </p> 
+            <p><a href="http://xircles.codehaus.org/projects/groovyfx/lists">Mailng Lists</a></p>
+        </div>
+    </nav>
 
-    
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="https://github.com/groovyfx-project/groovyfx/zipball/master">zip</a> or
-      <a href="https://github.com/groovyfx-project/groovyfx/tarball/master">tar formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/groovyfx-project/groovyfx</pre>
-    </p>
+    <section>
+        <p>
+            GroovyFX provides a Groovy binding for JavaFX 2.0.
 
-    <div class="footer">
-      get the source code on GitHub : <a href="https://github.com/groovyfx-project/groovyfx">groovyfx-project/groovyfx</a>
-    </div>
+        <p>
 
-  </div>
+        <p>
+            GroovyFX is an API that makes working with JavaFX in Groovy much simpler and more natural to those
+            well-versed in Groovy. GroovyFX is focused on leveraging the Builder pattern for JavaFX applications, but
+            more than that, it leverages some of the DSL capabilities that Groovy provides and makes the Groovy based
+            JavaFX code easier to write and, just as important, easier to read. For example, JavaFX colors can be set
+            using pseudo variables, like red or blue.
+        </p>
 
+        <p>
+            The primary goal of GroovyFX is to make JavaFX development simpler and more concise than what it takes in
+            Java. This is done via numerous built-in features that Groovy provides, including the Tree Structured
+            Language supported through Groovy's Builder framework that allows you to declare a JavaFX scene graph in
+            such a way that closely resembles the structure of the actual scene graph itself. This is done through
+            GroovyFX's SceneGraphBuilder object, which supports all the Controls, Shapes, Effects, and other JavaFX
+            objects, as well as support for using Groovy closures for event handling.
+        </p>
+
+        <p>
+            Features include the SceneGraphBuilder and Groovy DSL features to handle JavaFX objects, properties,
+            enumerations, binding, and paints/colors.
+        </p>
+
+        <h2>License</h2>
+
+        <p>GroovyFx is licenesed under the Apache License, Version 2.0.</p>
+
+        <h2>Download</h2>
+
+        <p>
+            You can download this project in either
+            <a href="https://github.com/groovyfx-project/groovyfx/zipball/master">zip</a> or
+            <a href="https://github.com/groovyfx-project/groovyfx/tarball/master">tar formats.</a>
+        </p>
+
+        <p>
+            You can also clone the project with <a href="http://git-scm.com">Git</a> by running:
+        <pre>$ git clone git://github.com/groovyfx-project/groovyfx</pre>
+        </p>
+    </section>
+
+    <footer>
+        get the source code on GitHub :
+        <a href="https://github.com/groovyfx-project/groovyfx">groovyfx-project/groovyfx</a>
+    </footer>
+</div>
 </body>
 </html>
