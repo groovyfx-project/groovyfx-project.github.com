@@ -1,0 +1,247 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <title>5 Controls 0.3.1</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="../css/main.css" type="text/css" media="screen, print" title="Style" charset="utf-8"/>
+    <link rel="stylesheet" href="../css/pdf.css" type="text/css" media="print" title="PDF" charset="utf-8"/>
+    <script type="text/javascript">
+function addJsClass() {
+    var classes = document.body.className.split(" ");
+    classes.push("js");
+    document.body.className = classes.join(" ");
+}
+    </script>
+</head>
+
+<body class="body" onload="addJsClass();">
+<div id="navigation">
+    <ul>
+        <li>
+            <div id="nav-summary" onmouseover="toggleNavSummary(false)" onmouseout="toggleNavSummary(true)">
+                <a href="../guide/index.html" class="button">Table of contents</a>
+
+                <div id="nav-summary-childs" style="display:none;">
+                    
+                    <div class="toc-item" style="margin-left:0"><a href="../guide/introduction.html"><strong>1</strong><span>Introduction</span></a>
+                    </div>
+                    
+                    <div class="toc-item" style="margin-left:0"><a href="../guide/gettingStarted.html"><strong>2</strong><span>Getting Started</span></a>
+                    </div>
+                    
+                    <div class="toc-item" style="margin-left:0"><a href="../guide/basicConcepts.html"><strong>3</strong><span>Basic Concepts</span></a>
+                    </div>
+                    
+                    <div class="toc-item" style="margin-left:0"><a href="../guide/propertiesAndBinding.html"><strong>4</strong><span>Properties and Binding</span></a>
+                    </div>
+                    
+                    <div class="toc-item" style="margin-left:0"><a href="../guide/controls.html"><strong>5</strong><span>Controls</span></a>
+                    </div>
+                    
+                    <div class="toc-item" style="margin-left:0"><a href="../guide/layout.html"><strong>6</strong><span>Layout</span></a>
+                    </div>
+                    
+                    <div class="toc-item" style="margin-left:0"><a href="../guide/graphics.html"><strong>7</strong><span>Graphics and Animation</span></a>
+                    </div>
+                    
+                    <div class="toc-item" style="margin-left:0"><a href="../guide/charts.html"><strong>8</strong><span>Charts</span></a>
+                    </div>
+                    
+                    <div class="toc-item" style="margin-left:0"><a href="../guide/groovyApplications.html"><strong>9</strong><span>Writing GroovyFX Applications</span></a>
+                    </div>
+                    
+                </div>
+            </div>
+        </li>
+        <li class="separator selected">
+            <a id="ref-button" onclick="localToggle(); return false;" href="#">Quick Reference</a>
+        </li>
+    </ul>
+</div>
+<div id="header">
+    <div class="images clearfix">
+        
+        <span id="logo"><a href="http://groovyfx-project.github.com/" target="_blank"><p id="groovyfxlogo"> </p></a></span>
+        
+        
+    </div>
+    <p></p>
+</div>
+
+
+<table id="colset" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+        <td id="col1">
+            <div id="main" class="corner-all">
+
+                
+                    <div class="toc-item prev-left"><a href="../guide/propertiesAndBinding.html">&lt;&lt; <strong>4</strong><span>Properties and Binding</span></a></div>
+                
+
+                <span id='toggle-col1' class="toggle">(<a href="#" onclick="localToggle(); return false;">Quick Reference</a>)</span>
+
+                
+                    <div class="toc-item next-right"><a href="../guide/layout.html"><strong>6</strong><span>Layout</span> >></a></div>
+                
+
+
+                <div class="project">
+                    <h1>5 Controls - Reference Documentation</h1>
+
+                    <p><strong>Authors:</strong> The Whole GroovyFX Gang</p>
+
+                    <p><strong>Version:</strong> 0.3.1</p>
+
+                    
+                </div>
+
+                
+                <div id="table-of-content">
+                    <h2>Table of Contents</h2>
+                    
+                    <div class="toc-item" style="margin-left:0px"><a href="#labelsAndText"><strong>5.1</strong><span>Labels and Text</span></a>
+                    </div>
+                    
+                    <div class="toc-item" style="margin-left:0px"><a href="#buttonsAndMenus"><strong>5.2</strong><span>Buttons and Menus</span></a>
+                    </div>
+                    
+                    <div class="toc-item" style="margin-left:10px"><a href="#actions"><strong>5.2.1</strong><span>Actions</span></a>
+                    </div>
+                    
+                    <div class="toc-item" style="margin-left:0px"><a href="#choiceBoxComboBox"><strong>5.3</strong><span>ChoiceBox and ComboBox</span></a>
+                    </div>
+                    
+                    <div class="toc-item" style="margin-left:0px"><a href="#listsTreesTables"><strong>5.4</strong><span>Lists, Tables, and Trees</span></a>
+                    </div>
+                    
+                    <div class="toc-item" style="margin-left:0px"><a href="#fileChoosers"><strong>5.5</strong><span>File Choosers</span></a>
+                    </div>
+                    
+                </div>
+                
+
+                
+
+<h1 id="controls">5 Controls</h1>
+controls
+
+
+<h2 id="labelsAndText">5.1 Labels and Text</h2>
+lablesAndText
+
+
+<h2 id="buttonsAndMenus">5.2 Buttons and Menus</h2>
+<h4>ToggleGroups</h4>
+ToggleGroups are identified with an unique string across the SceneGraphBuilder context. To tie a toggle type button
+to a specific ToggleGroup, use the special attribute toggleGroup on the Toggle type button. Buttons with the same
+ToggleGroup names will be assigned the same ToggleGroup instance.<p class="paragraph"/><div class="code"><pre>scene(fill: hsb(128, 0.5, 0.5, 0.5), root: group()) &#123;
+    toggleButton (
+        layoutX: 25,
+        layoutY: 300,
+        font: <span class="java&#45;quote">"16pt Courier"</span>,
+        text: <span class="java&#45;quote">"One"</span>,
+        selected: <span class="java&#45;keyword">true</span>,
+        toggleGroup: <span class="java&#45;quote">"Group1"</span>
+    )
+    toggleButton (
+        layoutX: 125,
+        layoutY: 300,
+        font: <span class="java&#45;quote">"16pt Courier"</span>,
+        text: <span class="java&#45;quote">"Two"</span>,
+        selected: <span class="java&#45;keyword">false</span>,
+        toggleGroup: <span class="java&#45;quote">"Group1"</span>
+    )
+&#125;</pre></div>
+
+
+<h2 id="actions">5.2.1 Actions</h2>
+GroovyFX provides an action abstraction inspired by <a href="http://docs.oracle.com/javase/6/docs/api/javax/swing/Action.html" target="blank">javax.swing.Action</a>.
+All Action properties are fully observable<p class="paragraph"/><h4>JavaFX Components Supporting <code>Action</code></h4><p class="paragraph"/>All buttons and menuItems support <code>Action</code> but only if their respective factories are used. In other words, if you manually
+create an instance of such controls then you must also bind Action properties manually.<p class="paragraph"/>The following table describes the properties used by JavaFX components that support Actions.<p class="paragraph"/><table class="wiki-table" cellpadding="0" cellspacing="0" border="0"><tr><th><strong class="bold">Action Property</strong></th><th><strong class="bold">Component Property</strong></th><th><strong class="bold">Notes</strong></th></tr><tr class="table-odd"><td>onAction</td><td>onAction</td><td>if component supports <code>onActionProperty()</code></td></tr><tr class="table-even"><td>name</td><td>text</td><td>if component supports <code>textProperty()</code></td></tr><tr class="table-odd"><td>description</td><td>tooltip.text</td><td>if component supports <code>tooltipProperty()</code></td></tr><tr class="table-even"><td>accelerator</td><td>accelerator</td><td>if component supports <code>acceleratorProperty()</code></td></tr><tr class="table-odd"><td>selected</td><td>selected</td><td>if component supports <code>selectedProperty()</code></td></tr><tr class="table-even"><td>icon</td><td>graphic</td><td>if component supports <code>graphicProperty()</code></td></tr><tr class="table-odd"><td>enabled</td><td>disabled</td><td>negated value is mapped to component property</td></tr></table><p class="paragraph"/>Any of the Action's properties may be skipped when using factory nodes, this avoids setting a text value on a toolbar button for example.
+In order to skip a property simply use the <code>skip</code> prefix. The following example shows the usage of Actions in both menuItems and toolbar
+buttons; the menuItems will display both icons and text wehereas the toolbar buttons will only display the icons<p class="paragraph"/><div class="code"><pre>actions &#123;
+    fxaction(id: 'copyAction',
+        icon: 'icons/copy.png',
+        onAction: &#123; /&#42; copy content &#42;/ &#125;
+    fxaction(id: 'cutyAction',
+        icon: 'icons/cut.png',
+        onAction: &#123; /&#42; cut content &#42;/ &#125;
+    fxaction(id: 'pasteAction',
+        icon: 'icons/paste.png',
+        onAction: &#123; /&#42; paste content &#42;/ &#125;
+&#125;<p class="paragraph"/>meuBar &#123;
+    menu(text: <span class="java&#45;quote">"Edit"</span>) &#123;
+         menuItem(cutAction)
+         menuItem(copyAction)
+         menuItem(pasteAction)
+    &#125;
+&#125;<p class="paragraph"/>toolBar &#123;
+    button(cutAction,   skipName: <span class="java&#45;keyword">true</span>)
+    button(copyAction,  skipName: <span class="java&#45;keyword">true</span>)
+    button(pasteAction, skipName: <span class="java&#45;keyword">true</span>)
+&#125;</pre></div>
+
+
+<h2 id="choiceBoxComboBox">5.3 ChoiceBox and ComboBox</h2>
+choiceBoxComboBox
+
+
+<h2 id="listsTreesTables">5.4 Lists, Tables, and Trees</h2>
+listsTreesTables
+
+
+<h2 id="fileChoosers">5.5 File Choosers</h2>
+fileChoosers
+
+
+                <div style="clear:both;margin-top:15px;"></div>
+                
+                    <div class="toc-item prev-left"><a href="../guide/propertiesAndBinding.html">&lt;&lt; <strong>4</strong><span>Properties and Binding</span></a></div>
+                
+                    <div class="toc-item next-right"><a href="../guide/layout.html"><strong>6</strong><span>Layout</span> >></a></div>
+                
+                <div style="clear:both"></div>
+            </div>
+        </td>
+        <td id="col2">
+            <div class="local clearfix">
+                <div class="local-title">
+                    <a href="../guide/index.html" target="mainFrame">Quick Reference</a>
+                    <span class="toggle">(<a href="#" onclick="localToggle(); return false;">hide</a>)</span>
+                </div>
+                <div class="menu">
+                    
+                    <div class="menu-block"><h1 class="menu-title" onclick="toggleRef(this.parentNode.childNodes[1])">SceneGraph</h1><div class="menu-sub">
+                        
+                            
+                            <div class="menu-item"><a href="../ref/SceneGraph/Usage.html">Usage</a>
+                            </div>
+                            
+                            </div>
+                    </div>
+                    
+                    <div class="menu-block"><h1 class="menu-title" onclick="toggleRef(this.parentNode.childNodes[1])">webView</h1><div class="menu-sub">
+                        
+                            
+                            <div class="menu-item"><a href="../ref/webView/Properties.html">Properties</a>
+                            </div>
+                            
+                            </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+
+<div id="footer">
+    Copies of this document may be made for your own use and for distribution to others, provided that you do not charge any fee for such copies and further provided that each copy contains this Copyright Notice, whether distributed in print or electronically.
+    
+</div>
+
+<script type="text/javascript" src="../js/docs.js"></script>
+
+</body>
+</html>

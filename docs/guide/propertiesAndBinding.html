@@ -2,7 +2,7 @@
                       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-    <title>1 Introduction 0.3.1</title>
+    <title>4 Properties and Binding 0.3.1</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link rel="stylesheet" href="../css/main.css" type="text/css" media="screen, print" title="Style" charset="utf-8"/>
     <link rel="stylesheet" href="../css/pdf.css" type="text/css" media="print" title="PDF" charset="utf-8"/>
@@ -76,16 +76,18 @@ function addJsClass() {
             <div id="main" class="corner-all">
 
                 
+                    <div class="toc-item prev-left"><a href="../guide/basicConcepts.html">&lt;&lt; <strong>3</strong><span>Basic Concepts</span></a></div>
+                
 
                 <span id='toggle-col1' class="toggle">(<a href="#" onclick="localToggle(); return false;">Quick Reference</a>)</span>
 
                 
-                    <div class="toc-item next-right"><a href="../guide/gettingStarted.html"><strong>2</strong><span>Getting Started</span> >></a></div>
+                    <div class="toc-item next-right"><a href="../guide/controls.html"><strong>5</strong><span>Controls</span> >></a></div>
                 
 
 
                 <div class="project">
-                    <h1>1 Introduction - Reference Documentation</h1>
+                    <h1>4 Properties and Binding - Reference Documentation</h1>
 
                     <p><strong>Authors:</strong> The Whole GroovyFX Gang</p>
 
@@ -98,7 +100,22 @@ function addJsClass() {
                 <div id="table-of-content">
                     <h2>Table of Contents</h2>
                     
-                    <div class="toc-item" style="margin-left:0px"><a href="#credits"><strong>1.1</strong><span>Credits</span></a>
+                    <div class="toc-item" style="margin-left:0px"><a href="#bindingSupport"><strong>4.1</strong><span>Binding Support</span></a>
+                    </div>
+                    
+                    <div class="toc-item" style="margin-left:10px"><a href="#propertyNames"><strong>4.1.1</strong><span>Property Names</span></a>
+                    </div>
+                    
+                    <div class="toc-item" style="margin-left:10px"><a href="#bidirectional"><strong>4.1.2</strong><span>Bidirectional</span></a>
+                    </div>
+                    
+                    <div class="toc-item" style="margin-left:10px"><a href="#unidirectional"><strong>4.1.3</strong><span>Unidirectional</span></a>
+                    </div>
+                    
+                    <div class="toc-item" style="margin-left:10px"><a href="#closureBindings"><strong>4.1.4</strong><span>Closure Binding Expressions</span></a>
+                    </div>
+                    
+                    <div class="toc-item" style="margin-left:0px"><a href="#fxbindable"><strong>4.2</strong><span>FXBindable Properties</span></a>
                     </div>
                     
                 </div>
@@ -106,41 +123,39 @@ function addJsClass() {
 
                 
 
-<h1 id="introduction">1 Introduction</h1>
-<blockquote class="note">
-Please note that this documentation is still under construction.  There are a lot of missing pieces.
-</blockquote><p class="paragraph"/>Client-side Java development took a major step forward with the introduction of Oracle's <a href="http://www.javafx.com" target="blank">JavaFX 2.0.</a> JavaFX is a modern, rich client technology stack that enables Java developers to quickly and easily create desktop clients with functionality and richness that rival, and even surpass, that of native clients and web applications.<p class="paragraph"/>GroovyFX is a library that makes working with JavaFX much simpler and more natural. GroovyFX is focused on exploiting the power of the <a href="http://groovy.codehaus.org" target="blank">Groovy</a> language to make JavaFX development easier and more concise than what is possible in Java. GroovyFX also leverages Groovy's powerful DSL features and AST transformations to eliminate boilerplate, making GroovyFX code easier to write and, just as importantly, easier to read.<p class="paragraph"/>GroovyFX provides the SceneGraphBuilder object, which offers support for:
-<ul class="star">
-<li>All of the JavaFX core controls</li>
-<li>All of the core JavaFX layout containers</li>
-<li>Shapes, colors, and gradients</li>
-<li>Video and audio (including H.264 support)</li>
-<li>Bar charts, line charts, pie charts, and the rest of core JavaFX charts</li>
-<li>Full property and binding support</li>
-<li>The @FXBindable annotation, which eliminates the boilerplate required to define JavaFX properties</li>
-</ul><p class="paragraph"/>All of these are made easy to use through the power of the  language and the extensive use of Domain Specific Languages (DSLs)<p class="paragraph"/>This documentation will take you from getting started with GroovyFX all the way to building full applications with the power of JavaFX and Groovy.
+<h1 id="propertiesAndBinding">4 Properties and Binding</h1>
+propertiesAndBinding
 
 
-<h2 id="credits">1.1 Credits</h2>
-<h4>The GroovyFX Committers</h4>
-The GroovyFX team is made up of the following core committers.
-<ul class="star">
-<li>Jim Clarke</li>
-<li>Dean Iverson</li>
-<li>Dierk König</li>
-<li>Andres Almiray</li>
-<li>Russel Winder</li>
-<li>Danno Ferrin</li>
-</ul><p class="paragraph"/><h4>Other Contributions</h4>
-We would also like to thank and recognize the following people who have contribtued pull requests to GroovyFX.
-<ul class="star">
-<li>Tobias Schulte, nested tableColumn support</li>
-</ul><p class="paragraph"/>
+<h2 id="bindingSupport">4.1 Binding Support</h2>
+bindingSupport
+
+
+<h2 id="propertyNames">4.1.1 Property Names</h2>
+propertyNames
+
+
+<h2 id="bidirectional">4.1.2 Bidirectional</h2>
+bidirectional
+
+
+<h2 id="unidirectional">4.1.3 Unidirectional</h2>
+unidirectional
+
+
+<h2 id="closureBindings">4.1.4 Closure Binding Expressions</h2>
+closureBindings
+
+
+<h2 id="fxbindable">4.2 FXBindable Properties</h2>
+fxbindable
 
 
                 <div style="clear:both;margin-top:15px;"></div>
                 
-                    <div class="toc-item next-right"><a href="../guide/gettingStarted.html"><strong>2</strong><span>Getting Started</span> >></a></div>
+                    <div class="toc-item prev-left"><a href="../guide/basicConcepts.html">&lt;&lt; <strong>3</strong><span>Basic Concepts</span></a></div>
+                
+                    <div class="toc-item next-right"><a href="../guide/controls.html"><strong>5</strong><span>Controls</span> >></a></div>
                 
                 <div style="clear:both"></div>
             </div>

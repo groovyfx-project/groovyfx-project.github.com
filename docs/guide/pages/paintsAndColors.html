@@ -2,7 +2,7 @@
                       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-    <title>2.3 A Hello World Example 0.1-SNAPSHOT</title>
+    <title>3.4 Paints and Colors 0.3.1</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link rel="stylesheet" href="../css/main.css" type="text/css" media="screen, print" title="Style" charset="utf-8"/>
     <link rel="stylesheet" href="../css/pdf.css" type="text/css" media="print" title="PDF" charset="utf-8"/>
@@ -30,6 +30,27 @@ function addJsClass() {
                     <div class="toc-item" style="margin-left:0"><a href="../../guide/gettingStarted.html"><strong>2</strong><span>Getting Started</span></a>
                     </div>
                     
+                    <div class="toc-item" style="margin-left:0"><a href="../../guide/basicConcepts.html"><strong>3</strong><span>Basic Concepts</span></a>
+                    </div>
+                    
+                    <div class="toc-item" style="margin-left:0"><a href="../../guide/propertiesAndBinding.html"><strong>4</strong><span>Properties and Binding</span></a>
+                    </div>
+                    
+                    <div class="toc-item" style="margin-left:0"><a href="../../guide/controls.html"><strong>5</strong><span>Controls</span></a>
+                    </div>
+                    
+                    <div class="toc-item" style="margin-left:0"><a href="../../guide/layout.html"><strong>6</strong><span>Layout</span></a>
+                    </div>
+                    
+                    <div class="toc-item" style="margin-left:0"><a href="../../guide/graphics.html"><strong>7</strong><span>Graphics and Animation</span></a>
+                    </div>
+                    
+                    <div class="toc-item" style="margin-left:0"><a href="../../guide/charts.html"><strong>8</strong><span>Charts</span></a>
+                    </div>
+                    
+                    <div class="toc-item" style="margin-left:0"><a href="../../guide/groovyApplications.html"><strong>9</strong><span>Writing GroovyFX Applications</span></a>
+                    </div>
+                    
                 </div>
             </div>
         </li>
@@ -45,7 +66,7 @@ function addJsClass() {
         
         
     </div>
-    <p>JavaFX made Groovy</p>
+    <p></p>
 </div>
 
 
@@ -55,20 +76,22 @@ function addJsClass() {
             <div id="main" class="corner-all">
 
                 
-                    <div class="toc-item prev-left"><a href="../../guide/introduction.html">&lt;&lt; <strong>1</strong><span>Introduction</span></a></div>
+                    <div class="toc-item prev-left"><a href="../../guide/gettingStarted.html">&lt;&lt; <strong>2</strong><span>Getting Started</span></a></div>
                 
 
                 <span id='toggle-col1' class="toggle">(<a href="#" onclick="localToggle(); return false;">Quick Reference</a>)</span>
 
                 
+                    <div class="toc-item next-right"><a href="../../guide/propertiesAndBinding.html"><strong>4</strong><span>Properties and Binding</span> >></a></div>
+                
 
 
                 <div class="project">
-                    <h1>2.3 A Hello World Example - Reference Documentation</h1>
+                    <h1>3.4 Paints and Colors - Reference Documentation</h1>
 
                     <p><strong>Authors:</strong> The Whole GroovyFX Gang</p>
 
-                    <p><strong>Version:</strong> 0.1-SNAPSHOT</p>
+                    <p><strong>Version:</strong> 0.3.1</p>
 
                     
                 </div>
@@ -77,16 +100,24 @@ function addJsClass() {
 
                 
 
-<h2 id="gettingStarted_aHelloWorldExample">2.3 A Hello World Example</h2>
-Once you are setup, try the following Groovy script to test that your setup is functioning as it should.
-<div class="code"><pre>some.hello.world.code</pre></div><p class="paragraph"/>bla<p class="paragraph"/><blockquote class="note">
-blubs<p class="paragraph"/>For details please refer to the Java API section.
-</blockquote><p class="paragraph"/>
+<h2 id="paintsAndColors">3.4 Paints and Colors</h2>
+All color and paint attributes may be set with one of the JavaFX Paint or Color objects
+(javafx.scene.paint.LinearGradient, javafx.scene.paint.RadialGradient and javafx.scene.paint.Color). In addition,
+colors may be set using the pseudo color variables, such as red, green, blue, etc. Colors may also be defined as
+a web string such as "#333", "cyan", etc. Colors may also be defined using the JavaFX CSS styles for colors,
+linear, and radial gradients. (see JavaFX CSS Reference Guide) Also see SceneGraphBuilder - paint for more details.<p class="paragraph"/><div class="code"><pre>scene(fill: hsb(128, 0.5, 0.5, 0.5))
+circle(centerX: 50, centerY: 50, radius: 25, fill: rgb(0, 0, 255))
+rectangle(x: 100, y: 50, width: 50, height: 50, fill: red)
+rectangle(x: 100, y: 50, width: 50, height: 50, fill: <span class="java&#45;quote">"#333"</span>)
+rectangle(x: 100, y: 50, width: 50, height: 50, fill: <span class="java&#45;quote">"linear (0%,0%) to (0%,100%) stops (0%,gray) (100%,black)"</span>)</pre></div>
+
 
 
                 <div style="clear:both;margin-top:15px;"></div>
                 
-                    <div class="toc-item prev-left"><a href="../../guide/introduction.html">&lt;&lt; <strong>1</strong><span>Introduction</span></a></div>
+                    <div class="toc-item prev-left"><a href="../../guide/gettingStarted.html">&lt;&lt; <strong>2</strong><span>Getting Started</span></a></div>
+                
+                    <div class="toc-item next-right"><a href="../../guide/propertiesAndBinding.html"><strong>4</strong><span>Properties and Binding</span> >></a></div>
                 
                 <div style="clear:both"></div>
             </div>
@@ -101,9 +132,6 @@ blubs<p class="paragraph"/>For details please refer to the Java API section.
                     
                     <div class="menu-block"><h1 class="menu-title" onclick="toggleRef(this.parentNode.childNodes[1])">SceneGraph</h1><div class="menu-sub">
                         
-                            
-                            <div class="menu-item"><a href="../../ref/SceneGraph/Concepts.html">Concepts</a>
-                            </div>
                             
                             <div class="menu-item"><a href="../../ref/SceneGraph/Usage.html">Usage</a>
                             </div>

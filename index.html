@@ -33,7 +33,8 @@
     <nav>
         <div id="community" class="nav-div">
             <h3>Community</h3>
-            <p><a href="http://groovy.codehaus.org/GroovyFX">User Guide</a></p>
+            <!--<p><a href="http://groovy.codehaus.org/GroovyFX">User Guide</a></p>-->
+            <p><a href="docs/index.html">User Guide</a></p>
             <p><a href="http://jira.codehaus.org/browse/GFX">Issue Tracker</a></p>
             <p><a href="http://xircles.codehaus.org/projects/groovyfx/lists">Mailing Lists</a></p>
             <p><a href="latest/groovyfx-0.3.1.jar">Download</a></p>
@@ -71,36 +72,34 @@
         <p>
             A simple and complete "Hello, World" program is shown below. The general pattern for a GroovyFX application
             is to define the JavaFX components within a Groovy closure that is passed to the static <code>start</code>
-            method of the GroovyFX class. Inside this closure, we instantiate our <code>SceneGraphBuilder</code>
-            and use it to start creating our scene graph nodes.
+            method of the GroovyFX class. Inside this closure, we simply start declaring our JavaFX scene graph nodes.
         </p>
 
         <p>
-            Each JavaFX class has a corresponding <code>SceneGraphBuilder</code> node. For example, the JavaFX
-            <code>Stage</code> class becomes the <code>stage</code> node. All <code>SceneGraphBuilder</code> node
+            Each JavaFX class has a corresponding GroovyFX node. For example, the JavaFX
+            <code>Stage</code> class becomes the <code>stage</code> node. All GroovyFX node
             names are exactly the same as their JavaFX counterparts with the start of their class names converted to
             lowercase letters.
         </p>
-        <pre><code style="background: #D8E8F0">import groovyx.javafx.GroovyFX
-import groovyx.javafx.SceneGraphBuilder
+        <pre><code style="background: #D8E8F0">
+import static groovyx.javafx.GroovyFX.start
 
-GroovyFX.start {
-    def sg = new SceneGraphBuilder()
-
-    sg.stage(title: "GroovyFX Hello World", visible: true) {
-        scene(fill: black, width: 650, height: 450) {
-            hbox(padding: 80) {
-                text(text: "Groovy", style: "-fx-font-size: 80pt") {
-                    fill linearGradient(endX: 0, stops: [palegreen, seagreen])
+start {
+    stage(title: 'GroovyFX Hello World', visible: true) {
+        scene(fill: BLACK, width: 500, height: 250) {
+            hbox(padding: 60) {
+                text(text: 'Groovy', font: '80pt sanserif') {
+                    fill linearGradient(endX: 0, stops: [PALEGREEN, SEAGREEN])
                 }
-                text(text: "FX", style: "-fx-font-size: 80pt") {
-                    fill linearGradient(endX: 0, stops: [cyan, dodgerblue])
-                    effect dropShadow(color: dodgerblue, radius: 25, spread: 0.25)
+                text(text: 'FX', font: '80pt sanserif') {
+                    fill linearGradient(endX: 0, stops: [CYAN, DODGERBLUE])
+                    effect dropShadow(color: DODGERBLUE, radius: 25, spread: 0.25)
                 }
             }
         }
     }
 }
+
 </code></pre>
 
         <p>

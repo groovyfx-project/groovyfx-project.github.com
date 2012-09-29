@@ -2,7 +2,7 @@
                       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
     <head>
-        <title>GroovyFX 0.1-SNAPSHOT</title>
+        <title>GroovyFX 0.3.1</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <link rel="stylesheet" href="../css/main.css" type="text/css" media="screen, print" title="Style" charset="utf-8" />
         <link rel="stylesheet" href="../css/pdf.css" type="text/css" media="print" title="PDF" charset="utf-8" />
@@ -27,6 +27,20 @@ function addJsClass(el) {
                             
                             <div class="toc-item" style="margin-left:0"><a href="#gettingStarted"><strong>2</strong><span>Getting Started</span></a></div>
                             
+                            <div class="toc-item" style="margin-left:0"><a href="#basicConcepts"><strong>3</strong><span>Basic Concepts</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:0"><a href="#propertiesAndBinding"><strong>4</strong><span>Properties and Binding</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:0"><a href="#controls"><strong>5</strong><span>Controls</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:0"><a href="#layout"><strong>6</strong><span>Layout</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:0"><a href="#graphics"><strong>7</strong><span>Graphics and Animation</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:0"><a href="#charts"><strong>8</strong><span>Charts</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:0"><a href="#groovyApplications"><strong>9</strong><span>Writing GroovyFX Applications</span></a></div>
+                            
                         </div>
                     </div>
                 </li>
@@ -42,7 +56,7 @@ function addJsClass(el) {
                 
                 
             </div>
-            <p>JavaFX made Groovy</p>
+            <p></p>
         </div>
 
 
@@ -56,7 +70,7 @@ function addJsClass(el) {
                         <div class="project">
                             <h1>GroovyFX - Reference Documentation</h1>
                             <p><strong>Authors:</strong> The Whole GroovyFX Gang</p>
-                            <p><strong>Version:</strong> 0.1-SNAPSHOT</p>
+                            <p><strong>Version:</strong> 0.3.1</p>
                             
                         </div>
 
@@ -66,23 +80,93 @@ function addJsClass(el) {
                             
                             <div class="toc-item" style="margin-left:0px"><a href="#introduction"><strong>1</strong><span>Introduction</span></a></div>
                             
-                            <div class="toc-item" style="margin-left:10px"><a href="#introduction_enter_GroovyFX"><strong>1.1</strong><span>Enter GroovyFX</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:10px"><a href="#introduction_credits"><strong>1.2</strong><span>Credits</span></a></div>
+                            <div class="toc-item" style="margin-left:10px"><a href="#credits"><strong>1.1</strong><span>Credits</span></a></div>
                             
                             <div class="toc-item" style="margin-left:0px"><a href="#gettingStarted"><strong>2</strong><span>Getting Started</span></a></div>
                             
-                            <div class="toc-item" style="margin-left:10px"><a href="#gettingStarted_whatsNew"><strong>2.1</strong><span>What's new</span></a></div>
+                            <div class="toc-item" style="margin-left:10px"><a href="#whatsNew"><strong>2.1</strong><span>What's new</span></a></div>
                             
-                            <div class="toc-item" style="margin-left:10px"><a href="#gettingStarted_downloadingAndInstalling"><strong>2.2</strong><span>Downloading and Installing</span></a></div>
+                            <div class="toc-item" style="margin-left:20px"><a href="#breakingChanges"><strong>2.1.1</strong><span>Breaking Changes</span></a></div>
                             
-                            <div class="toc-item" style="margin-left:10px"><a href="#gettingStarted_aHelloWorldExample"><strong>2.3</strong><span>A Hello World Example</span></a></div>
+                            <div class="toc-item" style="margin-left:20px"><a href="#improvements"><strong>2.1.2</strong><span>Improvements and Bug Fixes</span></a></div>
                             
-                            <div class="toc-item" style="margin-left:10px"><a href="#gettingStarted_codeConventions"><strong>2.4</strong><span>Code conventions</span></a></div>
+                            <div class="toc-item" style="margin-left:10px"><a href="#requirements"><strong>2.2</strong><span>Installation Requirements</span></a></div>
                             
-                            <div class="toc-item" style="margin-left:10px"><a href="#gettingStarted_gettingSetUpInAnIDE"><strong>2.5</strong><span>Getting Set Up in an IDE</span></a></div>
+                            <div class="toc-item" style="margin-left:10px"><a href="#usingGroovyFX"><strong>2.3</strong><span>Using the GroovyFX Library</span></a></div>
                             
-                            <div class="toc-item" style="margin-left:10px"><a href="#gettingStarted_applicabilityOfConcepts"><strong>2.6</strong><span>Applicability of Concepts</span></a></div>
+                            <div class="toc-item" style="margin-left:10px"><a href="#buildingFromSource"><strong>2.4</strong><span>Building from Source</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:10px"><a href="#helloGroovyFX"><strong>2.5</strong><span>Hello GroovyFX: Your First GroovyFX Program</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:0px"><a href="#basicConcepts"><strong>3</strong><span>Basic Concepts</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:10px"><a href="#usingSceneGraphBuilder"><strong>3.1</strong><span>Using SceneGraphBuilder</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:10px"><a href="#nodeAndPropertyNames"><strong>3.2</strong><span>Node and Property Names</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:10px"><a href="#fonts"><strong>3.3</strong><span>Fonts</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:10px"><a href="#paintsAndColors"><strong>3.4</strong><span>Paints and Colors</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:10px"><a href="#insets"><strong>3.5</strong><span>Insets</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:10px"><a href="#geometry"><strong>3.6</strong><span>Geometry</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:10px"><a href="#enumeratedValues"><strong>3.7</strong><span>Enumerated Values</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:0px"><a href="#propertiesAndBinding"><strong>4</strong><span>Properties and Binding</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:10px"><a href="#bindingSupport"><strong>4.1</strong><span>Binding Support</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:20px"><a href="#propertyNames"><strong>4.1.1</strong><span>Property Names</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:20px"><a href="#bidirectional"><strong>4.1.2</strong><span>Bidirectional</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:20px"><a href="#unidirectional"><strong>4.1.3</strong><span>Unidirectional</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:20px"><a href="#closureBindings"><strong>4.1.4</strong><span>Closure Binding Expressions</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:10px"><a href="#fxbindable"><strong>4.2</strong><span>FXBindable Properties</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:0px"><a href="#controls"><strong>5</strong><span>Controls</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:10px"><a href="#labelsAndText"><strong>5.1</strong><span>Labels and Text</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:10px"><a href="#buttonsAndMenus"><strong>5.2</strong><span>Buttons and Menus</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:20px"><a href="#actions"><strong>5.2.1</strong><span>Actions</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:10px"><a href="#choiceBoxComboBox"><strong>5.3</strong><span>ChoiceBox and ComboBox</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:10px"><a href="#listsTreesTables"><strong>5.4</strong><span>Lists, Tables, and Trees</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:10px"><a href="#fileChoosers"><strong>5.5</strong><span>File Choosers</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:0px"><a href="#layout"><strong>6</strong><span>Layout</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:0px"><a href="#graphics"><strong>7</strong><span>Graphics and Animation</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:10px"><a href="#shapesPaths"><strong>7.1</strong><span>Shapes and Paths</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:10px"><a href="#colors"><strong>7.2</strong><span>Colors</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:10px"><a href="#gradients"><strong>7.3</strong><span>Gradients</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:10px"><a href="#effects"><strong>7.4</strong><span>Effects</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:10px"><a href="#animation"><strong>7.5</strong><span>Animation</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:0px"><a href="#charts"><strong>8</strong><span>Charts</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:10px"><a href="#pieCharts"><strong>8.1</strong><span>Pie Charts</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:10px"><a href="#xyCharts"><strong>8.2</strong><span>XY Charts</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:0px"><a href="#groovyApplications"><strong>9</strong><span>Writing GroovyFX Applications</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:10px"><a href="#structure"><strong>9.1</strong><span>Structuring GroovyFX Applications</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:10px"><a href="#usingGriffon"><strong>9.2</strong><span>Using the Griffon Application Framework</span></a></div>
                             
                             <div style="clear:both" ></div>
                         </div>
@@ -90,82 +174,400 @@ function addJsClass(el) {
                         
 
 <h1 id="introduction">1 Introduction</h1>
-bla
-
-
-
-<h2 id="introduction_enter_GroovyFX">1.1 Enter GroovyFX</h2>
-bla
-
-
-
-<h2 id="introduction_credits">1.2 Credits</h2>
-bla
-
-
-
-<h1 id="gettingStarted">2 Getting Started</h1>
-bla<p class="paragraph"/><p class="paragraph"/>
-
-
-
-<h2 id="gettingStarted_whatsNew">2.1 What's new</h2>
-Again, the new release has a number of fixes, new functionality, and other enhancements.<p class="paragraph"/>Check out the <a href="http://go.to.the.notes" target="blank">JIRA release notes</a><p class="paragraph"/><h3>Project changes</h3><p class="paragraph"/><blockquote class="note">
-See <a href="http://go.to.the.notes/Breaking+Changes" target="blank">the Breaking Changes listing</a> for the list of breaking changes.
-</blockquote><p class="paragraph"/><h3>bla...</h3>
+<blockquote class="note">
+Please note that this documentation is still under construction.  There are a lot of missing pieces.
+</blockquote><p class="paragraph"/>Client-side Java development took a major step forward with the introduction of Oracle's <a href="http://www.javafx.com" target="blank">JavaFX 2.0.</a> JavaFX is a modern, rich client technology stack that enables Java developers to quickly and easily create desktop clients with functionality and richness that rival, and even surpass, that of native clients and web applications.<p class="paragraph"/>GroovyFX is a library that makes working with JavaFX much simpler and more natural. GroovyFX is focused on exploiting the power of the <a href="http://groovy.codehaus.org" target="blank">Groovy</a> language to make JavaFX development easier and more concise than what is possible in Java. GroovyFX also leverages Groovy's powerful DSL features and AST transformations to eliminate boilerplate, making GroovyFX code easier to write and, just as importantly, easier to read.<p class="paragraph"/>GroovyFX provides the SceneGraphBuilder object, which offers support for:
 <ul class="star">
-<li>blubs</li>
+<li>All of the JavaFX core controls</li>
+<li>All of the core JavaFX layout containers</li>
+<li>Shapes, colors, and gradients</li>
+<li>Video and audio (including H.264 support)</li>
+<li>Bar charts, line charts, pie charts, and the rest of core JavaFX charts</li>
+<li>Full property and binding support</li>
+<li>The @FXBindable annotation, which eliminates the boilerplate required to define JavaFX properties</li>
+</ul><p class="paragraph"/>All of these are made easy to use through the power of the  language and the extensive use of Domain Specific Languages (DSLs)<p class="paragraph"/>This documentation will take you from getting started with GroovyFX all the way to building full applications with the power of JavaFX and Groovy.
+
+
+<h2 id="credits">1.1 Credits</h2>
+<h4>The GroovyFX Committers</h4>
+The GroovyFX team is made up of the following core committers.
+<ul class="star">
+<li>Jim Clarke</li>
+<li>Dean Iverson</li>
+<li>Dierk König</li>
+<li>Andres Almiray</li>
+<li>Russel Winder</li>
+<li>Danno Ferrin</li>
+</ul><p class="paragraph"/><h4>Other Contributions</h4>
+We would also like to thank and recognize the following people who have contribtued pull requests to GroovyFX.
+<ul class="star">
+<li>Tobias Schulte, nested tableColumn support</li>
 </ul><p class="paragraph"/>
 
 
-<h2 id="gettingStarted_downloadingAndInstalling">2.2 Downloading and Installing</h2>
-Download JavaFX from http://javafx.com and follow the install instructions.<p class="paragraph"/><h3>Building with Gradle</h3>
-<ol>
-<li>Set your environment variable JAVAFX_HOME to the directory that contains rt/lib/jfxrt.jar.</li>
-<li>cd groovyfx</li>
-<li>gradlew build</li>
-</ol><p class="paragraph"/>To run any specific demo, e.g. the AccordionDemo, you can just call
-<div class="code"><pre>gradlew AccordionDemo</pre></div><p class="paragraph"/>To see an executable overview of all build tasks including all demos
-<div class="code"><pre>gradlew &#45;&#45;gui</pre></div><p class="paragraph"/><h4>Local development builds</h4><p class="paragraph"/>Until there is a release build of GroovyFx available in the central maven
-repositories, you can build locally, deploy to your local maven cache, and
-make your own projects depend on that build.<p class="paragraph"/>To install all generated artefacts into your local maven cache
-<div class="code"><pre>gradlew install</pre></div><p class="paragraph"/>To make a gradle build depend on a locally installed GroovyFx build
+<h1 id="gettingStarted">2 Getting Started</h1>
+This chapter will help you get started with GroovyFX by explaining how to download and install the project,
+how to use GroovyFX from within your favorite IDE, and how to write your first program.<p class="paragraph"/><p class="paragraph"/>
+
+
+
+<h2 id="whatsNew">2.1 What's new</h2>
+GroovyFX version 0.2 has a number of fixes, new functionality, and other enhancements.  This includes some 
+changes that are incompatible with version 0.1.  See the <a href="../guide/single.html#breakingChanges" class="guide">Breaking Changes</a> section 
+below for details on these changes.<p class="paragraph"/>
+
+
+<h2 id="breakingChanges">2.1.1 Breaking Changes</h2>
 <ul class="star">
-<li>use mavenLocal() as the repository</li>
-<li>add to dependencies: compile 'org.codehaus.groovy.modules.groovyfx:groovyfx:0.1-SNAPSHOT'</li>
-</ul><p class="paragraph"/><h3>Building with IntellijIdea</h3>
+<li>New usage of GroovyFX and SceneGraphBuilder classes</li>
+<li>New Binding</li>
+<li>TimelineBuilder went away</li>
+</ul><p class="paragraph"/>
+
+
+<h2 id="improvements">2.1.2 Improvements and Bug Fixes</h2>
+JavaFX 2.1 and 2.2 Support
 <ul class="star">
-<li>use the Groovyfx.iml module</li>
-<li>make sure to have libraries named "JavaFX 2.0 Beta" and "groovy-1.8.4"</li>
-</ul><p class="paragraph"/><h3>Building with NetBeans</h3>
-Add the &#60;JAVAFX_SDK&#62;/rt/lib/jfxrt.jar lib to the project libraries.
-In Netbeans modify the nbproject/project.properties file modify the following property:<p class="paragraph"/>file.reference.jfxrt.jar=/Users/jimclarke/SRC/JavaFX20/rt/lib/jfxrt.jar
+<li>DirectoryChooser</li>
+<li>ComboBox</li>
+<li>StackedBarChart and StackedAreaChart</li>
+<li>Canvas</li>
+</ul><p class="paragraph"/>Other Improvements
+<ul class="star">
+<li>Usage of Node IDs</li>
+<li>Actions</li>
+<li>Nested Table Column Support</li>
+<li>onSelect Pseudo-Property Added to ListView, TreeView, ComboBox, ChoiceBox, and TabPane</li>
+<li>Cell Factory Support</li>
+</ul><p class="paragraph"/>
+
+
+<h2 id="requirements">2.2 Installation Requirements</h2>
+Before installing GroovyFX you will need to install the Java Development Kit (JDK) version 1.6 or above. 
+<a href="http://java.com/en/download/manual.jsp" target="blank">Download the appropriate JDK</a> for your operating system, run the installer, and then set up an environment 
+variable called JAVA_HOME pointing to the location of this installation.
 
 
 
-<h2 id="gettingStarted_aHelloWorldExample">2.3 A Hello World Example</h2>
-Once you are setup, try the following Groovy script to test that your setup is functioning as it should.
-<div class="code"><pre>some.hello.world.code</pre></div><p class="paragraph"/>bla<p class="paragraph"/><blockquote class="note">
-blubs<p class="paragraph"/>For details please refer to the Java API section.
-</blockquote><p class="paragraph"/>
+<h2 id="usingGroovyFX">2.3 Using the GroovyFX Library</h2>
+<h4>Using GroovyFX from Maven Central</h4><p class="paragraph"/>Having GroovyFX in Maven Central (thanks to Sonatype's OSS hosting!) makes it simple to use GroovyFX in 
+everything from simple test scripts to larger projects.  The Maven coordinates are as follows
+<ul class="star">
+<li> <em class="italic">groupId</em> : org.codehaus.groovyfx</li>
+<li> <em class="italic">artifactId</em> : groovyfx</li>
+<li> <em class="italic">version</em> : 0.3.1</li>
+</ul><p class="paragraph"/>GroovyFX is simple to inlude in Groovy scripts thanks to Groovy's Grab annotation, a part of the Grape 
+system.  Just include the following line at the top of your script<p class="paragraph"/><div class="code"><pre>@Grab('org.codehaus.groovyfx:groovyfx:0.3.1')</pre></div><p class="paragraph"/><h4>Creating a GroovyFX-Based Project with Gradle</h4><p class="paragraph"/>It is also simple to set up your own GroovyFX-based project using Gradle as the build system.  This sample
+<a href="https://gist.github.com/2712927" target="blank">build.gradle</a> script will get you started.<p class="paragraph"/>Just create a new directory for your project and place the gradle script into it.  Then simply call<p class="paragraph"/><div class="code"><pre>gradle makeDirs</pre></div><p class="paragraph"/>to set up the rest of your project's directory structure.  You will automatically have a dependency on both
+Groovy and GroovyFX.
 
 
-<h2 id="gettingStarted_codeConventions">2.4 Code conventions</h2>
-bla
+<h2 id="buildingFromSource">2.4 Building from Source</h2>
+The project's source code is located on <a href="https://github.com/groovyfx-project/groovyfx" target="blank">GitHub</a>.  You can clone
+the GroovyFX repository using the following <a href="http://git-scm.com/" target="blank">Git</a> command<p class="paragraph"/><div class="code"><pre>git clone git://github.com/groovyfx&#45;project/groovyfx.git</pre></div><p class="paragraph"/><h4>Installation Requirements</h4><p class="paragraph"/>If you are using a JDK prior to Java 7u4, you will need to install the JavaFX 2.1 SDK from 
+<a href="http://www.oracle.com/technetwork/java/javafx/downloads/index.html" target="blank">javafx.com</a>. Once you have downloaded 
+and installed the SDK, set up an environment variable called JAVAFX_HOME pointing to the location of the 
+JavaFX SDK.<p class="paragraph"/><blockquote class="note">
+The JavaFX 2.1 SDK is included in Java 7u4 and above.  If you are using this version of the JDK, you do not
+need to install a separate SDK and set the JAVAFX_HOME environment unless you would like to use a different
+version of the JavaFX SDK than the one included in your JDK.
+</blockquote><p class="paragraph"/><h4>Building with Gradle</h4>
+GroovyFX uses <a href="http://www.gradle.org" target="blank">Gradle</a> as its primary build system.  Building the project with Gradle
+requires only the following simple steps<p class="paragraph"/><div class="code"><pre>cd groovyfx
+gradlew build</pre></div><p class="paragraph"/>The Gradle build script is also capable of running any of the project's demo.  To run any specific demo, e.g. 
+the AccordionDemo, you can just use<p class="paragraph"/><div class="code"><pre>gradlew AccordionDemo</pre></div><p class="paragraph"/>To see an executable overview of all build tasks including all demos<p class="paragraph"/><div class="code"><pre>gradlew &#45;&#45;gui</pre></div><p class="paragraph"/><h4>Building with Intellij IDEA</h4><p class="paragraph"/>GroovyFX's build script is capable of generating all of the project files neccessary to build the project with 
+Intellij IDEA.  Just run the following command from the project's root directory<p class="paragraph"/><div class="code"><pre>gradlew idea</pre></div><p class="paragraph"/>This will generate a groovyfx.ipr file.  From IDEA, select File -&#62; Open Project and navigate to the directory
+containing the groovyfx.ipr file and open it.  You should now be able to build the library and run the demos
+with IDEA.<p class="paragraph"/><h4>Building with NetBeans</h4><p class="paragraph"/>The NetBeans project files are included in the code repository.  You may have to set up a Java Platform that
+includes the JavaFX SDK directory, if one does not already exist. Please see 
+<a href="http://netbeans.org/kb/docs/java/javafx-setup.html" target="blank">Setting Up NetBeans IDE With JavaFX 2.1</a> for more information.<p class="paragraph"/>Once you have created the JavaFX enabled Java platform, then choose the GroovyFX project, 
+right click and pick "Properties". Choose the "Libraries" entry, then choose the 
+JavaFX enabled Java Platform. You should now be able to build the library and run the demos with NetBeans.
+Also, you may have to fix the location for the groovy-all-1.8.6.jar file.
 
 
-<h2 id="gettingStarted_gettingSetUpInAnIDE">2.5 Getting Set Up in an IDE</h2>
-bla
+
+<h2 id="helloGroovyFX">2.5 Hello GroovyFX: Your First GroovyFX Program</h2>
+Once you have everything set up, try the following Groovy script to test that your setup is functioning as it should.<p class="paragraph"/><div class="code"><pre>@Grab('org.codehaus.groovyfx:groovyfx:0.2')<p class="paragraph"/><span class="java&#45;keyword">import</span> <span class="java&#45;keyword">static</span> groovyx.javafx.GroovyFX.start<p class="paragraph"/>start &#123;
+    stage(title: 'GroovyFX Hello World', visible: <span class="java&#45;keyword">true</span>) &#123;
+        scene(fill: BLACK, width: 500, height: 250) &#123;
+            hbox(padding: 60) &#123;
+                text(text: 'Groovy', font: '80pt sanserif') &#123;
+                    fill linearGradient(endX: 0, stops: &#91;PALEGREEN, SEAGREEN&#93;)
+                &#125;
+                text(text: 'FX', font: '80pt sanserif') &#123;
+                    fill linearGradient(endX: 0, stops: &#91;CYAN, DODGERBLUE&#93;)
+                    effect dropShadow(color: DODGERBLUE, radius: 25, spread: 0.25)
+                &#125;
+            &#125;
+        &#125;
+    &#125;
+&#125;</pre></div><p class="paragraph"/>If everything runs correctly you should see the following screen appear.<p class="paragraph"/><img border="0" class="center" src="../img/helloWorld.png"></img>
 
 
-<h2 id="gettingStarted_applicabilityOfConcepts">2.6 Applicability of Concepts</h2>
-bla
-<ol>
-<li>one</li>
-<li>two</li>
-<ol>
-<li><strong class="bold">two point one</strong> bla</li>
-</ol></ol><p class="paragraph"/>else<p class="paragraph"/><p class="paragraph"/>
+
+<h1 id="basicConcepts">3 Basic Concepts</h1>
+In JavaFX, you display graphics and controls on the screen by constructing a scene graph that consists of various types
+of nodes - perhaps a circle or a button control.  The scene graph is put into a  <em class="italic">Scene,</em>  which defines the area in which
+your scene graph will be displayed.  The  <em class="italic">Scene</em>  can then be shown on a  <em class="italic">Stage</em> .  You can think of a  <em class="italic">Stage</em>  as the application
+container.  If your applicaiton is running on the user's desktop, the  <em class="italic">Stage</em>  corresponds to a desktop window that typically
+has a title bar and resizing controls.  If your application is embedded into a browser, then the  <em class="italic">Stage</em>  corresponds to the
+applet's display area.<p class="paragraph"/>This arrangement of Stage -&#62; Scene -&#62; Scene Graph is a hierarchy of nodes that can be described nicely using a declarative
+format:<p class="paragraph"/><div class="code"><pre>stage(title: 'GroovyFX', show: <span class="java&#45;keyword">true</span>) &#123;
+    scene &#123;
+        rectangle(width: 300, height: 100, fill: GREEN)
+    &#125;
+&#125;</pre></div><p class="paragraph"/>Except for one other minor detail which we'll cover in the next section, this is a complete GroovyFX program that, when run,
+will produce the output below.<p class="paragraph"/><img border="0" class="center" src="../img/firstapp.png"></img><p class="paragraph"/>You can see that we declare a stage with a  <em class="italic">title</em>  attribute of 'GroovyFX' and a  <em class="italic">show</em>  attribute set to  <em class="italic">true</em> .  The  <em class="italic">title</em> 
+of the stage appears as the text in the application window's title bar (since this was run as a desktop application).  The
+value of the  <em class="italic">show</em>  attribute controls whether the Stage (the window) will initially be visible.  If you leave out the
+ <em class="italic">show</em>  attribute, its default value will remain false and your applicaiton will be invisible!<p class="paragraph"/>The scene node is declared as a child of the stage node - that is, it appears within the stage's curly braces.  Those curly braces
+actually define the stage's closure, and any node declared within that closure will become a child node.  A rectangle
+declaration appears within the scene's closure, making the rectangle a child of the scene and the one and only node that
+makes up the entire scene graph in this application.<p class="paragraph"/>Those are the only two basic concepts you need to know in order to build rich user interfaces with GroovyFX.  You describe 
+the structure of your scene declaratively using closures to indicate the hierarchy of your nodes.  You pass attributes to 
+those nodes using Groovy's  <em class="italic">key: value</em>  syntax (the same syntax used to declare key/value pairs in Maps literals - in fact, 
+under the covers you are really passing a Map as an argument to each node).<p class="paragraph"/>This sort of syntax is generally usefull for declaring any kind of hierarchical data such as HTML or XML.  It is so common
+that Groovy has built-in support for easily creating classes, called Builders, that allow you to write code using this
+syntax.  Groovy's MarkupBuilder, for example, allows you to easily create HTML documents using a very similar syntax.<p class="paragraph"/>It is probably not surprising, then, that the class we have created to allow you to declare JavaFX scene graphs using Groovy's
+builder syntax is called  <em class="italic">SceneGraphBuilder</em> .<p class="paragraph"/><blockquote class="note">
+<strong class="bold">A Note on Terminology</strong><p class="paragraph"/>The nodes in a scene graph are generally referred to as, well&#8230; nodes.  When you create a Groovy Builder, the elements
+that you can declare with the builder are also referred to as nodes.  In most cases, this won't cause us any confusion
+because the JavaFX scene graph nodes all have a corresponding GroovyFX builder node, and therefore the term  <em class="italic">node</em>  can
+be used interchangabely.<p class="paragraph"/>In those rare cases where we need to make a distinction, we will explicitly refer to  <em class="italic">builder nodes</em>  rather
+than simply scene graph  <em class="italic">nodes</em> .
+</blockquote>
+
+
+
+<h2 id="usingSceneGraphBuilder">3.1 Using SceneGraphBuilder</h2>
+
+Although SceneGraphBuilder provides all of the builder nodes you will use when creating your GroovyFX graphics and 
+UIs, you will rarely use it directly.  This is because you will typically begin your applications by calling the 
+static  <em class="italic">start</em>  method of the GroovyFX class as shown here.<p class="paragraph"/><div class="code"><pre><span class="java&#45;keyword">import</span> <span class="java&#45;keyword">static</span> groovyx.javafx.GroovyFX.start<p class="paragraph"/>start &#123;
+    stage(title: 'GroovyFX', show: <span class="java&#45;keyword">true</span>) &#123;
+        scene &#123;
+            rectangle(width: 300, height: 100, fill: GREEN)
+        &#125;
+    &#125;
+&#125;</pre></div><p class="paragraph"/>The GroovyFX.start method takes a closure as its only parameter and, behind the scenes, it initiates JavaFX's startup
+sequence.  The  <em class="italic">start</em>  method also ensures that the closure you pass will be executed at the appropriate time during
+the JavaFX startup sequence.  Just before your closure is executed, the  <em class="italic">start</em>  method creates a new SceneGraphBuilder 
+object and sets it as the closure's delegate.  This is the reason that you can call SceneGraphBuilder methods like 
+ <em class="italic">stage</em> ,  <em class="italic">scene</em> , and  <em class="italic">rectangle</em>  within your closure.  Those calls will be automatically forwarded on to the closure's 
+delegate SceneGraphBuilder object when they are not found within the closure's current scope.<p class="paragraph"/>Calling the GroovyFX.start method is the missing piece of the puzzle we referred to in the previous section when we
+first presented this code.<p class="paragraph"/>The following sections describe some of the generalized behavior supported in the SceneGraphBuilder on all
+nodes and attributes defined in the User Guide.<p class="paragraph"/>
+
+
+<h2 id="nodeAndPropertyNames">3.2 Node and Property Names</h2>
+
+
+
+<h2 id="fonts">3.3 Fonts</h2>
+All font attributes may of course be set with a JavaFX Font object (javafx.scene.text.Font). In addition,
+fonts may be defined using the JavaFX CSS styles for "-fx-font" or "-fx-font-size". If a font size string
+is presented, then the default Font will be used with that size. (see CSS Reference Guide.)<p class="paragraph"/><div class="code"><pre>text(font: <span class="java&#45;quote">"32pt"</span>, text: <span class="java&#45;quote">"This is Text"</span>)
+button(font: <span class="java&#45;quote">"16pt Courier"</span>, text: <span class="java&#45;quote">"Push Here"</span>)</pre></div>
+
+
+
+<h2 id="paintsAndColors">3.4 Paints and Colors</h2>
+All color and paint attributes may be set with one of the JavaFX Paint or Color objects
+(javafx.scene.paint.LinearGradient, javafx.scene.paint.RadialGradient and javafx.scene.paint.Color). In addition,
+colors may be set using the pseudo color variables, such as red, green, blue, etc. Colors may also be defined as
+a web string such as "#333", "cyan", etc. Colors may also be defined using the JavaFX CSS styles for colors,
+linear, and radial gradients. (see JavaFX CSS Reference Guide) Also see SceneGraphBuilder - paint for more details.<p class="paragraph"/><div class="code"><pre>scene(fill: hsb(128, 0.5, 0.5, 0.5))
+circle(centerX: 50, centerY: 50, radius: 25, fill: rgb(0, 0, 255))
+rectangle(x: 100, y: 50, width: 50, height: 50, fill: red)
+rectangle(x: 100, y: 50, width: 50, height: 50, fill: <span class="java&#45;quote">"#333"</span>)
+rectangle(x: 100, y: 50, width: 50, height: 50, fill: <span class="java&#45;quote">"linear (0%,0%) to (0%,100%) stops (0%,gray) (100%,black)"</span>)</pre></div>
+
+
+
+<h2 id="insets">3.5 Insets</h2>
+The javafx.geometry.Insets class may be instantiated by using the javafx class, or by using a Groovy number list.
+If a number list is used, it may contain, one, two, or four numbers. If one number is presented then all sides of
+the Insets will be set to that value. If two numbers are presented then the first number will be used to set the
+top and bottom side of the Inset, and the second number will be used to set the left and right side of the Inset.
+If four numbers are present in the list, the numbers will be assigned to the the top, right, bottom and left in
+order. An empty list or the String "empty" (or "EMPTY") will map to the Insets.EMPTY object.<p class="paragraph"/><div class="code"><pre>stackPane(style: <span class="java&#45;quote">"&#45;fx&#45;background&#45;color: burlywood"</span>, padding: 20)
+stackPane(style: <span class="java&#45;quote">"&#45;fx&#45;background&#45;color: burlywood"</span>, padding: &#91;10&#93;)
+stackPane(style: <span class="java&#45;quote">"&#45;fx&#45;background&#45;color: burlywood"</span>, padding: &#91;50, 25&#93;)
+stackPane(style: <span class="java&#45;quote">"&#45;fx&#45;background&#45;color: burlywood"</span>, padding: &#91;0, 50, 0, 0&#93;)
+stackPane(style: <span class="java&#45;quote">"&#45;fx&#45;background&#45;color: burlywood"</span>, padding: &#91;&#93;)
+stackPane(style: <span class="java&#45;quote">"&#45;fx&#45;background&#45;color: burlywood"</span>, padding: <span class="java&#45;quote">"EMPTY"</span>)</pre></div><p class="paragraph"/>
+
+
+<h2 id="geometry">3.6 Geometry</h2>
+The Geometry objects in the javafx.geometry package, Point2D, Point3D, Dimension2D, Rectangle2D, and BoundingBox,
+may be set using numbered lists. For the 2D classes, 2 numbers must be provided, and for the 3D classes, 3 numbers
+must be provided. BoundingBox may be either 2D, requiring 4 values, or 3D, requiring 6 values. A Rectangle2D may
+also take and empty list or the "EMPTY" string as shown in the previous section on Insets.<p class="paragraph"/><div class="code"><pre>rotate(angle: 90, axis: &#91;1,1,0&#93;)
+imageView(viewport: &#91;0,0, 400, 400&#93;)</pre></div>
+
+
+
+<h2 id="enumeratedValues">3.7 Enumerated Values</h2>
+All Java Enumerations may be set using their string equivalents. For example, if an attribute field is of type
+javafx.geometry.Pos, then the value may be set with one of the string values, "center", "bottom_left", etc.<p class="paragraph"/>There are some special cases where Object instances are used rather than enumerations. For example the
+javafx.scene.Cursor class contains numerous singleton instances for the various cursors that may be set on the
+scene. Also, there are special pseudo variables for the Orientation enumeration, horizontal and vertical.<p class="paragraph"/><div class="code"><pre>scene(cursor: <span class="java&#45;quote">"OPEN_HAND"</span>)     // javafx.scene.Cursor <span class="java&#45;keyword">static</span> member.
+sg.stage(style: <span class="java&#45;quote">"transparent"</span>) // javafx.stage.StageStyle enumeration
+scrollBar(min: 0, max: 100, value: 50, orientation: horizontal) // javafx.geometry.Orientation enumeration</pre></div>
+
+
+
+<h1 id="propertiesAndBinding">4 Properties and Binding</h1>
+propertiesAndBinding
+
+
+<h2 id="bindingSupport">4.1 Binding Support</h2>
+bindingSupport
+
+
+<h2 id="propertyNames">4.1.1 Property Names</h2>
+propertyNames
+
+
+<h2 id="bidirectional">4.1.2 Bidirectional</h2>
+bidirectional
+
+
+<h2 id="unidirectional">4.1.3 Unidirectional</h2>
+unidirectional
+
+
+<h2 id="closureBindings">4.1.4 Closure Binding Expressions</h2>
+closureBindings
+
+
+<h2 id="fxbindable">4.2 FXBindable Properties</h2>
+fxbindable
+
+
+<h1 id="controls">5 Controls</h1>
+controls
+
+
+<h2 id="labelsAndText">5.1 Labels and Text</h2>
+lablesAndText
+
+
+<h2 id="buttonsAndMenus">5.2 Buttons and Menus</h2>
+<h4>ToggleGroups</h4>
+ToggleGroups are identified with an unique string across the SceneGraphBuilder context. To tie a toggle type button
+to a specific ToggleGroup, use the special attribute toggleGroup on the Toggle type button. Buttons with the same
+ToggleGroup names will be assigned the same ToggleGroup instance.<p class="paragraph"/><div class="code"><pre>scene(fill: hsb(128, 0.5, 0.5, 0.5), root: group()) &#123;
+    toggleButton (
+        layoutX: 25,
+        layoutY: 300,
+        font: <span class="java&#45;quote">"16pt Courier"</span>,
+        text: <span class="java&#45;quote">"One"</span>,
+        selected: <span class="java&#45;keyword">true</span>,
+        toggleGroup: <span class="java&#45;quote">"Group1"</span>
+    )
+    toggleButton (
+        layoutX: 125,
+        layoutY: 300,
+        font: <span class="java&#45;quote">"16pt Courier"</span>,
+        text: <span class="java&#45;quote">"Two"</span>,
+        selected: <span class="java&#45;keyword">false</span>,
+        toggleGroup: <span class="java&#45;quote">"Group1"</span>
+    )
+&#125;</pre></div>
+
+
+<h2 id="actions">5.2.1 Actions</h2>
+GroovyFX provides an action abstraction inspired by <a href="http://docs.oracle.com/javase/6/docs/api/javax/swing/Action.html" target="blank">javax.swing.Action</a>.
+All Action properties are fully observable<p class="paragraph"/><h4>JavaFX Components Supporting <code>Action</code></h4><p class="paragraph"/>All buttons and menuItems support <code>Action</code> but only if their respective factories are used. In other words, if you manually
+create an instance of such controls then you must also bind Action properties manually.<p class="paragraph"/>The following table describes the properties used by JavaFX components that support Actions.<p class="paragraph"/><table class="wiki-table" cellpadding="0" cellspacing="0" border="0"><tr><th><strong class="bold">Action Property</strong></th><th><strong class="bold">Component Property</strong></th><th><strong class="bold">Notes</strong></th></tr><tr class="table-odd"><td>onAction</td><td>onAction</td><td>if component supports <code>onActionProperty()</code></td></tr><tr class="table-even"><td>name</td><td>text</td><td>if component supports <code>textProperty()</code></td></tr><tr class="table-odd"><td>description</td><td>tooltip.text</td><td>if component supports <code>tooltipProperty()</code></td></tr><tr class="table-even"><td>accelerator</td><td>accelerator</td><td>if component supports <code>acceleratorProperty()</code></td></tr><tr class="table-odd"><td>selected</td><td>selected</td><td>if component supports <code>selectedProperty()</code></td></tr><tr class="table-even"><td>icon</td><td>graphic</td><td>if component supports <code>graphicProperty()</code></td></tr><tr class="table-odd"><td>enabled</td><td>disabled</td><td>negated value is mapped to component property</td></tr></table><p class="paragraph"/>Any of the Action's properties may be skipped when using factory nodes, this avoids setting a text value on a toolbar button for example.
+In order to skip a property simply use the <code>skip</code> prefix. The following example shows the usage of Actions in both menuItems and toolbar
+buttons; the menuItems will display both icons and text wehereas the toolbar buttons will only display the icons<p class="paragraph"/><div class="code"><pre>actions &#123;
+    fxaction(id: 'copyAction',
+        icon: 'icons/copy.png',
+        onAction: &#123; /&#42; copy content &#42;/ &#125;
+    fxaction(id: 'cutyAction',
+        icon: 'icons/cut.png',
+        onAction: &#123; /&#42; cut content &#42;/ &#125;
+    fxaction(id: 'pasteAction',
+        icon: 'icons/paste.png',
+        onAction: &#123; /&#42; paste content &#42;/ &#125;
+&#125;<p class="paragraph"/>meuBar &#123;
+    menu(text: <span class="java&#45;quote">"Edit"</span>) &#123;
+         menuItem(cutAction)
+         menuItem(copyAction)
+         menuItem(pasteAction)
+    &#125;
+&#125;<p class="paragraph"/>toolBar &#123;
+    button(cutAction,   skipName: <span class="java&#45;keyword">true</span>)
+    button(copyAction,  skipName: <span class="java&#45;keyword">true</span>)
+    button(pasteAction, skipName: <span class="java&#45;keyword">true</span>)
+&#125;</pre></div>
+
+
+<h2 id="choiceBoxComboBox">5.3 ChoiceBox and ComboBox</h2>
+choiceBoxComboBox
+
+
+<h2 id="listsTreesTables">5.4 Lists, Tables, and Trees</h2>
+listsTreesTables
+
+
+<h2 id="fileChoosers">5.5 File Choosers</h2>
+fileChoosers
+
+
+<h1 id="layout">6 Layout</h1>
+layout
+
+
+<h1 id="graphics">7 Graphics and Animation</h1>
+graphics
+
+
+<h2 id="shapesPaths">7.1 Shapes and Paths</h2>
+shapesPaths
+
+
+<h2 id="colors">7.2 Colors</h2>
+colors
+
+
+<h2 id="gradients">7.3 Gradients</h2>
+gradients
+
+
+<h2 id="effects">7.4 Effects</h2>
+effects
+
+
+<h2 id="animation">7.5 Animation</h2>
+animation
+
+
+<h1 id="charts">8 Charts</h1>
+charts
+
+
+<h2 id="pieCharts">8.1 Pie Charts</h2>
+pieCharts
+
+
+<h2 id="xyCharts">8.2 XY Charts</h2>
+xyCharts
+
+
+<h1 id="groovyApplications">9 Writing GroovyFX Applications</h1>
+groovyApplications
+
+
+<h2 id="structure">9.1 Structuring GroovyFX Applications</h2>
+We should adapt Dierk's famous blog post for this section.
+
+
+<h2 id="usingGriffon">9.2 Using the Griffon Application Framework</h2>
+usingGriffon
 
                     </div>
                 </td>
@@ -179,9 +581,6 @@ bla
                     
                     <div class="menu-block"><h1 class="menu-title" onclick="toggleRef(this.parentNode.childNodes[1])">SceneGraph</h1><div class="menu-sub">
                         
-                        
-                        <div class="menu-item"><a href="../ref/SceneGraph/Concepts.html">Concepts</a>
-                        </div>
                         
                         <div class="menu-item"><a href="../ref/SceneGraph/Usage.html">Usage</a>
                         </div>

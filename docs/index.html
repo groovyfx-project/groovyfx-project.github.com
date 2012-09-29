@@ -2,7 +2,7 @@
                       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
     <head>
-        <title>GroovyFX 0.1-SNAPSHOT</title>
+        <title>GroovyFX 0.3.1</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <link rel="stylesheet" href="./css/main.css" type="text/css" media="screen, print" title="Style" charset="utf-8" />
         <link rel="stylesheet" href="./css/pdf.css" type="text/css" media="print" title="PDF" charset="utf-8" />
@@ -27,6 +27,20 @@ function addJsClass(el) {
                             
                             <div class="toc-item" style="margin-left:0"><a href="./guide/gettingStarted.html"><strong>2</strong><span>Getting Started</span></a></div>
                             
+                            <div class="toc-item" style="margin-left:0"><a href="./guide/basicConcepts.html"><strong>3</strong><span>Basic Concepts</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:0"><a href="./guide/propertiesAndBinding.html"><strong>4</strong><span>Properties and Binding</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:0"><a href="./guide/controls.html"><strong>5</strong><span>Controls</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:0"><a href="./guide/layout.html"><strong>6</strong><span>Layout</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:0"><a href="./guide/graphics.html"><strong>7</strong><span>Graphics and Animation</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:0"><a href="./guide/charts.html"><strong>8</strong><span>Charts</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:0"><a href="./guide/groovyApplications.html"><strong>9</strong><span>Writing GroovyFX Applications</span></a></div>
+                            
                         </div>
                     </div>
                 </li>
@@ -42,7 +56,7 @@ function addJsClass(el) {
                 
                 
             </div>
-            <p>JavaFX made Groovy</p>
+            <p></p>
         </div>
 
 
@@ -56,7 +70,7 @@ function addJsClass(el) {
                         <div class="project">
                             <h1>GroovyFX - Reference Documentation</h1>
                             <p><strong>Authors:</strong> The Whole GroovyFX Gang</p>
-                            <p><strong>Version:</strong> 0.1-SNAPSHOT</p>
+                            <p><strong>Version:</strong> 0.3.1</p>
                             
                         </div>
 
@@ -66,23 +80,93 @@ function addJsClass(el) {
                             
                             <div class="toc-item" style="margin-left:0px"><a href="./guide/introduction.html"><strong>1</strong><span>Introduction</span></a></div>
                             
-                            <div class="toc-item" style="margin-left:10px"><a href="./guide/introduction.html#introduction_enter_GroovyFX"><strong>1.1</strong><span>Enter GroovyFX</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:10px"><a href="./guide/introduction.html#introduction_credits"><strong>1.2</strong><span>Credits</span></a></div>
+                            <div class="toc-item" style="margin-left:10px"><a href="./guide/introduction.html#credits"><strong>1.1</strong><span>Credits</span></a></div>
                             
                             <div class="toc-item" style="margin-left:0px"><a href="./guide/gettingStarted.html"><strong>2</strong><span>Getting Started</span></a></div>
                             
-                            <div class="toc-item" style="margin-left:10px"><a href="./guide/gettingStarted.html#gettingStarted_whatsNew"><strong>2.1</strong><span>What's new</span></a></div>
+                            <div class="toc-item" style="margin-left:10px"><a href="./guide/gettingStarted.html#whatsNew"><strong>2.1</strong><span>What's new</span></a></div>
                             
-                            <div class="toc-item" style="margin-left:10px"><a href="./guide/gettingStarted.html#gettingStarted_downloadingAndInstalling"><strong>2.2</strong><span>Downloading and Installing</span></a></div>
+                            <div class="toc-item" style="margin-left:20px"><a href="./guide/gettingStarted.html#breakingChanges"><strong>2.1.1</strong><span>Breaking Changes</span></a></div>
                             
-                            <div class="toc-item" style="margin-left:10px"><a href="./guide/gettingStarted.html#gettingStarted_aHelloWorldExample"><strong>2.3</strong><span>A Hello World Example</span></a></div>
+                            <div class="toc-item" style="margin-left:20px"><a href="./guide/gettingStarted.html#improvements"><strong>2.1.2</strong><span>Improvements and Bug Fixes</span></a></div>
                             
-                            <div class="toc-item" style="margin-left:10px"><a href="./guide/gettingStarted.html#gettingStarted_codeConventions"><strong>2.4</strong><span>Code conventions</span></a></div>
+                            <div class="toc-item" style="margin-left:10px"><a href="./guide/gettingStarted.html#requirements"><strong>2.2</strong><span>Installation Requirements</span></a></div>
                             
-                            <div class="toc-item" style="margin-left:10px"><a href="./guide/gettingStarted.html#gettingStarted_gettingSetUpInAnIDE"><strong>2.5</strong><span>Getting Set Up in an IDE</span></a></div>
+                            <div class="toc-item" style="margin-left:10px"><a href="./guide/gettingStarted.html#usingGroovyFX"><strong>2.3</strong><span>Using the GroovyFX Library</span></a></div>
                             
-                            <div class="toc-item" style="margin-left:10px"><a href="./guide/gettingStarted.html#gettingStarted_applicabilityOfConcepts"><strong>2.6</strong><span>Applicability of Concepts</span></a></div>
+                            <div class="toc-item" style="margin-left:10px"><a href="./guide/gettingStarted.html#buildingFromSource"><strong>2.4</strong><span>Building from Source</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:10px"><a href="./guide/gettingStarted.html#helloGroovyFX"><strong>2.5</strong><span>Hello GroovyFX: Your First GroovyFX Program</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:0px"><a href="./guide/basicConcepts.html"><strong>3</strong><span>Basic Concepts</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:10px"><a href="./guide/basicConcepts.html#usingSceneGraphBuilder"><strong>3.1</strong><span>Using SceneGraphBuilder</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:10px"><a href="./guide/basicConcepts.html#nodeAndPropertyNames"><strong>3.2</strong><span>Node and Property Names</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:10px"><a href="./guide/basicConcepts.html#fonts"><strong>3.3</strong><span>Fonts</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:10px"><a href="./guide/basicConcepts.html#paintsAndColors"><strong>3.4</strong><span>Paints and Colors</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:10px"><a href="./guide/basicConcepts.html#insets"><strong>3.5</strong><span>Insets</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:10px"><a href="./guide/basicConcepts.html#geometry"><strong>3.6</strong><span>Geometry</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:10px"><a href="./guide/basicConcepts.html#enumeratedValues"><strong>3.7</strong><span>Enumerated Values</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:0px"><a href="./guide/propertiesAndBinding.html"><strong>4</strong><span>Properties and Binding</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:10px"><a href="./guide/propertiesAndBinding.html#bindingSupport"><strong>4.1</strong><span>Binding Support</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:20px"><a href="./guide/propertiesAndBinding.html#propertyNames"><strong>4.1.1</strong><span>Property Names</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:20px"><a href="./guide/propertiesAndBinding.html#bidirectional"><strong>4.1.2</strong><span>Bidirectional</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:20px"><a href="./guide/propertiesAndBinding.html#unidirectional"><strong>4.1.3</strong><span>Unidirectional</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:20px"><a href="./guide/propertiesAndBinding.html#closureBindings"><strong>4.1.4</strong><span>Closure Binding Expressions</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:10px"><a href="./guide/propertiesAndBinding.html#fxbindable"><strong>4.2</strong><span>FXBindable Properties</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:0px"><a href="./guide/controls.html"><strong>5</strong><span>Controls</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:10px"><a href="./guide/controls.html#labelsAndText"><strong>5.1</strong><span>Labels and Text</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:10px"><a href="./guide/controls.html#buttonsAndMenus"><strong>5.2</strong><span>Buttons and Menus</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:20px"><a href="./guide/controls.html#actions"><strong>5.2.1</strong><span>Actions</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:10px"><a href="./guide/controls.html#choiceBoxComboBox"><strong>5.3</strong><span>ChoiceBox and ComboBox</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:10px"><a href="./guide/controls.html#listsTreesTables"><strong>5.4</strong><span>Lists, Tables, and Trees</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:10px"><a href="./guide/controls.html#fileChoosers"><strong>5.5</strong><span>File Choosers</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:0px"><a href="./guide/layout.html"><strong>6</strong><span>Layout</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:0px"><a href="./guide/graphics.html"><strong>7</strong><span>Graphics and Animation</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:10px"><a href="./guide/graphics.html#shapesPaths"><strong>7.1</strong><span>Shapes and Paths</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:10px"><a href="./guide/graphics.html#colors"><strong>7.2</strong><span>Colors</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:10px"><a href="./guide/graphics.html#gradients"><strong>7.3</strong><span>Gradients</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:10px"><a href="./guide/graphics.html#effects"><strong>7.4</strong><span>Effects</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:10px"><a href="./guide/graphics.html#animation"><strong>7.5</strong><span>Animation</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:0px"><a href="./guide/charts.html"><strong>8</strong><span>Charts</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:10px"><a href="./guide/charts.html#pieCharts"><strong>8.1</strong><span>Pie Charts</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:10px"><a href="./guide/charts.html#xyCharts"><strong>8.2</strong><span>XY Charts</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:0px"><a href="./guide/groovyApplications.html"><strong>9</strong><span>Writing GroovyFX Applications</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:10px"><a href="./guide/groovyApplications.html#structure"><strong>9.1</strong><span>Structuring GroovyFX Applications</span></a></div>
+                            
+                            <div class="toc-item" style="margin-left:10px"><a href="./guide/groovyApplications.html#usingGriffon"><strong>9.2</strong><span>Using the Griffon Application Framework</span></a></div>
                             
                             <div style="clear:both" ></div>
                         </div>
@@ -100,9 +184,6 @@ function addJsClass(el) {
                     
                     <div class="menu-block"><h1 class="menu-title" onclick="toggleRef(this.parentNode.childNodes[1])">SceneGraph</h1><div class="menu-sub">
                         
-                        
-                        <div class="menu-item"><a href="./ref/SceneGraph/Concepts.html">Concepts</a>
-                        </div>
                         
                         <div class="menu-item"><a href="./ref/SceneGraph/Usage.html">Usage</a>
                         </div>

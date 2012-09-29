@@ -2,12 +2,12 @@
                       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-    <title>GroovyFX 0.3.1</title>
+    <title>3.1 Using SceneGraphBuilder 0.3.1</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen, print" title="Style" charset="utf-8"/>
-    <link rel="stylesheet" href="../../css/pdf.css" type="text/css" media="print" title="PDF" charset="utf-8"/>
+    <link rel="stylesheet" href="../css/main.css" type="text/css" media="screen, print" title="Style" charset="utf-8"/>
+    <link rel="stylesheet" href="../css/pdf.css" type="text/css" media="print" title="PDF" charset="utf-8"/>
     <script type="text/javascript">
-function addJsClass(el) {
+function addJsClass() {
     var classes = document.body.className.split(" ");
     classes.push("js");
     document.body.className = classes.join(" ");
@@ -16,14 +16,13 @@ function addJsClass(el) {
 </head>
 
 <body class="body" onload="addJsClass();">
-
 <div id="navigation">
     <ul>
         <li>
             <div id="nav-summary" onmouseover="toggleNavSummary(false)" onmouseout="toggleNavSummary(true)">
                 <a href="../../guide/index.html" class="button">Table of contents</a>
 
-                <div id="nav-summary-childs">
+                <div id="nav-summary-childs" style="display:none;">
                     
                     <div class="toc-item" style="margin-left:0"><a href="../../guide/introduction.html"><strong>1</strong><span>Introduction</span></a>
                     </div>
@@ -74,80 +73,60 @@ function addJsClass(el) {
 <table id="colset" border="0" cellpadding="0" cellspacing="0">
     <tr>
         <td id="col1">
-            <div id="main" class="reference corner-all">
+            <div id="main" class="corner-all">
+
+                
+                    <div class="toc-item prev-left"><a href="../../guide/gettingStarted.html">&lt;&lt; <strong>2</strong><span>Getting Started</span></a></div>
+                
 
                 <span id='toggle-col1' class="toggle">(<a href="#" onclick="localToggle(); return false;">Quick Reference</a>)</span>
 
                 
-<h1>Properties of webView </h1>
-<h2>Self declared properties</h2>
-<ul class="star">
-<li>fontScale</li>
-<li>location</li>
-<li>maxHeight</li>
-<li>maxSize</li>
-<li>maxWidth</li>
-<li>minHeight</li>
-<li>minSize</li>
-<li>minWidth</li>
-<li>prefHeight</li>
-<li>prefSize</li>
-<li>prefWidth</li>
-</ul><p class="paragraph"/><h2>Inherited properties </h2>
-<ul class="star">
-<li>blendMode</li>
-<li>cache</li>
-<li>cacheHint</li>
-<li>clip</li>
-<li>cursor</li>
-<li>depthTest</li>
-<li>disable</li>
-<li>effect</li>
-<li>eventDispatcher</li>
-<li>focusTraversable</li>
-<li>id</li>
-<li>inputMethodRequests</li>
-<li>layoutX</li>
-<li>layoutY</li>
-<li>managed</li>
-<li>mouseTransparent</li>
-<li>onContextMenuRequested</li>
-<li>onDragDetected</li>
-<li>onDragDone</li>
-<li>onDragDropped</li>
-<li>onDragEntered</li>
-<li>onDragExited</li>
-<li>onDragOver</li>
-<li>onInputMethodTextChanged</li>
-<li>onKeyPressed</li>
-<li>onKeyReleased</li>
-<li>onKeyTyped</li>
-<li>onMouseClicked</li>
-<li>onMouseDragEntered</li>
-<li>onMouseDragExited</li>
-<li>onMouseDragOver</li>
-<li>onMouseDragReleased</li>
-<li>onMouseDragged</li>
-<li>onMouseEntered</li>
-<li>onMouseExited</li>
-<li>onMouseMoved</li>
-<li>onMousePressed</li>
-<li>onMouseReleased</li>
-<li>onScroll</li>
-<li>opacity</li>
-<li>pickOnBounds</li>
-<li>rotate</li>
-<li>rotationAxis</li>
-<li>scaleX</li>
-<li>scaleY</li>
-<li>scaleZ</li>
-<li>style</li>
-<li>translateX</li>
-<li>translateY</li>
-<li>translateZ</li>
-<li>userData</li>
-<li>visible</li>
-</ul><p class="paragraph"/>
+                    <div class="toc-item next-right"><a href="../../guide/propertiesAndBinding.html"><strong>4</strong><span>Properties and Binding</span> >></a></div>
+                
+
+
+                <div class="project">
+                    <h1>3.1 Using SceneGraphBuilder - Reference Documentation</h1>
+
+                    <p><strong>Authors:</strong> The Whole GroovyFX Gang</p>
+
+                    <p><strong>Version:</strong> 0.3.1</p>
+
+                    
+                </div>
+
+                
+
+                
+
+<h2 id="usingSceneGraphBuilder">3.1 Using SceneGraphBuilder</h2>
+
+Although SceneGraphBuilder provides all of the builder nodes you will use when creating your GroovyFX graphics and 
+UIs, you will rarely use it directly.  This is because you will typically begin your applications by calling the 
+static  <em class="italic">start</em>  method of the GroovyFX class as shown here.<p class="paragraph"/><div class="code"><pre><span class="java&#45;keyword">import</span> <span class="java&#45;keyword">static</span> groovyx.javafx.GroovyFX.start<p class="paragraph"/>start &#123;
+    stage(title: 'GroovyFX', show: <span class="java&#45;keyword">true</span>) &#123;
+        scene &#123;
+            rectangle(width: 300, height: 100, fill: GREEN)
+        &#125;
+    &#125;
+&#125;</pre></div><p class="paragraph"/>The GroovyFX.start method takes a closure as its only parameter and, behind the scenes, it initiates JavaFX's startup
+sequence.  The  <em class="italic">start</em>  method also ensures that the closure you pass will be executed at the appropriate time during
+the JavaFX startup sequence.  Just before your closure is executed, the  <em class="italic">start</em>  method creates a new SceneGraphBuilder 
+object and sets it as the closure's delegate.  This is the reason that you can call SceneGraphBuilder methods like 
+ <em class="italic">stage</em> ,  <em class="italic">scene</em> , and  <em class="italic">rectangle</em>  within your closure.  Those calls will be automatically forwarded on to the closure's 
+delegate SceneGraphBuilder object when they are not found within the closure's current scope.<p class="paragraph"/>Calling the GroovyFX.start method is the missing piece of the puzzle we referred to in the previous section when we
+first presented this code.<p class="paragraph"/>The following sections describe some of the generalized behavior supported in the SceneGraphBuilder on all
+nodes and attributes defined in the User Guide.<p class="paragraph"/>
+
+
+                <div style="clear:both;margin-top:15px;"></div>
+                
+                    <div class="toc-item prev-left"><a href="../../guide/gettingStarted.html">&lt;&lt; <strong>2</strong><span>Getting Started</span></a></div>
+                
+                    <div class="toc-item next-right"><a href="../../guide/propertiesAndBinding.html"><strong>4</strong><span>Properties and Binding</span> >></a></div>
+                
+                <div style="clear:both"></div>
             </div>
         </td>
         <td id="col2">
@@ -158,26 +137,22 @@ function addJsClass(el) {
                 </div>
                 <div class="menu">
                     
-                    <div class="menu-block">
-                        <h1 class="menu-title" onclick="toggleRef(nextElement(this))">SceneGraph</h1>
-                        <div class="menu-sub">
-                            
+                    <div class="menu-block"><h1 class="menu-title" onclick="toggleRef(this.parentNode.childNodes[1])">SceneGraph</h1><div class="menu-sub">
+                        
                             
                             <div class="menu-item"><a href="../../ref/SceneGraph/Usage.html">Usage</a>
                             </div>
                             
-                        </div>
+                            </div>
                     </div>
                     
-                    <div class="menu-block">
-                        <h1 class="menu-title" onclick="toggleRef(nextElement(this))">webView</h1>
-                        <div class="menu-sub selected">
-                            
+                    <div class="menu-block"><h1 class="menu-title" onclick="toggleRef(this.parentNode.childNodes[1])">webView</h1><div class="menu-sub">
+                        
                             
                             <div class="menu-item"><a href="../../ref/webView/Properties.html">Properties</a>
                             </div>
                             
-                        </div>
+                            </div>
                     </div>
                     
                 </div>
@@ -191,8 +166,7 @@ function addJsClass(el) {
     
 </div>
 
-
-<script type="text/javascript" src="../../js/docs.js"></script>
+<script type="text/javascript" src="../js/docs.js"></script>
 
 </body>
 </html>
