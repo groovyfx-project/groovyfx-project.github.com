@@ -2,7 +2,7 @@
                       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-    <title>2 Getting Started 0.3.1</title>
+    <title>2 Getting Started 0.4.0</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link rel="stylesheet" href="../css/main.css" type="text/css" media="screen, print" title="Style" charset="utf-8"/>
     <link rel="stylesheet" href="../css/pdf.css" type="text/css" media="print" title="PDF" charset="utf-8"/>
@@ -91,7 +91,7 @@ function addJsClass() {
 
                     <p><strong>Authors:</strong> The Whole GroovyFX Gang</p>
 
-                    <p><strong>Version:</strong> 0.3.1</p>
+                    <p><strong>Version:</strong> 0.4.0</p>
 
                     
                 </div>
@@ -100,25 +100,28 @@ function addJsClass() {
                 <div id="table-of-content">
                     <h2>Table of Contents</h2>
                     
-                    <div class="toc-item" style="margin-left:0px"><a href="#whatsNew"><strong>2.1</strong><span>What's new</span></a>
+                    <div class="toc-item" style="margin-left:0px"><a href="#whatsNew_0_4_0"><strong>2.1</strong><span>What's New in v0.4</span></a>
                     </div>
                     
-                    <div class="toc-item" style="margin-left:10px"><a href="#breakingChanges"><strong>2.1.1</strong><span>Breaking Changes</span></a>
+                    <div class="toc-item" style="margin-left:0px"><a href="#whatsNew_0_2_0"><strong>2.2</strong><span>What's New in v0.2</span></a>
                     </div>
                     
-                    <div class="toc-item" style="margin-left:10px"><a href="#improvements"><strong>2.1.2</strong><span>Improvements and Bug Fixes</span></a>
+                    <div class="toc-item" style="margin-left:10px"><a href="#breakingChanges"><strong>2.2.1</strong><span>Breaking Changes</span></a>
                     </div>
                     
-                    <div class="toc-item" style="margin-left:0px"><a href="#requirements"><strong>2.2</strong><span>Installation Requirements</span></a>
+                    <div class="toc-item" style="margin-left:10px"><a href="#improvements"><strong>2.2.2</strong><span>Improvements and Bug Fixes</span></a>
                     </div>
                     
-                    <div class="toc-item" style="margin-left:0px"><a href="#usingGroovyFX"><strong>2.3</strong><span>Using the GroovyFX Library</span></a>
+                    <div class="toc-item" style="margin-left:0px"><a href="#requirements"><strong>2.3</strong><span>Installation Requirements</span></a>
                     </div>
                     
-                    <div class="toc-item" style="margin-left:0px"><a href="#buildingFromSource"><strong>2.4</strong><span>Building from Source</span></a>
+                    <div class="toc-item" style="margin-left:0px"><a href="#usingGroovyFX"><strong>2.4</strong><span>Using the GroovyFX Library</span></a>
                     </div>
                     
-                    <div class="toc-item" style="margin-left:0px"><a href="#helloGroovyFX"><strong>2.5</strong><span>Hello GroovyFX: Your First GroovyFX Program</span></a>
+                    <div class="toc-item" style="margin-left:0px"><a href="#buildingFromSource"><strong>2.5</strong><span>Building from Source</span></a>
+                    </div>
+                    
+                    <div class="toc-item" style="margin-left:0px"><a href="#helloGroovyFX"><strong>2.6</strong><span>Hello GroovyFX: Your First GroovyFX Program</span></a>
                     </div>
                     
                 </div>
@@ -132,13 +135,17 @@ how to use GroovyFX from within your favorite IDE, and how to write your first p
 
 
 
-<h2 id="whatsNew">2.1 What's new</h2>
+<h2 id="whatsNew_0_4_0">2.1 What's New in v0.4</h2>
+GroovyFX version 0.4 includes support for Groovy 2.3, Java 8, and JavaFX 8.<p class="paragraph"/>
+
+
+<h2 id="whatsNew_0_2_0">2.2 What's New in v0.2</h2>
 GroovyFX version 0.2 has a number of fixes, new functionality, and other enhancements.  This includes some 
 changes that are incompatible with version 0.1.  See the <a href="../guide/single.html#breakingChanges" class="guide">Breaking Changes</a> section 
 below for details on these changes.<p class="paragraph"/>
 
 
-<h2 id="breakingChanges">2.1.1 Breaking Changes</h2>
+<h2 id="breakingChanges">2.2.1 Breaking Changes</h2>
 <ul class="star">
 <li>New usage of GroovyFX and SceneGraphBuilder classes</li>
 <li>New Binding</li>
@@ -146,7 +153,7 @@ below for details on these changes.<p class="paragraph"/>
 </ul><p class="paragraph"/>
 
 
-<h2 id="improvements">2.1.2 Improvements and Bug Fixes</h2>
+<h2 id="improvements">2.2.2 Improvements and Bug Fixes</h2>
 JavaFX 2.1 and 2.2 Support
 <ul class="star">
 <li>DirectoryChooser</li>
@@ -163,27 +170,27 @@ JavaFX 2.1 and 2.2 Support
 </ul><p class="paragraph"/>
 
 
-<h2 id="requirements">2.2 Installation Requirements</h2>
+<h2 id="requirements">2.3 Installation Requirements</h2>
 Before installing GroovyFX you will need to install the Java Development Kit (JDK) version 1.6 or above. 
 <a href="http://java.com/en/download/manual.jsp" target="blank">Download the appropriate JDK</a> for your operating system, run the installer, and then set up an environment 
 variable called JAVA_HOME pointing to the location of this installation.
 
 
 
-<h2 id="usingGroovyFX">2.3 Using the GroovyFX Library</h2>
+<h2 id="usingGroovyFX">2.4 Using the GroovyFX Library</h2>
 <h4>Using GroovyFX from Maven Central</h4><p class="paragraph"/>Having GroovyFX in Maven Central (thanks to Sonatype's OSS hosting!) makes it simple to use GroovyFX in 
 everything from simple test scripts to larger projects.  The Maven coordinates are as follows
 <ul class="star">
 <li> <em class="italic">groupId</em> : org.codehaus.groovyfx</li>
 <li> <em class="italic">artifactId</em> : groovyfx</li>
-<li> <em class="italic">version</em> : 0.3.1</li>
+<li> <em class="italic">version</em> : 0.4.0</li>
 </ul><p class="paragraph"/>GroovyFX is simple to inlude in Groovy scripts thanks to Groovy's Grab annotation, a part of the Grape 
-system.  Just include the following line at the top of your script<p class="paragraph"/><div class="code"><pre>@Grab('org.codehaus.groovyfx:groovyfx:0.3.1')</pre></div><p class="paragraph"/><h4>Creating a GroovyFX-Based Project with Gradle</h4><p class="paragraph"/>It is also simple to set up your own GroovyFX-based project using Gradle as the build system.  This sample
+system.  Just include the following line at the top of your script<p class="paragraph"/><div class="code"><pre>@Grab('org.codehaus.groovyfx:groovyfx:0.4.0')</pre></div><p class="paragraph"/><h4>Creating a GroovyFX-Based Project with Gradle</h4><p class="paragraph"/>It is also simple to set up your own GroovyFX-based project using Gradle as the build system.  This sample
 <a href="https://gist.github.com/2712927" target="blank">build.gradle</a> script will get you started.<p class="paragraph"/>Just create a new directory for your project and place the gradle script into it.  Then simply call<p class="paragraph"/><div class="code"><pre>gradle makeDirs</pre></div><p class="paragraph"/>to set up the rest of your project's directory structure.  You will automatically have a dependency on both
 Groovy and GroovyFX.
 
 
-<h2 id="buildingFromSource">2.4 Building from Source</h2>
+<h2 id="buildingFromSource">2.5 Building from Source</h2>
 The project's source code is located on <a href="https://github.com/groovyfx-project/groovyfx" target="blank">GitHub</a>.  You can clone
 the GroovyFX repository using the following <a href="http://git-scm.com/" target="blank">Git</a> command<p class="paragraph"/><div class="code"><pre>git clone git://github.com/groovyfx&#45;project/groovyfx.git</pre></div><p class="paragraph"/><h4>Installation Requirements</h4><p class="paragraph"/>If you are using a JDK prior to Java 7u4, you will need to install the JavaFX 2.1 SDK from 
 <a href="http://www.oracle.com/technetwork/java/javafx/downloads/index.html" target="blank">javafx.com</a>. Once you have downloaded 
@@ -208,7 +215,7 @@ Also, you may have to fix the location for the groovy-all-1.8.6.jar file.
 
 
 
-<h2 id="helloGroovyFX">2.5 Hello GroovyFX: Your First GroovyFX Program</h2>
+<h2 id="helloGroovyFX">2.6 Hello GroovyFX: Your First GroovyFX Program</h2>
 Once you have everything set up, try the following Groovy script to test that your setup is functioning as it should.<p class="paragraph"/><div class="code"><pre>@Grab('org.codehaus.groovyfx:groovyfx:0.2')<p class="paragraph"/><span class="java&#45;keyword">import</span> <span class="java&#45;keyword">static</span> groovyx.javafx.GroovyFX.start<p class="paragraph"/>start &#123;
     stage(title: 'GroovyFX Hello World', visible: <span class="java&#45;keyword">true</span>) &#123;
         scene(fill: BLACK, width: 500, height: 250) &#123;
