@@ -1,221 +1,3811 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-    <head>
-        <title>GroovyFX 0.4.0</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <link rel="stylesheet" href="./css/main.css" type="text/css" media="screen, print" title="Style" charset="utf-8" />
-        <link rel="stylesheet" href="./css/pdf.css" type="text/css" media="print" title="PDF" charset="utf-8" />
-    <script type="text/javascript">
-function addJsClass(el) {
-    var classes = document.body.className.split(" ");
-    classes.push("js");
-    document.body.className = classes.join(" ");
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="generator" content="Asciidoctor 0.1.4">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The GroovyFX Guide</title>
+<style>
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
+@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:500,700);
+
+/* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+    display: block;
 }
-    </script>
-    </head>
 
-    <body class="body" onload="addJsClass();">
-        <div id="navigation">
-            <ul>
-                <li>
-                    <div id="nav-summary" onmouseover="toggleNavSummary(false)" onmouseout="toggleNavSummary(true)">
-                        <a href="./guide/index.html" class="button">Table of contents</a>
-                        <div id="nav-summary-childs" style="display:none;">
-                            
-                            <div class="toc-item" style="margin-left:0"><a href="./guide/introduction.html"><strong>1</strong><span>Introduction</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:0"><a href="./guide/gettingStarted.html"><strong>2</strong><span>Getting Started</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:0"><a href="./guide/basicConcepts.html"><strong>3</strong><span>Basic Concepts</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:0"><a href="./guide/propertiesAndBinding.html"><strong>4</strong><span>Properties and Binding</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:0"><a href="./guide/controls.html"><strong>5</strong><span>Controls</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:0"><a href="./guide/layout.html"><strong>6</strong><span>Layout</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:0"><a href="./guide/graphics.html"><strong>7</strong><span>Graphics and Animation</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:0"><a href="./guide/charts.html"><strong>8</strong><span>Charts</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:0"><a href="./guide/groovyApplications.html"><strong>9</strong><span>Writing GroovyFX Applications</span></a></div>
-                            
-                        </div>
-                    </div>
-                </li>
-                <li class="separator selected">
-                    <a id="ref-button" onclick="localToggle(); return false;" href="#">Quick Reference</a>
-                </li>
-            </ul>
-        </div>
-        <div id="header">
-            <div class="images clearfix">
-                
-                <span id="logo"><a href="http://groovyfx-project.github.com/" target="_blank"><p id="groovyfxlogo"> </p></a></span>
-                
-                
-            </div>
-            <p></p>
-        </div>
+audio, canvas, video {
+    display: inline-block;
+}
 
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
 
-        <table id="colset" border="0" cellpadding="0" cellspacing="0">
-            <tr>
-                <td id="col1">
-                    <div id="main" class="corner-all">
+[hidden] {
+    display: none;
+}
 
-                        <span id='toggle-col1' class="toggle">(<a href="#" onclick="localToggle(); return false;">Quick Reference</a>)</span>
+script {
+    display: none !important;
+}
 
-                        <div class="project">
-                            <h1>GroovyFX - Reference Documentation</h1>
-                            <p><strong>Authors:</strong> The Whole GroovyFX Gang</p>
-                            <p><strong>Version:</strong> 0.4.0</p>
-                            
-                        </div>
+html {
+    background: #fff;
+    color: #000;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
 
-                        
-                        <div id="table-of-content">
-                            <h2>Table of Contents</h2>
-                            
-                            <div class="toc-item" style="margin-left:0px"><a href="./guide/introduction.html"><strong>1</strong><span>Introduction</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:10px"><a href="./guide/introduction.html#credits"><strong>1.1</strong><span>Credits</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:0px"><a href="./guide/gettingStarted.html"><strong>2</strong><span>Getting Started</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:10px"><a href="./guide/gettingStarted.html#whatsNew_0_4_0"><strong>2.1</strong><span>What's New in v0.4</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:10px"><a href="./guide/gettingStarted.html#whatsNew_0_2_0"><strong>2.2</strong><span>What's New in v0.2</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:20px"><a href="./guide/gettingStarted.html#breakingChanges"><strong>2.2.1</strong><span>Breaking Changes</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:20px"><a href="./guide/gettingStarted.html#improvements"><strong>2.2.2</strong><span>Improvements and Bug Fixes</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:10px"><a href="./guide/gettingStarted.html#requirements"><strong>2.3</strong><span>Installation Requirements</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:10px"><a href="./guide/gettingStarted.html#usingGroovyFX"><strong>2.4</strong><span>Using the GroovyFX Library</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:10px"><a href="./guide/gettingStarted.html#buildingFromSource"><strong>2.5</strong><span>Building from Source</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:10px"><a href="./guide/gettingStarted.html#helloGroovyFX"><strong>2.6</strong><span>Hello GroovyFX: Your First GroovyFX Program</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:0px"><a href="./guide/basicConcepts.html"><strong>3</strong><span>Basic Concepts</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:10px"><a href="./guide/basicConcepts.html#usingSceneGraphBuilder"><strong>3.1</strong><span>Using SceneGraphBuilder</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:10px"><a href="./guide/basicConcepts.html#nodeAndPropertyNames"><strong>3.2</strong><span>Node and Property Names</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:10px"><a href="./guide/basicConcepts.html#fonts"><strong>3.3</strong><span>Fonts</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:10px"><a href="./guide/basicConcepts.html#paintsAndColors"><strong>3.4</strong><span>Paints and Colors</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:10px"><a href="./guide/basicConcepts.html#insets"><strong>3.5</strong><span>Insets</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:10px"><a href="./guide/basicConcepts.html#geometry"><strong>3.6</strong><span>Geometry</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:10px"><a href="./guide/basicConcepts.html#enumeratedValues"><strong>3.7</strong><span>Enumerated Values</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:0px"><a href="./guide/propertiesAndBinding.html"><strong>4</strong><span>Properties and Binding</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:10px"><a href="./guide/propertiesAndBinding.html#bindingSupport"><strong>4.1</strong><span>Binding Support</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:20px"><a href="./guide/propertiesAndBinding.html#propertyNames"><strong>4.1.1</strong><span>Property Names</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:20px"><a href="./guide/propertiesAndBinding.html#bidirectional"><strong>4.1.2</strong><span>Bidirectional</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:20px"><a href="./guide/propertiesAndBinding.html#unidirectional"><strong>4.1.3</strong><span>Unidirectional</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:20px"><a href="./guide/propertiesAndBinding.html#closureBindings"><strong>4.1.4</strong><span>Closure Binding Expressions</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:10px"><a href="./guide/propertiesAndBinding.html#fxbindable"><strong>4.2</strong><span>FXBindable Properties</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:0px"><a href="./guide/controls.html"><strong>5</strong><span>Controls</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:10px"><a href="./guide/controls.html#labelsAndText"><strong>5.1</strong><span>Labels and Text</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:10px"><a href="./guide/controls.html#buttonsAndMenus"><strong>5.2</strong><span>Buttons and Menus</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:20px"><a href="./guide/controls.html#actions"><strong>5.2.1</strong><span>Actions</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:10px"><a href="./guide/controls.html#choiceBoxComboBox"><strong>5.3</strong><span>ChoiceBox and ComboBox</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:10px"><a href="./guide/controls.html#listsTreesTables"><strong>5.4</strong><span>Lists, Tables, and Trees</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:10px"><a href="./guide/controls.html#fileChoosers"><strong>5.5</strong><span>File Choosers</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:0px"><a href="./guide/layout.html"><strong>6</strong><span>Layout</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:0px"><a href="./guide/graphics.html"><strong>7</strong><span>Graphics and Animation</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:10px"><a href="./guide/graphics.html#shapesPaths"><strong>7.1</strong><span>Shapes and Paths</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:10px"><a href="./guide/graphics.html#colors"><strong>7.2</strong><span>Colors</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:10px"><a href="./guide/graphics.html#gradients"><strong>7.3</strong><span>Gradients</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:10px"><a href="./guide/graphics.html#effects"><strong>7.4</strong><span>Effects</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:10px"><a href="./guide/graphics.html#animation"><strong>7.5</strong><span>Animation</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:0px"><a href="./guide/charts.html"><strong>8</strong><span>Charts</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:10px"><a href="./guide/charts.html#pieCharts"><strong>8.1</strong><span>Pie Charts</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:10px"><a href="./guide/charts.html#xyCharts"><strong>8.2</strong><span>XY Charts</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:0px"><a href="./guide/groovyApplications.html"><strong>9</strong><span>Writing GroovyFX Applications</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:10px"><a href="./guide/groovyApplications.html#structure"><strong>9.1</strong><span>Structuring GroovyFX Applications</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:10px"><a href="./guide/groovyApplications.html#usingGriffon"><strong>9.2</strong><span>Using the Griffon Application Framework</span></a></div>
-                            
-                            <div style="clear:both" ></div>
-                        </div>
-                        
-                        
-                    </div>
-                </td>
-                <td id="col2">
-            <div class="local clearfix">
-                <div class="local-title">
-                    <a href="./guide/index.html" target="mainFrame">Quick Reference</a>
-                    <span class="toggle">(<a href="#" onclick="localToggle(); return false;">hide</a>)</span>
-                </div>
-                <div class="menu">
-                    
-                    <div class="menu-block"><h1 class="menu-title" onclick="toggleRef(this.parentNode.childNodes[1])">SceneGraph</h1><div class="menu-sub">
-                        
-                        
-                        <div class="menu-item"><a href="./ref/SceneGraph/Usage.html">Usage</a>
-                        </div>
-                        
-                        </div>
-                    </div>
-                    
-                    <div class="menu-block"><h1 class="menu-title" onclick="toggleRef(this.parentNode.childNodes[1])">webView</h1><div class="menu-sub">
-                        
-                        
-                        <div class="menu-item"><a href="./ref/webView/Properties.html">Properties</a>
-                        </div>
-                        
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-        </td>
-            </tr>
-        </table>
+body {
+    margin: 0;
+}
 
-        <div id="footer">
-            Copies of this document may be made for your own use and for distribution to others, provided that you do not charge any fee for such copies and further provided that each copy contains this Copyright Notice, whether distributed in print or electronically.
-            
-        </div>
+a {
+    background: transparent;
+}
 
+a:focus {
+    outline: thin dotted;
+}
 
+a:active, a:hover {
+    outline: 0;
+}
 
-<script type="text/javascript" src="./js/docs.js"></script>
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
 
-    </body>
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+b, strong {
+    font-weight: bold;
+}
+
+dfn {
+    font-style: italic;
+}
+
+hr {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+}
+
+mark {
+    background: #ff0;
+    color: #000;
+}
+
+code, kbd, pre, samp {
+    font-family: 'Source Code Pro', monospace, serif;
+    font-size: 1em;
+}
+
+pre {
+    white-space: pre-wrap;
+}
+
+q {
+    quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+small {
+    font-size: 80%;
+}
+
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+img {
+    border: 0;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+figure {
+    margin: 0;
+}
+
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+    border: 0;
+    padding: 0;
+}
+
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    margin: 0;
+}
+
+button, input {
+    line-height: normal;
+}
+
+button, select {
+    text-transform: none;
+}
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
+button[disabled], html input[disabled] {
+    cursor: default;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+input[type="search"] {
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+textarea {
+    overflow: auto;
+    vertical-align: top;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-size: 100%;
+}
+
+body {
+    background: white;
+    color: #222222;
+    padding: 0;
+    margin: 0;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
+    position: relative;
+    cursor: auto;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+a:focus {
+    outline: none;
+}
+
+img, object, embed {
+    max-width: 100%;
+    height: auto;
+}
+
+object, embed {
+    height: 100%;
+}
+
+img {
+    -ms-interpolation-mode: bicubic;
+}
+
+#map_canvas img, #map_canvas embed, #map_canvas object, .map_canvas img, .map_canvas embed, .map_canvas object {
+    max-width: none !important;
+}
+
+.left {
+    float: left !important;
+}
+
+.right {
+    float: right !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-justify {
+    text-align: justify !important;
+}
+
+.hide {
+    display: none;
+}
+
+.antialiased, body {
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+textarea {
+    height: auto;
+    min-height: 50px;
+}
+
+select {
+    width: 100%;
+}
+
+p.lead, .paragraph.lead > p, #preamble > .sectionbody > .paragraph:first-of-type p {
+    font-size: 1.21875em;
+    line-height: 1.6;
+}
+
+.subheader, #content #toctitle, .admonitionblock td.content > .title, .exampleblock > .title, .imageblock > .title, .videoblock > .title, .listingblock > .title, .literalblock > .title, .openblock > .title, .paragraph > .title, .quoteblock > .title, .sidebarblock > .title, .tableblock > .title, .verseblock > .title, .dlist > .title, .olist > .title, .ulist > .title, .qlist > .title, .hdlist > .title, .tableblock > caption {
+    line-height: 1.4;
+    color: #7a2518;
+    font-weight: 300;
+    margin-top: 0.2em;
+    margin-bottom: 0.5em;
+}
+
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, #toctitle, .sidebarblock > .content > .title, h4, h5, h6, pre, form, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+    direction: ltr;
+}
+
+a {
+    color: #005498;
+    text-decoration: underline;
+    line-height: inherit;
+}
+
+a:hover, a:focus {
+    color: #00467f;
+}
+
+a img {
+    border: none;
+}
+
+p {
+    font-family: inherit;
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 1.25em;
+    text-rendering: optimizeLegibility;
+}
+
+p aside {
+    font-size: 0.875em;
+    line-height: 1.35;
+    font-style: italic;
+}
+
+h1, h2, h3, #toctitle, .sidebarblock > .content > .title, h4, h5, h6 {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    color: #222;
+    text-rendering: optimizeLegibility;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    line-height: 1.2125em;
+}
+
+h1 small, h2 small, h3 small, #toctitle small, .sidebarblock > .content > .title small, h4 small, h5 small, h6 small {
+    font-size: 60%;
+    color: #e99b8f;
+    line-height: 0;
+}
+
+h1 {
+    font-size: 2.125em;
+}
+
+h2 {
+    font-size: 1.6875em;
+    font-weight: bold;
+}
+
+h3, #toctitle, .sidebarblock > .content > .title {
+    font-size: 1.375em;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 1.125em;
+    font-weight: bold;
+}
+
+h5 {
+    font-size: 1.125em;
+    font-weight: bold;
+}
+
+h6 {
+    font-size: 1em;
+}
+
+hr {
+    border: solid #dddddd;
+    border-width: 1px 0 0;
+    clear: both;
+    margin: 1.25em 0 1.1875em;
+    height: 0;
+}
+
+em, i {
+    font-style: italic;
+    line-height: inherit;
+}
+
+strong, b {
+    font-weight: bold;
+    line-height: inherit;
+}
+
+small {
+    font-size: 60%;
+    line-height: inherit;
+}
+
+code {
+    font-family: 'Source Code Pro', Consolas, "Liberation Mono", Courier, monospace;
+    font-weight: normal;
+    color: #6d180b;
+    font-size: 85%;
+}
+
+ul, ol, dl {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 1.25em;
+    list-style-position: outside;
+    font-family: inherit;
+}
+
+ul, ol {
+    margin-left: 1.5em;
+}
+
+ul li ul, ul li ol {
+    margin-left: 1.25em;
+    margin-bottom: 0;
+    font-size: 1em;
+}
+
+ul.square li ul, ul.circle li ul, ul.disc li ul {
+    list-style: inherit;
+}
+
+ul.square {
+    list-style-type: square;
+}
+
+ul.circle {
+    list-style-type: circle;
+}
+
+ul.disc {
+    list-style-type: disc;
+}
+
+ul.no-bullet {
+    list-style: none;
+}
+
+ol li ul, ol li ol {
+    margin-left: 1.25em;
+    margin-bottom: 0;
+}
+
+dl dt {
+    margin-bottom: 0.3125em;
+    font-weight: bold;
+}
+
+dl dd {
+    margin-bottom: 1.25em;
+}
+
+abbr, acronym {
+    text-transform: uppercase;
+    font-size: 90%;
+    color: #222222;
+    border-bottom: 1px dotted #dddddd;
+    cursor: help;
+}
+
+abbr {
+    text-transform: none;
+}
+
+blockquote {
+    margin: 0 0 1.25em;
+    padding: 0.5625em 1.25em 0 1.1875em;
+    border-left: 1px solid #dddddd;
+}
+
+blockquote cite {
+    display: block;
+    font-size: inherit;
+    color: #555555;
+}
+
+blockquote cite:before {
+    content: "\2014 \0020";
+}
+
+blockquote cite a, blockquote cite a:visited {
+    color: #555555;
+}
+
+blockquote, blockquote p {
+    line-height: 1.6;
+    color: #6f6f6f;
+}
+
+.vcard {
+    display: inline-block;
+    margin: 0 0 1.25em 0;
+    border: 1px solid #dddddd;
+    padding: 0.625em 0.75em;
+}
+
+.vcard li {
+    margin: 0;
+    display: block;
+}
+
+.vcard .fn {
+    font-weight: bold;
+    font-size: 0.9375em;
+}
+
+.vevent .summary {
+    font-weight: bold;
+}
+
+.vevent abbr {
+    cursor: auto;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    padding: 0 0.0625em;
+}
+
+@media only screen and (min-width: 768px) {
+    h1, h2, h3, #toctitle, .sidebarblock > .content > .title, h4, h5, h6 {
+        line-height: 1.4;
+    }
+
+    h1 {
+        font-size: 2.75em;
+    }
+
+    h2 {
+        font-size: 2.3125em;
+        font-weight: bold;
+    }
+
+    h3, #toctitle, .sidebarblock > .content > .title {
+        font-size: 1.6875em;
+        font-weight: bold;
+    }
+
+    h4 {
+        font-size: 1.4375em;
+        font-weight: bold;
+    }
+
+    h5 {
+        font-size: 1.3em;
+        font-weight: bold;
+    }
+}
+
+.print-only {
+    display: none !important;
+}
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a, a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+        content: "";
+    }
+
+    pre, blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr, img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p, h2, h3, #toctitle, .sidebarblock > .content > .title {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2, h3, #toctitle, .sidebarblock > .content > .title {
+        page-break-after: avoid;
+    }
+
+    .hide-on-print {
+        display: none !important;
+    }
+
+    .print-only {
+        display: block !important;
+    }
+
+    .hide-for-print {
+        display: none !important;
+    }
+
+    .show-for-print {
+        display: inherit !important;
+    }
+}
+
+table {
+    background: white;
+    margin-bottom: 1.25em;
+    border: solid 1px #dddddd;
+}
+
+table thead, table tfoot {
+    background: whitesmoke;
+    font-weight: bold;
+}
+
+table thead tr th, table thead tr td, table tfoot tr th, table tfoot tr td {
+    padding: 0.5em 0.625em 0.625em;
+    font-size: inherit;
+    color: #222222;
+    text-align: left;
+}
+
+table tr th, table tr td {
+    padding: 0.5625em 0.625em;
+    font-size: inherit;
+    color: #222222;
+}
+
+table tr.even, table tr.alt, table tr:nth-of-type(even) {
+    background: #f9f9f9;
+}
+
+table thead tr th, table tfoot tr th, table tbody tr td, table tr td, table tfoot tr td {
+    display: table-cell;
+    line-height: 1.6;
+}
+
+.clearfix:before, .clearfix:after, .float-group:before, .float-group:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after, .float-group:after {
+    clear: both;
+}
+
+*:not(pre) > code {
+    font-size: 0.9375em;
+    padding: 1px 3px 0;
+    white-space: nowrap;
+    background-color: #f2f2f2;
+    border: 1px solid #cccccc;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    text-shadow: none;
+}
+
+pre, pre > code {
+    line-height: 1.4;
+    color: inherit;
+    font-family: 'Source Code Pro', Consolas, "Liberation Mono", Courier, monospace;
+    font-weight: normal;
+}
+
+kbd.keyseq {
+    color: #555555;
+}
+
+kbd:not(.keyseq) {
+    display: inline-block;
+    color: #222222;
+    font-size: 0.75em;
+    line-height: 1.4;
+    background-color: #F7F7F7;
+    border: 1px solid #ccc;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px white inset;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px white inset;
+    margin: -0.15em 0.15em 0 0.15em;
+    padding: 0.2em 0.6em 0.2em 0.5em;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.keyseq kbd:first-child {
+    margin-left: 0;
+}
+
+.keyseq kbd:last-child {
+    margin-right: 0;
+}
+
+.menuseq, .menu {
+    color: #090909;
+}
+
+p a > code:hover {
+    color: #561309;
+}
+
+#header, #content, #footnotes, #footer {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 62.5em;
+    *zoom: 1;
+    position: relative;
+    padding-left: 0.9375em;
+    padding-right: 0.9375em;
+}
+
+#header:before, #header:after, #content:before, #content:after, #footnotes:before, #footnotes:after, #footer:before, #footer:after {
+    content: " ";
+    display: table;
+}
+
+#header:after, #content:after, #footnotes:after, #footer:after {
+    clear: both;
+}
+
+#header {
+    margin-bottom: 2.5em;
+}
+
+#header > h1 {
+    color: black;
+    font-weight: normal;
+    border-bottom: 1px solid #dddddd;
+    margin-bottom: -28px;
+    padding-bottom: 32px;
+}
+
+#header span {
+    color: #6f6f6f;
+}
+
+#header #revnumber {
+    text-transform: capitalize;
+}
+
+#header br {
+    display: none;
+}
+
+#header br + span {
+    padding-left: 3px;
+}
+
+#header br + span:before {
+    content: "\2013 \0020";
+}
+
+#header br + span.author {
+    padding-left: 0;
+}
+
+#header br + span.author:before {
+    content: ", ";
+}
+
+#toc {
+    border-bottom: 3px double #ebebeb;
+    padding-bottom: 1.25em;
+}
+
+#toc > ul {
+    margin-left: 0.25em;
+}
+
+#toc ul.sectlevel0 > li > a {
+    font-style: italic;
+}
+
+#toc ul.sectlevel0 ul.sectlevel1 {
+    margin-left: 0;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+#toc ul {
+    list-style-type: none;
+}
+
+#toctitle {
+    color: #7a2518;
+}
+
+@media only screen and (min-width: 1280px) {
+    body.toc2 {
+        padding-left: 20em;
+    }
+
+    #toc.toc2 {
+        position: fixed;
+        width: 20em;
+        left: 0;
+        top: 0;
+        border-right: 1px solid #ebebeb;
+        border-bottom: 0;
+        z-index: 1000;
+        padding: 1em;
+        height: 100%;
+        overflow: auto;
+    }
+
+    #toc.toc2 #toctitle {
+        margin-top: 0;
+    }
+
+    #toc.toc2 > ul {
+        font-size: .95em;
+    }
+
+    #toc.toc2 ul ul {
+        margin-left: 0;
+        padding-left: 1.25em;
+    }
+
+    #toc.toc2 ul.sectlevel0 ul.sectlevel1 {
+        padding-left: 0;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
+
+    body.toc2.toc-right {
+        padding-left: 0;
+        padding-right: 20em;
+    }
+
+    body.toc2.toc-right #toc.toc2 {
+        border-right: 0;
+        border-left: 1px solid #ebebeb;
+        left: auto;
+        right: 0;
+    }
+}
+
+#content #toc {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #d9d9d9;
+    margin-bottom: 1.25em;
+    padding: 1.25em;
+    background: #f2f2f2;
+    border-width: 0;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+
+#content #toc > :first-child {
+    margin-top: 0;
+}
+
+#content #toc > :last-child {
+    margin-bottom: 0;
+}
+
+#content #toc a {
+    text-decoration: none;
+}
+
+#content #toctitle {
+    font-weight: bold;
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    padding-left: 0.125em;
+}
+
+#footer {
+    max-width: 100%;
+    background-color: #222222;
+    padding: 1.25em;
+}
+
+#footer-text {
+    color: #dddddd;
+    line-height: 1.44;
+}
+
+.sect1 {
+    padding-bottom: 1.25em;
+}
+
+.sect1 + .sect1 {
+    border-top: 3px double #ebebeb;
+}
+
+#content h1 > a.anchor, h2 > a.anchor, h3 > a.anchor, #toctitle > a.anchor, .sidebarblock > .content > .title > a.anchor, h4 > a.anchor, h5 > a.anchor, h6 > a.anchor {
+    position: absolute;
+    width: 1em;
+    margin-left: -1em;
+    display: block;
+    text-decoration: none;
+    visibility: hidden;
+    text-align: center;
+    font-weight: normal;
+}
+
+#content h1 > a.anchor:before, h2 > a.anchor:before, h3 > a.anchor:before, #toctitle > a.anchor:before, .sidebarblock > .content > .title > a.anchor:before, h4 > a.anchor:before, h5 > a.anchor:before, h6 > a.anchor:before {
+    content: '\00A7';
+    font-size: .85em;
+    vertical-align: text-top;
+    display: block;
+    margin-top: 0.05em;
+}
+
+#content h1:hover > a.anchor, #content h1 > a.anchor:hover, h2:hover > a.anchor, h2 > a.anchor:hover, h3:hover > a.anchor, #toctitle:hover > a.anchor, .sidebarblock > .content > .title:hover > a.anchor, h3 > a.anchor:hover, #toctitle > a.anchor:hover, .sidebarblock > .content > .title > a.anchor:hover, h4:hover > a.anchor, h4 > a.anchor:hover, h5:hover > a.anchor, h5 > a.anchor:hover, h6:hover > a.anchor, h6 > a.anchor:hover {
+    visibility: visible;
+}
+
+#content h1 > a.link, h2 > a.link, h3 > a.link, #toctitle > a.link, .sidebarblock > .content > .title > a.link, h4 > a.link, h5 > a.link, h6 > a.link {
+    color: #ba3925;
+    text-decoration: none;
+}
+
+#content h1 > a.link:hover, h2 > a.link:hover, h3 > a.link:hover, #toctitle > a.link:hover, .sidebarblock > .content > .title > a.link:hover, h4 > a.link:hover, h5 > a.link:hover, h6 > a.link:hover {
+    color: #a53221;
+}
+
+.imageblock, .literalblock, .listingblock, .verseblock, .videoblock {
+    margin-bottom: 1.25em;
+}
+
+.admonitionblock td.content > .title, .exampleblock > .title, .imageblock > .title, .videoblock > .title, .listingblock > .title, .literalblock > .title, .openblock > .title, .paragraph > .title, .quoteblock > .title, .sidebarblock > .title, .tableblock > .title, .verseblock > .title, .dlist > .title, .olist > .title, .ulist > .title, .qlist > .title, .hdlist > .title {
+    text-align: left;
+    font-weight: bold;
+}
+
+.tableblock > caption {
+    text-align: left;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: visible;
+    max-width: 0;
+}
+
+table.tableblock #preamble > .sectionbody > .paragraph:first-of-type p {
+    font-size: inherit;
+}
+
+.admonitionblock > table {
+    border: 0;
+    background: none;
+    width: 100%;
+}
+
+.admonitionblock > table td.icon {
+    text-align: center;
+    width: 80px;
+}
+
+.admonitionblock > table td.icon img {
+    max-width: none;
+}
+
+.admonitionblock > table td.icon .title {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.admonitionblock > table td.content {
+    padding-left: 1.125em;
+    padding-right: 1.25em;
+    border-left: 1px solid #dddddd;
+    color: #6f6f6f;
+}
+
+.admonitionblock > table td.content > :last-child > :last-child {
+    margin-bottom: 0;
+}
+
+.exampleblock > .content {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #e6e6e6;
+    margin-bottom: 1.25em;
+    padding: 1.25em;
+    background: white;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.exampleblock > .content > :first-child {
+    margin-top: 0;
+}
+
+.exampleblock > .content > :last-child {
+    margin-bottom: 0;
+}
+
+.exampleblock > .content h1, .exampleblock > .content h2, .exampleblock > .content h3, .exampleblock > .content #toctitle, .sidebarblock.exampleblock > .content > .title, .exampleblock > .content h4, .exampleblock > .content h5, .exampleblock > .content h6, .exampleblock > .content p {
+    color: #333333;
+}
+
+.exampleblock > .content h1, .exampleblock > .content h2, .exampleblock > .content h3, .exampleblock > .content #toctitle, .sidebarblock.exampleblock > .content > .title, .exampleblock > .content h4, .exampleblock > .content h5, .exampleblock > .content h6 {
+    line-height: 1;
+    margin-bottom: 0.625em;
+}
+
+.exampleblock > .content h1.subheader, .exampleblock > .content h2.subheader, .exampleblock > .content h3.subheader, .exampleblock > .content .subheader#toctitle, .sidebarblock.exampleblock > .content > .subheader.title, .exampleblock > .content h4.subheader, .exampleblock > .content h5.subheader, .exampleblock > .content h6.subheader {
+    line-height: 1.4;
+}
+
+.exampleblock.result > .content {
+    -webkit-box-shadow: 0 1px 8px #d9d9d9;
+    box-shadow: 0 1px 8px #d9d9d9;
+}
+
+.sidebarblock {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #d9d9d9;
+    margin-bottom: 1.25em;
+    padding: 1.25em;
+    background: #f2f2f2;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.sidebarblock > :first-child {
+    margin-top: 0;
+}
+
+.sidebarblock > :last-child {
+    margin-bottom: 0;
+}
+
+.sidebarblock h1, .sidebarblock h2, .sidebarblock h3, .sidebarblock #toctitle, .sidebarblock > .content > .title, .sidebarblock h4, .sidebarblock h5, .sidebarblock h6, .sidebarblock p {
+    color: #333333;
+}
+
+.sidebarblock h1, .sidebarblock h2, .sidebarblock h3, .sidebarblock #toctitle, .sidebarblock > .content > .title, .sidebarblock h4, .sidebarblock h5, .sidebarblock h6 {
+    line-height: 1;
+    margin-bottom: 0.625em;
+}
+
+.sidebarblock h1.subheader, .sidebarblock h2.subheader, .sidebarblock h3.subheader, .sidebarblock .subheader#toctitle, .sidebarblock > .content > .subheader.title, .sidebarblock h4.subheader, .sidebarblock h5.subheader, .sidebarblock h6.subheader {
+    line-height: 1.4;
+}
+
+.sidebarblock > .content > .title {
+    color: #7a2518;
+    margin-top: 0;
+    line-height: 1.6;
+}
+
+.exampleblock > .content > :last-child > :last-child, .exampleblock > .content .olist > ol > li:last-child > :last-child, .exampleblock > .content .ulist > ul > li:last-child > :last-child, .exampleblock > .content .qlist > ol > li:last-child > :last-child, .sidebarblock > .content > :last-child > :last-child, .sidebarblock > .content .olist > ol > li:last-child > :last-child, .sidebarblock > .content .ulist > ul > li:last-child > :last-child, .sidebarblock > .content .qlist > ol > li:last-child > :last-child {
+    margin-bottom: 0;
+}
+
+.literalblock > .content pre, .listingblock > .content pre {
+    background: none;
+    border-width: 1px 0;
+    border-style: dotted;
+    border-color: #bfbfbf;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    padding: 0.75em 0.75em 0.5em 0.75em;
+    word-wrap: break-word;
+}
+
+.literalblock > .content pre.nowrap, .listingblock > .content pre.nowrap {
+    overflow-x: auto;
+    white-space: pre;
+    word-wrap: normal;
+}
+
+.literalblock > .content pre > code, .listingblock > .content pre > code {
+    display: block;
+}
+
+@media only screen {
+    .literalblock > .content pre, .listingblock > .content pre {
+        font-size: 0.8em;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .literalblock > .content pre, .listingblock > .content pre {
+        font-size: 0.9em;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .literalblock > .content pre, .listingblock > .content pre {
+        font-size: 1em;
+    }
+}
+
+.listingblock pre.highlight {
+    padding: 0;
+}
+
+.listingblock pre.highlight > code {
+    padding: 0.75em 0.75em 0.5em 0.75em;
+}
+
+.listingblock > .content {
+    position: relative;
+}
+
+.listingblock:hover code[class*=" language-"]:before {
+    text-transform: uppercase;
+    font-size: 0.9em;
+    color: #999;
+    position: absolute;
+    top: 0.375em;
+    right: 0.375em;
+}
+
+.listingblock:hover code.asciidoc:before {
+    content: "asciidoc";
+}
+
+.listingblock:hover code.clojure:before {
+    content: "clojure";
+}
+
+.listingblock:hover code.css:before {
+    content: "css";
+}
+
+.listingblock:hover code.groovy:before {
+    content: "groovy";
+}
+
+.listingblock:hover code.html:before {
+    content: "html";
+}
+
+.listingblock:hover code.java:before {
+    content: "java";
+}
+
+.listingblock:hover code.javascript:before {
+    content: "javascript";
+}
+
+.listingblock:hover code.python:before {
+    content: "python";
+}
+
+.listingblock:hover code.ruby:before {
+    content: "ruby";
+}
+
+.listingblock:hover code.scss:before {
+    content: "scss";
+}
+
+.listingblock:hover code.xml:before {
+    content: "xml";
+}
+
+.listingblock:hover code.yaml:before {
+    content: "yaml";
+}
+
+.listingblock.terminal pre .command:before {
+    content: attr(data-prompt);
+    padding-right: 0.5em;
+    color: #999;
+}
+
+.listingblock.terminal pre .command:not([data-prompt]):before {
+    content: '$';
+}
+
+table.pyhltable {
+    border: 0;
+    margin-bottom: 0;
+}
+
+table.pyhltable td {
+    vertical-align: top;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+table.pyhltable td.code {
+    padding-left: .75em;
+    padding-right: 0;
+}
+
+.highlight.pygments .lineno, table.pyhltable td:not(.code) {
+    color: #999;
+    padding-left: 0;
+    padding-right: .5em;
+    border-right: 1px solid #dddddd;
+}
+
+.highlight.pygments .lineno {
+    display: inline-block;
+    margin-right: .25em;
+}
+
+table.pyhltable .linenodiv {
+    background-color: transparent !important;
+    padding-right: 0 !important;
+}
+
+.quoteblock {
+    margin: 0 0 1.25em;
+    padding: 0.5625em 1.25em 0 1.1875em;
+    border-left: 1px solid #dddddd;
+}
+
+.quoteblock blockquote {
+    margin: 0 0 1.25em 0;
+    padding: 0 0 0.5625em 0;
+    border: 0;
+}
+
+.quoteblock blockquote > .paragraph:last-child p {
+    margin-bottom: 0;
+}
+
+.quoteblock .attribution {
+    margin-top: -.25em;
+    padding-bottom: 0.5625em;
+    font-size: inherit;
+    color: #555555;
+}
+
+.quoteblock .attribution br {
+    display: none;
+}
+
+.quoteblock .attribution cite {
+    display: block;
+    margin-bottom: 0.625em;
+}
+
+table thead th, table tfoot th {
+    font-weight: bold;
+}
+
+table.tableblock.grid-all {
+    border-collapse: separate;
+    border-spacing: 1px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+}
+
+table.tableblock.frame-topbot, table.tableblock.frame-none {
+    border-left: 0;
+    border-right: 0;
+}
+
+table.tableblock.frame-sides, table.tableblock.frame-none {
+    border-top: 0;
+    border-bottom: 0;
+}
+
+table.tableblock td .paragraph:last-child p > p:last-child, table.tableblock th > p:last-child, table.tableblock td > p:last-child {
+    margin-bottom: 0;
+}
+
+th.tableblock.halign-left, td.tableblock.halign-left {
+    text-align: left;
+}
+
+th.tableblock.halign-right, td.tableblock.halign-right {
+    text-align: right;
+}
+
+th.tableblock.halign-center, td.tableblock.halign-center {
+    text-align: center;
+}
+
+th.tableblock.valign-top, td.tableblock.valign-top {
+    vertical-align: top;
+}
+
+th.tableblock.valign-bottom, td.tableblock.valign-bottom {
+    vertical-align: bottom;
+}
+
+th.tableblock.valign-middle, td.tableblock.valign-middle {
+    vertical-align: middle;
+}
+
+tbody tr th {
+    display: table-cell;
+    line-height: 1.6;
+    background: whitesmoke;
+}
+
+tbody tr th, tbody tr th p, tfoot tr th, tfoot tr th p {
+    color: #222222;
+    font-weight: bold;
+}
+
+td > div.verse {
+    white-space: pre;
+}
+
+ol {
+    margin-left: 1.75em;
+}
+
+ul li ol {
+    margin-left: 1.5em;
+}
+
+dl dd {
+    margin-left: 1.125em;
+}
+
+dl dd:last-child, dl dd:last-child > :last-child {
+    margin-bottom: 0;
+}
+
+ol > li p, ul > li p, ul dd, ol dd, .olist .olist, .ulist .ulist, .ulist .olist, .olist .ulist {
+    margin-bottom: 0.625em;
+}
+
+ul.unstyled, ol.unnumbered, ul.checklist, ul.none {
+    list-style-type: none;
+}
+
+ul.unstyled, ol.unnumbered, ul.checklist {
+    margin-left: 0.625em;
+}
+
+ul.checklist li > p:first-child > i[class^="icon-check"]:first-child, ul.checklist li > p:first-child > input[type="checkbox"]:first-child {
+    margin-right: 0.25em;
+}
+
+ul.checklist li > p:first-child > input[type="checkbox"]:first-child {
+    position: relative;
+    top: 1px;
+}
+
+ul.inline {
+    margin: 0 auto 0.625em auto;
+    margin-left: -1.375em;
+    margin-right: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+
+ul.inline > li {
+    list-style: none;
+    float: left;
+    margin-left: 1.375em;
+    display: block;
+}
+
+ul.inline > li > * {
+    display: block;
+}
+
+.unstyled dl dt {
+    font-weight: normal;
+    font-style: normal;
+}
+
+ol.arabic {
+    list-style-type: decimal;
+}
+
+ol.decimal {
+    list-style-type: decimal-leading-zero;
+}
+
+ol.loweralpha {
+    list-style-type: lower-alpha;
+}
+
+ol.upperalpha {
+    list-style-type: upper-alpha;
+}
+
+ol.lowerroman {
+    list-style-type: lower-roman;
+}
+
+ol.upperroman {
+    list-style-type: upper-roman;
+}
+
+ol.lowergreek {
+    list-style-type: lower-greek;
+}
+
+.hdlist > table, .colist > table {
+    border: 0;
+    background: none;
+}
+
+.hdlist > table > tbody > tr, .colist > table > tbody > tr {
+    background: none;
+}
+
+td.hdlist1 {
+    padding-right: .8em;
+    font-weight: bold;
+}
+
+td.hdlist1, td.hdlist2 {
+    vertical-align: top;
+}
+
+.literalblock + .colist, .listingblock + .colist {
+    margin-top: -0.5em;
+}
+
+.colist > table tr > td:first-of-type {
+    padding: 0 .8em;
+    line-height: 1;
+}
+
+.colist > table tr > td:last-of-type {
+    padding: 0.25em 0;
+}
+
+.qanda > ol > li > p > em:only-child {
+    color: #00467f;
+}
+
+.thumb, .th {
+    line-height: 0;
+    display: inline-block;
+    border: solid 4px white;
+    -webkit-box-shadow: 0 0 0 1px #dddddd;
+    box-shadow: 0 0 0 1px #dddddd;
+}
+
+.imageblock.left, .imageblock[style*="float: left"] {
+    margin: 0.25em 0.625em 1.25em 0;
+}
+
+.imageblock.right, .imageblock[style*="float: right"] {
+    margin: 0.25em 0 1.25em 0.625em;
+}
+
+.imageblock > .title {
+    margin-bottom: 0;
+}
+
+.imageblock.thumb, .imageblock.th {
+    border-width: 6px;
+}
+
+.imageblock.thumb > .title, .imageblock.th > .title {
+    padding: 0 0.125em;
+}
+
+.image.left, .image.right {
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+    display: inline-block;
+    line-height: 0;
+}
+
+.image.left {
+    margin-right: 0.625em;
+}
+
+.image.right {
+    margin-left: 0.625em;
+}
+
+a.image {
+    text-decoration: none;
+}
+
+span.footnote, span.footnoteref {
+    vertical-align: super;
+    font-size: 0.875em;
+}
+
+span.footnote a, span.footnoteref a {
+    text-decoration: none;
+}
+
+#footnotes {
+    padding-top: 0.75em;
+    padding-bottom: 0.75em;
+    margin-bottom: 0.625em;
+}
+
+#footnotes hr {
+    width: 20%;
+    min-width: 6.25em;
+    margin: -.25em 0 .75em 0;
+    border-width: 1px 0 0 0;
+}
+
+#footnotes .footnote {
+    padding: 0 0.375em;
+    line-height: 1.3;
+    font-size: 0.875em;
+    margin-left: 1.2em;
+    text-indent: -1.2em;
+    margin-bottom: .2em;
+}
+
+#footnotes .footnote a:first-of-type {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#footnotes .footnote:last-of-type {
+    margin-bottom: 0;
+}
+
+#content #footnotes {
+    margin-top: -0.625em;
+    margin-bottom: 0;
+    padding: 0.75em 0;
+}
+
+.gist .file-data > table {
+    border: none;
+    background: #fff;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.gist .file-data > table td.line-data {
+    width: 99%;
+}
+
+div.unbreakable {
+    page-break-inside: avoid;
+}
+
+.big {
+    font-size: larger;
+}
+
+.small {
+    font-size: smaller;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.overline {
+    text-decoration: overline;
+}
+
+.line-through {
+    text-decoration: line-through;
+}
+
+.aqua {
+    color: #00bfbf;
+}
+
+.aqua-background {
+    background-color: #00fafa;
+}
+
+.black {
+    color: black;
+}
+
+.black-background {
+    background-color: black;
+}
+
+.blue {
+    color: #0000bf;
+}
+
+.blue-background {
+    background-color: #0000fa;
+}
+
+.fuchsia {
+    color: #bf00bf;
+}
+
+.fuchsia-background {
+    background-color: #fa00fa;
+}
+
+.gray {
+    color: #606060;
+}
+
+.gray-background {
+    background-color: #7d7d7d;
+}
+
+.green {
+    color: #006000;
+}
+
+.green-background {
+    background-color: #007d00;
+}
+
+.lime {
+    color: #00bf00;
+}
+
+.lime-background {
+    background-color: #00fa00;
+}
+
+.maroon {
+    color: #600000;
+}
+
+.maroon-background {
+    background-color: #7d0000;
+}
+
+.navy {
+    color: #000060;
+}
+
+.navy-background {
+    background-color: #00007d;
+}
+
+.olive {
+    color: #606000;
+}
+
+.olive-background {
+    background-color: #7d7d00;
+}
+
+.purple {
+    color: #600060;
+}
+
+.purple-background {
+    background-color: #7d007d;
+}
+
+.red {
+    color: #bf0000;
+}
+
+.red-background {
+    background-color: #fa0000;
+}
+
+.silver {
+    color: #909090;
+}
+
+.silver-background {
+    background-color: #bcbcbc;
+}
+
+.teal {
+    color: #006060;
+}
+
+.teal-background {
+    background-color: #007d7d;
+}
+
+.white {
+    color: #bfbfbf;
+}
+
+.white-background {
+    background-color: #fafafa;
+}
+
+.yellow {
+    color: #bfbf00;
+}
+
+.yellow-background {
+    background-color: #fafa00;
+}
+
+span.icon > [class^="icon-"], span.icon > [class*=" icon-"] {
+    cursor: default;
+}
+
+.admonitionblock td.icon [class^="icon-"]:before {
+    font-size: 2.5em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    cursor: default;
+}
+
+.admonitionblock td.icon .icon-note:before {
+    content: "\f05a";
+    color: #4298b8;
+}
+
+.admonitionblock td.icon .icon-tip:before {
+    content: "\f0eb";
+    text-shadow: 1px 1px 2px rgba(155, 155, 0, 0.8);
+    color: #ffe400;
+}
+
+.admonitionblock td.icon .icon-warning:before {
+    content: "\f071";
+    color: #ff8c00;
+}
+
+.admonitionblock td.icon .icon-caution:before {
+    content: "\f06d";
+    color: #db4800;
+}
+
+.admonitionblock td.icon .icon-important:before {
+    content: "\f06a";
+    color: #db4800;
+}
+
+.conum {
+    display: inline-block;
+    color: white !important;
+    background-color: #222222;
+    -webkit-border-radius: 100px;
+    border-radius: 100px;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 20px;
+    font-family: Arial, sans-serif;
+    font-style: normal;
+    position: relative;
+    top: -2px;
+    letter-spacing: -1px;
+}
+
+.conum * {
+    color: white !important;
+}
+
+.conum + b {
+    display: none;
+}
+
+.conum:after {
+    content: attr(data-value);
+}
+
+.conum:not([data-value]):empty {
+    display: none;
+}
+
+#toc.toc2 {
+    background: #ededed;
+}
+
+.literalblock > .content > pre, .listingblock > .content > pre {
+    -webkit-border-radius: 0;
+    border-radius: 0;
+}
+</style>
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.min.css">
+<style>
+/* Foundation stylesheet for CodeRay (to match GitHub theme) | MIT License | http://foundation.zurb.com */
+table.CodeRay { border-collapse: collapse; padding: 2px; margin-bottom: 0; border: 0; background: transparent; }
+table.CodeRay td { padding: 0 .5em; vertical-align: top; }
+table.CodeRay td.line-numbers { text-align: right; color: #999; border-right: 1px solid #e5e5e5; padding-left: 0; }
+span.line-numbers { border-right: 1px solid #E5E5E5; color: #999; display: inline-block; margin-right: 0.5em; padding-right: 0.5em; }
+.CodeRay td.line-numbers strong, .CodeRay span.line-numbers strong { font-weight: normal; }
+.CodeRay .debug { color: white !important; background: blue !important; }
+.CodeRay .annotation { color: #007; }
+.CodeRay .attribute-name { color: #f08; }
+.CodeRay .attribute-value { color: #700; }
+.CodeRay .binary { color: #509; }
+.CodeRay .comment  { color: #999; font-style: italic; }
+.CodeRay .char { color: #04D; }
+.CodeRay .char .content { color: #04D; }
+.CodeRay .char .delimiter { color: #039; }
+.CodeRay .class { color: #458; }
+.CodeRay .complex { color: #A08; }
+.CodeRay .constant { color: teal; }
+.CodeRay .color { color: #0A0; }
+.CodeRay .class-variable { color: #369; }
+.CodeRay .decorator { color: #B0B; }
+.CodeRay .definition { color: #099; }
+.CodeRay .directive { color: #088; }
+.CodeRay .delimiter { color: black; }
+.CodeRay .doc { color: #970; }
+.CodeRay .doctype { color: #34b; }
+.CodeRay .doc-string { color: #D42; }
+.CodeRay .escape  { color: #666; }
+.CodeRay .entity { color: #800; }
+.CodeRay .error { color: #808; }
+.CodeRay .exception { color: #C00; }
+.CodeRay .filename { color: #099; }
+.CodeRay .function { color: #900; }
+.CodeRay .global-variable { color: teal; }
+.CodeRay .hex { color: #058; }
+.CodeRay .integer  { color: #099; }
+.CodeRay .include { color: #B44; }
+.CodeRay .inline { color: black; }
+.CodeRay .inline .inline { background: #ccc; }
+.CodeRay .inline .inline .inline { background: #bbb; }
+.CodeRay .inline .inline-delimiter { color: #D14; }
+.CodeRay .inline-delimiter { color: #D14; }
+.CodeRay .important { color: #f00; }
+.CodeRay .interpreted { color: #B2B; }
+.CodeRay .instance-variable { color: teal; }
+.CodeRay .label { color: #970; }
+.CodeRay .local-variable { color: #963; }
+.CodeRay .octal { color: #40E; }
+.CodeRay .predefined { color: #369; }
+.CodeRay .preprocessor { color: #579; }
+.CodeRay .pseudo-class { color: #00C; }
+.CodeRay .predefined-type { color: #074; }
+.CodeRay .reserved, .keyword  { color: #000; }
+.CodeRay .key { color: #808; }
+.CodeRay .key .delimiter { color: #606; }
+.CodeRay .key .char { color: #80f; }
+.CodeRay .value { color: #088; }
+.CodeRay .regexp { background-color: #fff0ff; }
+.CodeRay .regexp .content { color: #808; }
+.CodeRay .regexp .delimiter { color: #404; }
+.CodeRay .regexp .modifier { color: #C2C; }
+.CodeRay .regexp .function  { color: #404; font-weight: bold; }
+.CodeRay .string { color: #D20; }
+.CodeRay .string .string { }
+.CodeRay .string .string .string { background-color: #ffd0d0; }
+.CodeRay .string .content { color: #D14; }
+.CodeRay .string .char { color: #D14; }
+.CodeRay .string .delimiter { color: #D14; }
+.CodeRay .shell { color: #D14; }
+.CodeRay .shell .content { }
+.CodeRay .shell .delimiter { color: #D14; }
+.CodeRay .symbol { color: #990073; }
+.CodeRay .symbol .content { color: #A60; }
+.CodeRay .symbol .delimiter { color: #630; }
+.CodeRay .tag, .CodeRay .attribute-name { color: #070; }
+.CodeRay .tag-special { color: #D70; }
+.CodeRay .type { color: #339; }
+.CodeRay .variable  { color: #036; }
+.CodeRay .insert { background: #afa; }
+.CodeRay .delete { background: #faa; }
+.CodeRay .change { color: #aaf; background: #007; }
+.CodeRay .head { color: #f8f; background: #505; }
+.CodeRay .insert .insert { color: #080; }
+.CodeRay .delete .delete { color: #800; }
+.CodeRay .change .change { color: #66f; }
+.CodeRay .head .head { color: #f4f; }
+
+</style>
+</head>
+<body class="book toc2 toc-left">
+<div id="header">
+<h1>The GroovyFX Guide</h1>
+<span id="author" class="author">Dean Iverson, Dierk Koenig, Russel Winder, Andres Almiray</span><br>
+<span id="revnumber">version 0.4.1-SNAPSHOT</span>
+<br><span id="revremark">The easiest way to write JavaFX 2.0 applications in Groovy</span>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_introduction">1. Introduction</a></li>
+<li>
+<ul class="sectlevel2">
+<li><a href="#_the_groovyfx_committers">1.1. The GroovyFX Committers</a></li>
+<li>
+<ul class="sectlevel3">
+<li><a href="#_other_contributions">1.1.1. Other Contributions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_getting_started">2. Getting Started</a></li>
+<li>
+<ul class="sectlevel2">
+<li><a href="#_what_s_new_in_version_0_4_0">2.1. What&#8217;s New in Version 0.4.0</a></li>
+<li><a href="#_what_s_new_in_version_0_2_0">2.2. What&#8217;s New in Version 0.2.0</a></li>
+<li>
+<ul class="sectlevel3">
+<li><a href="#_improvements">2.2.1. Improvements</a></li>
+<li><a href="#_breaking_changes">2.2.2. Breaking Changes</a></li>
+</ul>
+</li>
+<li><a href="#_installation_requirements">2.3. Installation Requirements</a></li>
+<li><a href="#_using_the_groovyfx_library">2.4. Using the GroovyFX Library</a></li>
+<li>
+<ul class="sectlevel3">
+<li><a href="#_maven_central">2.4.1. Maven Central</a></li>
+<li><a href="#_creating_a_groovyfx_based_project_with_gradle">2.4.2. Creating a GroovyFX-Based Project with Gradle</a></li>
+</ul>
+</li>
+<li><a href="#_building_from_source">2.5. Building from Source</a></li>
+<li>
+<ul class="sectlevel3">
+<li><a href="#_installation_requirements_2">2.5.1. Installation Requirements</a></li>
+<li><a href="#_building_with_gradle">2.5.2. Building with Gradle</a></li>
+<li><a href="#_building_with_intellij_idea">2.5.3. Building with Intellij IDEA</a></li>
+<li><a href="#_building_with_netbeans">2.5.4. Building with NetBeans</a></li>
+</ul>
+</li>
+<li><a href="#_hello_groovyfx_your_first_groovyfx_program">2.6. Hello GroovyFX: Your First GroovyFX Program</a></li>
+</ul>
+</li>
+<li><a href="#_basic_concepts">3. Basic Concepts</a></li>
+<li>
+<ul class="sectlevel2">
+<li><a href="#_using_scenegraphbuilder">3.1. Using SceneGraphBuilder</a></li>
+<li><a href="#_node_and_property_names">3.2. Node and Property Names</a></li>
+<li><a href="#_fonts">3.3. Fonts</a></li>
+<li><a href="#_paints_and_colors">3.4. Paints and Colors</a></li>
+<li><a href="#_insets">3.5. Insets</a></li>
+<li><a href="#_geometry">3.6. Geometry</a></li>
+<li><a href="#_enumerated_values">3.7. Enumerated Values</a></li>
+</ul>
+</li>
+<li><a href="#_properties_and_binding">4. Properties and Binding</a></li>
+<li>
+<ul class="sectlevel2">
+<li><a href="#_binding_support">4.1. Binding Support</a></li>
+<li>
+<ul class="sectlevel3">
+<li><a href="#_property_names">4.1.1. Property Names</a></li>
+<li><a href="#_bidirectional">4.1.2. Bidirectional</a></li>
+<li><a href="#_unidirectional">4.1.3. Unidirectional</a></li>
+<li><a href="#_closure_binding_expressions">4.1.4. Closure Binding Expressions</a></li>
+<li><a href="#_fxbindable_properties">4.1.5. FXBindable Properties</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_controls">5. Controls</a></li>
+<li>
+<ul class="sectlevel2">
+<li><a href="#_labels_and_text">5.1. Labels and Text</a></li>
+<li><a href="#_buttons_and_menus">5.2. Buttons and Menus</a></li>
+<li>
+<ul class="sectlevel3">
+<li><a href="#_togglegroups">5.2.1. ToggleGroups</a></li>
+<li><a href="#_actions">5.2.2. Actions</a></li>
+<li>
+<ul class="sectlevel4">
+<li><a href="#_javafx_components_supporting_action">JavaFX Components Supporting Action</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_choicebox_and_combobox">5.3. ChoiceBox and ComboBox</a></li>
+<li><a href="#_lists_tables_and_trees">5.4. Lists, Tables, and Trees</a></li>
+<li><a href="#_file_choosers">5.5. File Choosers</a></li>
+</ul>
+</li>
+<li><a href="#_layout">6. Layout</a></li>
+<li><a href="#_graphics_and_animation">7. Graphics and Animation</a></li>
+<li>
+<ul class="sectlevel2">
+<li><a href="#_shapes_and_paths">7.1. Shapes and Paths</a></li>
+<li><a href="#_colors">7.2. Colors</a></li>
+<li><a href="#_gradients">7.3. Gradients</a></li>
+<li><a href="#_effects">7.4. Effects</a></li>
+<li><a href="#_animation">7.5. Animation</a></li>
+</ul>
+</li>
+<li><a href="#_charts">8. Charts</a></li>
+<li>
+<ul class="sectlevel2">
+<li><a href="#_pie_charts">8.1. Pie Charts</a></li>
+<li><a href="#_xy_charts">8.2. XY Charts</a></li>
+</ul>
+</li>
+<li><a href="#_writing_applications">9. Writing Applications</a></li>
+<li>
+<ul class="sectlevel2">
+<li><a href="#_structuring_groovyfx_applications">9.1. Structuring GroovyFX Applications</a></li>
+<li><a href="#_using_the_griffon_application_framework">9.2. Using the Griffon Application Framework</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_introduction"><a class="anchor" href="#_introduction"></a>1. Introduction</h2>
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="icon-note" title="Note"></i>
+</td>
+<td class="content">
+Please note that this documentation is still under construction.  There are a
+lot of missing pieces.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Client-side Java development took a major step forward with the introduction of
+Oracle&#8217;s <a href="http://www.javafx.com">JavaFX</a> library. JavaFX is a modern, rich client
+technology stack that enables Java developers to quickly and easily create
+desktop clients with functionality and richness that rival, and even surpass,
+that of native clients and web applications.</p>
+</div>
+<div class="paragraph">
+<p>GroovyFX is a library that makes working with JavaFX much simpler and more
+natural. GroovyFX is focused on exploiting the power of the
+<a href="http://groovy.codehaus.org">Groovy</a> language to make JavaFX development easier
+and more concise than what is possible in Java. GroovyFX also leverages Groovy&#8217;s
+powerful DSL features and AST transformations to eliminate boilerplate, making
+GroovyFX code easier to write and, just as importantly, easier to read.</p>
+</div>
+<div class="paragraph">
+<p>GroovyFX provides the SceneGraphBuilder object, which offers support for:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>All of the JavaFX core controls</p>
+</li>
+<li>
+<p>All of the core JavaFX layout containers</p>
+</li>
+<li>
+<p>Shapes, colors, and gradients</p>
+</li>
+<li>
+<p>Video and audio (including H.264 support)</p>
+</li>
+<li>
+<p>Bar charts, line charts, pie charts, and the rest of core JavaFX charts</p>
+</li>
+<li>
+<p>Full property and binding support</p>
+</li>
+<li>
+<p>The @FXBindable annotation, which eliminates the boilerplate required to
+define JavaFX properties</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>All of these are made easy to use through the power of the language and the
+extensive use of Domain Specific Languages (DSLs).  This documentation will take
+you from getting started with GroovyFX all the way to building full applications
+with the power of JavaFX and Groovy.</p>
+</div>
+<div class="sect2">
+<h3 id="_the_groovyfx_committers"><a class="anchor" href="#_the_groovyfx_committers"></a>1.1. The GroovyFX Committers</h3>
+<div class="paragraph">
+<p>The GroovyFX team is made up of the following core committers.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Jim Clarke</p>
+</li>
+<li>
+<p>Dean Iverson</p>
+</li>
+<li>
+<p>Dierk König</p>
+</li>
+<li>
+<p>Andres Almiray</p>
+</li>
+<li>
+<p>Russel Winder</p>
+</li>
+<li>
+<p>Danno Ferrin</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="_other_contributions"><a class="anchor" href="#_other_contributions"></a>1.1.1. Other Contributions</h4>
+<div class="paragraph">
+<p>We would also like to thank and recognize the following people who have
+contribtued pull requests to GroovyFX.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Tobias Schulte, nested tableColumn support</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_getting_started"><a class="anchor" href="#_getting_started"></a>2. Getting Started</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_what_s_new_in_version_0_4_0"><a class="anchor" href="#_what_s_new_in_version_0_4_0"></a>2.1. What&#8217;s New in Version 0.4.0</h3>
+<div class="paragraph">
+<p>GroovyFX version 0.4 includes support for Groovy 2.3, Java 8, and JavaFX 8.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_what_s_new_in_version_0_2_0"><a class="anchor" href="#_what_s_new_in_version_0_2_0"></a>2.2. What&#8217;s New in Version 0.2.0</h3>
+<div class="paragraph">
+<p>GroovyFX version 0.2 has a number of fixes, new functionality, and other
+enhancements.  This includes some changes that are incompatible with version
+0.1.  See the Breaking Changes section below for details on these changes.</p>
+</div>
+<div class="sect3">
+<h4 id="_improvements"><a class="anchor" href="#_improvements"></a>2.2.1. Improvements</h4>
+<div class="paragraph">
+<p>The following JavaFX 2.1 and 2.2 features have been added:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>DirectoryChooser</p>
+</li>
+<li>
+<p>ComboBox</p>
+</li>
+<li>
+<p>StackedBarChart and StackedAreaChart</p>
+</li>
+<li>
+<p>Canvas</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Other improvements:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage of Node IDs</p>
+</li>
+<li>
+<p>Actions</p>
+</li>
+<li>
+<p>Nested Table Column Support</p>
+</li>
+<li>
+<p>onSelect Pseudo-Property Added to ListView, TreeView, ComboBox, ChoiceBox,
+and TabPane</p>
+</li>
+<li>
+<p>Cell Factory Support</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_breaking_changes"><a class="anchor" href="#_breaking_changes"></a>2.2.2. Breaking Changes</h4>
+<div class="paragraph">
+<p>The following changes are not backwards compatible with previous versions.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>New usage of GroovyFX and SceneGraphBuilder classes</p>
+</li>
+<li>
+<p>New Binding</p>
+</li>
+<li>
+<p>TimelineBuilder went away</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_installation_requirements"><a class="anchor" href="#_installation_requirements"></a>2.3. Installation Requirements</h3>
+<div class="paragraph">
+<p>Before installing GroovyFX you will need to install the Java Development Kit
+(JDK) version 1.6 or above.</p>
+</div>
+<div class="paragraph">
+<p><a href="http://java.com/en/download/manual.jsp">Download the appropriate JDK</a> for your
+operating system, run the installer, and then set up an environment
+variable named JAVA_HOME pointing to the location of this installation.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_using_the_groovyfx_library"><a class="anchor" href="#_using_the_groovyfx_library"></a>2.4. Using the GroovyFX Library</h3>
+<div class="paragraph">
+<p>There are several ways in which you can include GroovyFx in your projects.</p>
+</div>
+<div class="sect3">
+<h4 id="_maven_central"><a class="anchor" href="#_maven_central"></a>2.4.1. Maven Central</h4>
+<div class="paragraph">
+<p>Having GroovyFX in Maven Central (thanks to Sonatype&#8217;s OSS hosting!) makes it
+simple to use GroovyFX in everything from simple test scripts to larger
+projects.  The Maven coordinates are as follows</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><em>groupId</em>: org.codehaus.groovyfx</p>
+</li>
+<li>
+<p><em>artifactId</em>: groovyfx</p>
+</li>
+<li>
+<p><em>version</em>: 0.4.0</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>GroovyFX is simple to inlude in Groovy scripts thanks to Groovy&#8217;s Grab
+annotation, a part of the Grape system.  Just include the following line at the
+top of your script</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code class="groovy language-groovy">Testing.groovy
+<span class="annotation">@Grab</span>(<span class="string"><span class="delimiter">'</span><span class="content">org.codehaus.groovyfx:groovyfx:0.4.0</span><span class="delimiter">'</span></span>)</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_creating_a_groovyfx_based_project_with_gradle"><a class="anchor" href="#_creating_a_groovyfx_based_project_with_gradle"></a>2.4.2. Creating a GroovyFX-Based Project with Gradle</h4>
+<div class="paragraph">
+<p>It is also simple to set up your own GroovyFX-based project using Gradle as the
+build system.  This sample build.gradle script will get you started.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code class="groovy language-groovy">apply <span class="key">plugin</span>:<span class="string"><span class="delimiter">'</span><span class="content">groovy</span><span class="delimiter">'</span></span>
+
+project.ext.set(<span class="string"><span class="delimiter">'</span><span class="content">javafxHome</span><span class="delimiter">'</span></span>, <span class="predefined-type">System</span>.env[<span class="string"><span class="delimiter">'</span><span class="content">JAVAFX_HOME</span><span class="delimiter">'</span></span>]
+
+repositories { mavenCentral() }
+
+dependencies {
+    groovy <span class="string"><span class="delimiter">'</span><span class="content">org.codehaus.groovy:groovy-all:1.8.6</span><span class="delimiter">'</span></span>
+    compile <span class="string"><span class="delimiter">'</span><span class="content">org.codehaus.groovyfx:groovyfx:0.4.0</span><span class="delimiter">'</span></span>
+    compile files(<span class="string"><span class="delimiter">&quot;</span><span class="inline"><span class="inline-delimiter">${</span>javafxHome<span class="inline-delimiter">}</span></span><span class="content">/rt/lib/jfxrt.jar</span><span class="delimiter">&quot;</span></span>)
+}
+
+task run(<span class="key">type</span>: JavaExec) {
+    main = <span class="string"><span class="delimiter">'</span><span class="content">helloGroovyFX</span><span class="delimiter">'</span></span>
+    classpath sourceSets.main.runtimeClasspath
+}
+
+task makeDirs(<span class="key">description</span>:<span class="string"><span class="delimiter">'</span><span class="content">make all dirs for project setup</span><span class="delimiter">'</span></span>) &lt;&lt; {
+    <span class="keyword">def</span> sources = [sourceSets.main, sourceSets.test]
+    sources*.allSource*.srcDirs.flatten().each { <span class="predefined-type">File</span> srcDir -&gt;
+        println <span class="string"><span class="delimiter">&quot;</span><span class="content">making </span><span class="inline"><span class="inline-delimiter">$</span>srcDir</span><span class="delimiter">&quot;</span></span>
+        srcDir.mkdirs()
+    }
+}
+
+task wrap(<span class="key">type</span>:Wrapper, <span class="key">description</span>:<span class="string"><span class="delimiter">&quot;</span><span class="content">create a gradlew</span><span class="delimiter">&quot;</span></span>) {
+    gradleVersion = <span class="string"><span class="delimiter">'</span><span class="content">1.0-rc-3</span><span class="delimiter">'</span></span>
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Just create a new directory for your project and place the gradle script into
+it.  Then simply call</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code class="groovy language-groovy">gradle makeDirs</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>to set up the rest of your project&#8217;s directory structure.  You will
+automatically have a dependency on both Groovy and GroovyFX.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_building_from_source"><a class="anchor" href="#_building_from_source"></a>2.5. Building from Source</h3>
+<div class="paragraph">
+<p>The project&#8217;s source code is located on
+<a href="https://github.com/groovyfx-project/groovyfx">GitHub</a>.  You can clone the
+GroovyFX repository using the following <a href="http://git-scm.com/">Git</a> command</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code>git clone git://github.com/groovyfx-project/groovyfx.git</code></pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_installation_requirements_2"><a class="anchor" href="#_installation_requirements_2"></a>2.5.1. Installation Requirements</h4>
+<div class="paragraph">
+<p>If you are using a JDK prior to Java 7u4, you will need to install the JavaFX
+2.x SDK from
+<a href="http://www.oracle.com/technetwork/java/javafx/downloads/index.html">javafx.com</a>.
+Once you have downloaded and installed the SDK, set up an environment variable
+called JAVAFX_HOME pointing to the location of the JavaFX SDK.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="icon-note" title="Note"></i>
+</td>
+<td class="content">
+The JavaFX 2.1 SDK is included in Java 7u4 and above.  If you are using this
+version of the JDK, you do not need to install a separate SDK and set the
+JAVAFX_HOME environment unless you would like to use a different version of the
+JavaFX SDK than the one included in your JDK.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_building_with_gradle"><a class="anchor" href="#_building_with_gradle"></a>2.5.2. Building with Gradle</h4>
+<div class="paragraph">
+<p>GroovyFX uses <a href="http://www.gradle.org">Gradle</a> as its primary build system.
+Building the project with Gradle requires only the following simple steps</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code>cd groovyfx
+gradlew build</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The Gradle build script is also capable of running any of the project&#8217;s demo.
+To run any specific demo, e.g.the AccordionDemo, you can just use</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code>gradlew AccordionDemo</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To see an executable overview of all build tasks including all demos</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code>gradlew --gui</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_building_with_intellij_idea"><a class="anchor" href="#_building_with_intellij_idea"></a>2.5.3. Building with Intellij IDEA</h4>
+<div class="paragraph">
+<p>GroovyFX&#8217;s build script is capable of generating all of the project files
+neccessary to build the project with Intellij IDEA.  Just run the following
+command from the project&#8217;s root directory</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code>gradlew idea</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This will generate a groovyfx.ipr file.  From IDEA, select File &#8594; Open Project
+and navigate to the directory containing the groovyfx.ipr file and open it.  You
+should now be able to build the library and run the demos with IDEA.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_building_with_netbeans"><a class="anchor" href="#_building_with_netbeans"></a>2.5.4. Building with NetBeans</h4>
+<div class="paragraph">
+<p>The NetBeans project files are included in the code repository.  You may have to
+set up a Java Platform that includes the JavaFX SDK directory, if one does not
+already exist. Please see
+<a href="http://netbeans.org/kb/docs/java/javafx-setup.html">Setting Up NetBeans IDE With
+JavaFX 2.1</a> for more information.</p>
+</div>
+<div class="paragraph">
+<p>Once you have created the JavaFX enabled Java platform, then choose the GroovyFX project,
+right click and pick "Properties". Choose the "Libraries" entry, then choose the
+JavaFX enabled Java Platform. You should now be able to build the library and run the demos with NetBeans.
+Also, you may have to fix the location for the groovy-all jar file.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_hello_groovyfx_your_first_groovyfx_program"><a class="anchor" href="#_hello_groovyfx_your_first_groovyfx_program"></a>2.6. Hello GroovyFX: Your First GroovyFX Program</h3>
+<div class="paragraph">
+<p>Once you have everything set up, try the following Groovy script to test that your setup is functioning as it should.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code class="groovy language-groovy"><span class="annotation">@Grab</span>(<span class="string"><span class="delimiter">'</span><span class="content">org.codehaus.groovyfx:groovyfx:0.2</span><span class="delimiter">'</span></span>)
+
+<span class="keyword">import</span> <span class="include">static</span> <span class="include">groovyx.javafx.GroovyFX.start</span>
+
+start {
+    stage(<span class="key">title</span>: <span class="string"><span class="delimiter">'</span><span class="content">GroovyFX Hello World</span><span class="delimiter">'</span></span>, <span class="key">visible</span>: <span class="predefined-constant">true</span>) {
+        scene(<span class="key">fill</span>: BLACK, <span class="key">width</span>: <span class="integer">500</span>, <span class="key">height</span>: <span class="integer">250</span>) {
+            hbox(<span class="key">padding</span>: <span class="integer">60</span>) {
+                text(<span class="key">text</span>: <span class="string"><span class="delimiter">'</span><span class="content">Groovy</span><span class="delimiter">'</span></span>, <span class="key">font</span>: <span class="string"><span class="delimiter">'</span><span class="content">80pt sanserif</span><span class="delimiter">'</span></span>) {
+                    fill linearGradient(<span class="key">endX</span>: <span class="integer">0</span>, <span class="key">stops</span>: [PALEGREEN, SEAGREEN])
+                }
+                text(<span class="key">text</span>: <span class="string"><span class="delimiter">'</span><span class="content">FX</span><span class="delimiter">'</span></span>, <span class="key">font</span>: <span class="string"><span class="delimiter">'</span><span class="content">80pt sanserif</span><span class="delimiter">'</span></span>) {
+                    fill linearGradient(<span class="key">endX</span>: <span class="integer">0</span>, <span class="key">stops</span>: [CYAN, DODGERBLUE])
+                    effect dropShadow(<span class="key">color</span>: DODGERBLUE, <span class="key">radius</span>: <span class="integer">25</span>, <span class="key">spread</span>: <span class="float">0.25</span>)
+                }
+            }
+        }
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If everything runs correctly you should see the following screen appear.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/helloWorld.png" alt="helloWorld"></span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_basic_concepts"><a class="anchor" href="#_basic_concepts"></a>3. Basic Concepts</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In JavaFX, you display graphics and controls on the screen by constructing a scene graph that consists of various types
+of nodes - perhaps a circle or a button control.  The scene graph is put into a <code>Scene</code>, which defines the area in which
+your scene graph will be displayed.  The <code>Scene</code> can then be shown on a <code>Stage</code>.  You can think of a <code>Stage</code> as the application
+container.  If your applicaiton is running on the user&#8217;s desktop, the <code>Stage</code> corresponds to a desktop window that typically
+has a title bar and resizing controls.  If your application is embedded into a browser, then the <code>Stage</code> corresponds to the
+applet&#8217;s display area.</p>
+</div>
+<div class="paragraph">
+<p>This arrangement of Stage &#8594; Scene &#8594; Scene Graph is a hierarchy of nodes that can be described nicely using a declarative
+format:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code class="groovy language-groovy">stage(<span class="key">title</span>: <span class="string"><span class="delimiter">'</span><span class="content">GroovyFX</span><span class="delimiter">'</span></span>, <span class="key">show</span>: <span class="predefined-constant">true</span>) {
+    scene {
+        rectangle(<span class="key">width</span>: <span class="integer">300</span>, <span class="key">height</span>: <span class="integer">100</span>, <span class="key">fill</span>: GREEN)
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Except for one other minor detail which we&#8217;ll cover in the next section, this is a complete GroovyFX program that, when run,
+will produce the output below.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/firstapp.png" alt="firstapp"></span></p>
+</div>
+<div class="paragraph">
+<p>You can see that we declare a stage with a <code>title</code> attribute of <em>GroovyFX</em> and a <code>show</code> attribute set to <em>true</em>.  The <code>title</code>
+of the stage appears as the text in the application window&#8217;s title bar (since this was run as a desktop application).  The
+value of the <code>show</code> attribute controls whether the Stage (the window) will initially be visible.  If you leave out the
+<code>show</code> attribute, its default value will remain false and your applicaiton will be invisible!</p>
+</div>
+<div class="paragraph">
+<p>The scene node is declared as a child of the stage node - that is, it appears within the stage&#8217;s curly braces.  Those curly braces
+actually define the stage&#8217;s closure, and any node declared within that closure will become a child node.  A rectangle
+declaration appears within the scene&#8217;s closure, making the rectangle a child of the scene and the one and only node that
+makes up the entire scene graph in this application.</p>
+</div>
+<div class="paragraph">
+<p>Those are the only two basic concepts you need to know in order to build rich user interfaces with GroovyFX.  You describe
+the structure of your scene declaratively using closures to indicate the hierarchy of your nodes.  You pass attributes to
+those nodes using Groovy&#8217;s <em>key: value</em> syntax (the same syntax used to declare key/value pairs in Maps literals - in fact,
+under the covers you are really passing a Map as an argument to each node).</p>
+</div>
+<div class="paragraph">
+<p>This sort of syntax is generally usefull for declaring any kind of hierarchical data such as HTML or XML.  It is so common
+that Groovy has built-in support for easily creating classes, called Builders, that allow you to write code using this
+syntax.  Groovy&#8217;s MarkupBuilder, for example, allows you to easily create HTML documents using a very similar syntax.</p>
+</div>
+<div class="paragraph">
+<p>It is probably not surprising, then, that the class we have created to allow you to declare JavaFX scene graphs using Groovy&#8217;s
+builder syntax is called <code>SceneGraphBuilder</code>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><strong>A Note on Terminology</strong></p>
+</div>
+<div class="paragraph">
+<p>The nodes in a scene graph are generally referred to as, well&#8230; nodes.  When you create a Groovy Builder, the elements
+that you can declare with the builder are also referred to as nodes.  In most cases, this won&#8217;t cause us any confusion
+because the JavaFX scene graph nodes all have a corresponding GroovyFX <code>SceneGraphBuilder</code> node, and therefore the term <em>node</em> can
+be used interchangabely.</p>
+</div>
+<div class="paragraph">
+<p>In those rare cases where we need to make a distinction, we will explicitly refer to <em>builder nodes</em> rather
+than simply scene graph <em>nodes</em>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_using_scenegraphbuilder"><a class="anchor" href="#_using_scenegraphbuilder"></a>3.1. Using SceneGraphBuilder</h3>
+<div class="paragraph">
+<p>Although SceneGraphBuilder provides all of the builder nodes you will use when creating your GroovyFX graphics and
+UIs, you will rarely use it directly.  This is because you will typically begin your applications by calling the
+static <code>start</code> method of the GroovyFX class as shown here.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code class="groovy language-groovy"><span class="keyword">import</span> <span class="include">static</span> <span class="include">groovyx.javafx.GroovyFX.start</span>
+
+start {
+    stage(<span class="key">title</span>: <span class="string"><span class="delimiter">'</span><span class="content">GroovyFX</span><span class="delimiter">'</span></span>, <span class="key">show</span>: <span class="predefined-constant">true</span>) {
+        scene {
+            rectangle(<span class="key">width</span>: <span class="integer">300</span>, <span class="key">height</span>: <span class="integer">100</span>, <span class="key">fill</span>: GREEN)
+        }
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The GroovyFX.start method takes a closure as its only parameter and, behind the scenes, it initiates JavaFX&#8217;s startup
+sequence.  The <code>start</code> method also ensures that the closure you pass will be executed at the appropriate time during
+the JavaFX startup sequence.  Just before your closure is executed, the <code>start</code> method creates a new SceneGraphBuilder
+object and sets it as the closure&#8217;s delegate.  This is the reason that you can call SceneGraphBuilder methods like
+<code>stage</code>, <em>scene</em>, and <em>rectangle</em> within your closure.  Those calls will be automatically forwarded on to the closure&#8217;s
+delegate SceneGraphBuilder object when they are not found within the closure&#8217;s current scope.</p>
+</div>
+<div class="paragraph">
+<p>Calling the <code>GroovyFX.start</code> method is the missing piece of the puzzle we referred to in the previous section when we
+first presented this code.</p>
+</div>
+<div class="paragraph">
+<p>The following sections describe some of the generalized behavior supported in the SceneGraphBuilder on all
+nodes and attributes defined in the User Guide.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_node_and_property_names"><a class="anchor" href="#_node_and_property_names"></a>3.2. Node and Property Names</h3>
+<div class="paragraph">
+<p>The following table contains a list of all the GroovyFX node names and their corresponding JavaFX class names.</p>
+</div>
+<table class="tableblock frame-all grid-all" style="width:100%; ">
+<colgroup>
+<col style="width:33%;">
+<col style="width:33%;">
+<col style="width:33%;"> 
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GroovyFX Node</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JavaFX Class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parameter List</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">stage</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.Stage</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, scene)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">popup</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.stage.Popup</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fileChooser</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.stage.FileChooser</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.stage.FilterChooser.ExtensionFilter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">scene</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.Scene</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">stylesheets</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.util.List</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">group</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.Group</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pane</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.layout.Pane</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">stackPane</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.layout.StackPane</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">anchorPane</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.layout.AnchorPane</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">borderPane</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.layout.BorderPane</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">flowPane</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.layout.FlowPane</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">hbox</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.layout.HBox</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vbox</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.layout.VBox</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tilePane</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.layout.TilePane</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gridPane</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.layout.GridPane</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">row</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">groovyx.javafx.factory.GridRowColumn</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">column</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">groovyx.javafx.factory.GridRowColumn</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">constraint</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">groovyx.javafx.factory.GridConstraint</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">top</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">groovyx.javafx.factory.BorderPanePosition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bottom</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">groovyx.javafx.factory.BorderPanePosition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">left</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">groovyx.javafx.factory.BorderPanePosition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">right</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">groovyx.javafx.factory.BorderPanePosition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">center</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">groovyx.javafx.factory.BorderPanePosition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">node</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.Node</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nodes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.util.List</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(list)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">container</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.Parent</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fxml</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.Node</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mediaView</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.media.MediaView</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">()</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mediaPlayer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.media.MediaPlayer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">()</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">imageView</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.image.ImageView</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">()</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">image</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.image.Image</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">()</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">menuBar</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.control.MenuBar</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">contextMenu</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.control.ContextMenu</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">menuButton</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.control.MenuBar</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">splitMenuButton</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.control.MenuBar</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">menu</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.control.MenuBar</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">menuItem</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.control.MenuBar</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">checkMenuItem</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.control.MenuBar</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">customMenuItem</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.control.MenuBar</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">separatorMenuItem</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.control.MenuBar</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">radioMenuItem</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.control.MenuBar</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">button</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.control.Button</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(value)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">checkBox</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.control.CheckBox</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">label</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.control.Label</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(value)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">choiceBox</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.control.ChoiceBox</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">hyperlink</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.control.Hyperlink</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tooltip</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.control.Tooltip</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">radioButton</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.control.RadioButton</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">toggleButton</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.control.ToggleButton</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">scrollBar</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.control.ScrollBar</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">scrollPane</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.control.ScrollPane</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">slider</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.control.Slider</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">separator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.control.Separator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">textArea</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.control.TextArea</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">textField</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.control.TextField</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">progressBar</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.control.ProgressBar</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">progressIndicator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.control.ProgressIndicator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">listView</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.control.ListView</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tableView</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.control.TableView</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tableColumn</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.control.TableColumn</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tableRow</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.control.TableRow</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">treeView</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.control.TreeView</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">treeItem</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.control.TreeItem</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">accordion</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.control.Accordion</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(value)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">titledPane</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.control.TitledPane</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">splitPane</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.control.SplitPane</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dividerPosition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.control.DividerPosition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tabPane</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.control.TabPane</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tab</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.control.Tab</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">toolBar</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.control.ToolBar</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">title</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">groovyx.javafx.factory.Titled</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">content</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">groovyx.javafx.factory.Titled</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">graphic</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">groovyx.javafx.factory.Graphic</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">onBranchCollapse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">groovyx.javafx.ClosureEventHandler</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(handler)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">onBranchExpand</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">groovyx.javafx.ClosureEventHandler</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(handler)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">onChildrenModification</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">groovyx.javafx.ClosureEventHandler</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(handler)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">onGraphicChanged</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">groovyx.javafx.ClosureEventHandler</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(handler)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">onTreeNotification</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">groovyx.javafx.ClosureEventHandler</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(handler)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">onValueChanged</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">groovyx.javafx.ClosureEventHandler</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(handler)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">onEditCancel</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">groovyx.javafx.ClosureEventHandler</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(handler)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">onEditCommit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">groovyx.javafx.ClosureEventHandler</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(handler)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">onEditStart</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">groovyx.javafx.ClosureEventHandler</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(handler)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">onTreeItemCountChange</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">groovyx.javafx.ClosureEventHandler</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(handler)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pieChart</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.chart.PieChart</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">lineChart</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.builders.LineChartBuilder</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">areaChart</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.builders.AreaChartBuilder</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bubbleChart</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.builders.BubbleChartBuilder</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">barChart</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.builders.BarChartBuilder</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">scatterChart</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.builders.ScatterChartBuilder</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">numberAxis</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.chart.NumberAxis</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">categoryAxis</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.chart.CategoryAxis</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">series</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.chart.XYChart.Series</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">affine</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rotate</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">scale</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">shear</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">translate</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">arc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.shape.Arc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">circle</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.shape.Circle</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cubicCurve</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.shape.CubicCurve</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ellipse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.shape.Ellipse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">line</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.shape.Line</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">polygon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.shape.Polygon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">polyline</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.shape.Polyline</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">quadCurve</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.shape.QuadCurve</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rectangle</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.shape.Rectangle</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">svgPath</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.shape.SVGPath</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">path</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.shape.Path</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">arcTo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.shape.ArcTo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">closePath</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.shape.ClosePath</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cubicCurveTo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.shape.CubicCurveTo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">hLineTo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.shape.HLineTo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">lineTo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.shape.LineTo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">moveTo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.shape.MoveTo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">quadCurveTo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.shape.QuadCurveTo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vLineTo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.shape.VLineTo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">text</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.text.Text</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">linearGradient</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.builders.LinearGradientBuilder</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">radialGradient</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.builders.RadialGradientBuilder</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">stop</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.paint.Stop</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fill</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.paint.Paint</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">stroke</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.paint.Paint</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">effect</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.effect.Effect</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">blend</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.effect.Blend</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bloom</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.effect.Bloom</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boxBlur</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.effect.BoxBlur</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">colorAdjust</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.effect.ColorAdjust</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">colorInput</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.effect.ColorInput</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">displacementMap</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.effect.DisplacementMap</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dropShadow</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.effect.DropShadow</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gaussianBlur</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.effect.GaussianBlur</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">glow</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.effect.Glow</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">imageInput</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.effect.ImageInput</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">innerShadow</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.effect.InnerShadow</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">lighting</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.effect.Lighting</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">motionBlur</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.effect.MotionBlur</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">perspectiveTransform</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.effect.PerspectiveTransform</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">reflection</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.effect.Reflection</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sepiaTone</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.effect.SepiaTone</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">shadow</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.effect.Shadow</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">distant</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.effect.Light.Distant</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">point</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.effect.Light.Point</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">spot</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.effect.Light.Spot</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">topInput</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bottomInput</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bumpInput</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">contentInput</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">clip</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">onMouseClicked</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.event.EventHandler</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">onMouseDragged</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.event.EventHandler</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">onMouseEntered</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.event.EventHandler</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">onMouseExited</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.event.EventHandler</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">onMousePressed</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.event.EventHandler</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">onMouseReleased</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.event.EventHandler</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">onMouseWheelMoved</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.event.EventHandler</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">onDragDetected</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.event.EventHandler</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">onDragDone</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.event.EventHandler</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">onDragEntered</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.event.EventHandler</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">onDragExited</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.event.EventHandler</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">onDragOver</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.event.EventHandler</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">onDragDropped</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.event.EventHandler</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">onAction</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.event.EventHandler</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">webView</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.web.WebView</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">webEngine</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.web.WebEngine</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">htmlEditor</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.scene.web.HTMLEditor</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fadeTransition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.animation.FadeTransition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fillTransition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.animation.FadeTransition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">parallelTransition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.animation.ParallelTransition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pauseTransition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.animation.PauseTransition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rotateTransition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.animation.RotateTransition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">scaleTransition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.animation.ScaleTransition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">translateTransition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.animation.TranslateTransition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sequentialTransition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.animation.SequentialTransition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pathTransition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.animation.PathTransition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">strokeTransition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.animation.StrokeTransition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">transition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">javafx.animation.Transition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(args, body)</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+<div class="sect2">
+<h3 id="_fonts"><a class="anchor" href="#_fonts"></a>3.3. Fonts</h3>
+<div class="paragraph">
+<p>All font attributes may of course be set with a JavaFX Font object (javafx.scene.text.Font). In addition,
+fonts may be defined using the JavaFX CSS styles for "-fx-font" or "-fx-font-size". If a font size string
+is presented, then the default Font will be used with that size. (see CSS Reference Guide.)</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code class="groovy language-groovy">text(<span class="key">font</span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">32pt</span><span class="delimiter">&quot;</span></span>, <span class="key">text</span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">This is Text</span><span class="delimiter">&quot;</span></span>)
+button(<span class="key">font</span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">16pt Courier</span><span class="delimiter">&quot;</span></span>, <span class="key">text</span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">Push Here</span><span class="delimiter">&quot;</span></span>)</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_paints_and_colors"><a class="anchor" href="#_paints_and_colors"></a>3.4. Paints and Colors</h3>
+<div class="paragraph">
+<p>All color and paint attributes may be set with one of the JavaFX Paint or Color objects
+(javafx.scene.paint.LinearGradient, javafx.scene.paint.RadialGradient and javafx.scene.paint.Color). In addition,
+colors may be set using the pseudo color variables, such as red, green, blue, etc. Colors may also be defined as
+a web string such as "#333", "cyan", etc. Colors may also be defined using the JavaFX CSS styles for colors,
+linear, and radial gradients. (see JavaFX CSS Reference Guide) Also see SceneGraphBuilder - paint for more details.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code class="groovy language-groovy">scene(<span class="key">fill</span>: hsb(<span class="integer">128</span>, <span class="float">0.5</span>, <span class="float">0.5</span>, <span class="float">0.5</span>))
+circle(<span class="key">centerX</span>: <span class="integer">50</span>, <span class="key">centerY</span>: <span class="integer">50</span>, <span class="key">radius</span>: <span class="integer">25</span>, <span class="key">fill</span>: rgb(<span class="integer">0</span>, <span class="integer">0</span>, <span class="integer">255</span>))
+rectangle(<span class="key">x</span>: <span class="integer">100</span>, <span class="key">y</span>: <span class="integer">50</span>, <span class="key">width</span>: <span class="integer">50</span>, <span class="key">height</span>: <span class="integer">50</span>, <span class="key">fill</span>: red)
+rectangle(<span class="key">x</span>: <span class="integer">100</span>, <span class="key">y</span>: <span class="integer">50</span>, <span class="key">width</span>: <span class="integer">50</span>, <span class="key">height</span>: <span class="integer">50</span>, <span class="key">fill</span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">#333</span><span class="delimiter">&quot;</span></span>)
+rectangle(<span class="key">x</span>: <span class="integer">100</span>, <span class="key">y</span>: <span class="integer">50</span>, <span class="key">width</span>: <span class="integer">50</span>, <span class="key">height</span>: <span class="integer">50</span>, <span class="key">fill</span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">linear (0%,0%) to (0%,100%) stops (0%,gray) (100%,black)</span><span class="delimiter">&quot;</span></span>)</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_insets"><a class="anchor" href="#_insets"></a>3.5. Insets</h3>
+<div class="paragraph">
+<p>The javafx.geometry.Insets class may be instantiated by using the javafx class, or by using a Groovy number list.
+If a number list is used, it may contain, one, two, or four numbers. If one number is presented then all sides of
+the Insets will be set to that value. If two numbers are presented then the first number will be used to set the
+top and bottom side of the Inset, and the second number will be used to set the left and right side of the Inset.
+If four numbers are present in the list, the numbers will be assigned to the the top, right, bottom and left in
+order. An empty list or the String "empty" (or "EMPTY") will map to the Insets.EMPTY object.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code class="groovy language-groovy">stackPane(<span class="key">style</span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">-fx-background-color: burlywood</span><span class="delimiter">&quot;</span></span>, <span class="key">padding</span>: <span class="integer">20</span>)
+stackPane(<span class="key">style</span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">-fx-background-color: burlywood</span><span class="delimiter">&quot;</span></span>, <span class="key">padding</span>: [<span class="integer">10</span>])
+stackPane(<span class="key">style</span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">-fx-background-color: burlywood</span><span class="delimiter">&quot;</span></span>, <span class="key">padding</span>: [<span class="integer">50</span>, <span class="integer">25</span>])
+stackPane(<span class="key">style</span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">-fx-background-color: burlywood</span><span class="delimiter">&quot;</span></span>, <span class="key">padding</span>: [<span class="integer">0</span>, <span class="integer">50</span>, <span class="integer">0</span>, <span class="integer">0</span>])
+stackPane(<span class="key">style</span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">-fx-background-color: burlywood</span><span class="delimiter">&quot;</span></span>, <span class="key">padding</span>: <span class="type">[]</span>)
+stackPane(<span class="key">style</span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">-fx-background-color: burlywood</span><span class="delimiter">&quot;</span></span>, <span class="key">padding</span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">EMPTY</span><span class="delimiter">&quot;</span></span>)</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_geometry"><a class="anchor" href="#_geometry"></a>3.6. Geometry</h3>
+<div class="paragraph">
+<p>The Geometry objects in the javafx.geometry package, Point2D, Point3D, Dimension2D, Rectangle2D, and BoundingBox,
+may be set using numbered lists. For the 2D classes, 2 numbers must be provided, and for the 3D classes, 3 numbers
+must be provided. BoundingBox may be either 2D, requiring 4 values, or 3D, requiring 6 values. A Rectangle2D may
+also take and empty list or the "EMPTY" string as shown in the previous section on Insets.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code class="groovy language-groovy">rotate(<span class="key">angle</span>: <span class="integer">90</span>, <span class="key">axis</span>: [<span class="integer">1</span>,<span class="integer">1</span>,<span class="integer">0</span>])
+imageView(<span class="key">viewport</span>: [<span class="integer">0</span>,<span class="integer">0</span>, <span class="integer">400</span>, <span class="integer">400</span>])</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_enumerated_values"><a class="anchor" href="#_enumerated_values"></a>3.7. Enumerated Values</h3>
+<div class="paragraph">
+<p>All Java Enumerations may be set using their string equivalents. For example, if an attribute field is of type
+javafx.geometry.Pos, then the value may be set with one of the string values, "center", "bottom_left", etc.</p>
+</div>
+<div class="paragraph">
+<p>There are some special cases where Object instances are used rather than enumerations. For example the
+javafx.scene.Cursor class contains numerous singleton instances for the various cursors that may be set on the
+scene. Also, there are special pseudo variables for the Orientation enumeration, horizontal and vertical.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code class="groovy language-groovy">scene(<span class="key">cursor</span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">OPEN_HAND</span><span class="delimiter">&quot;</span></span>)     <span class="comment">// javafx.scene.Cursor static member.</span>
+sg.stage(<span class="key">style</span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">transparent</span><span class="delimiter">&quot;</span></span>) <span class="comment">// javafx.stage.StageStyle enumeration</span>
+scrollBar(<span class="key">min</span>: <span class="integer">0</span>, <span class="key">max</span>: <span class="integer">100</span>, <span class="key">value</span>: <span class="integer">50</span>, <span class="key">orientation</span>: horizontal) <span class="comment">// javafx.geometry.Orientation enumeration</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_properties_and_binding"><a class="anchor" href="#_properties_and_binding"></a>4. Properties and Binding</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_binding_support"><a class="anchor" href="#_binding_support"></a>4.1. Binding Support</h3>
+<div class="sect3">
+<h4 id="_property_names"><a class="anchor" href="#_property_names"></a>4.1.1. Property Names</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_bidirectional"><a class="anchor" href="#_bidirectional"></a>4.1.2. Bidirectional</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_unidirectional"><a class="anchor" href="#_unidirectional"></a>4.1.3. Unidirectional</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_closure_binding_expressions"><a class="anchor" href="#_closure_binding_expressions"></a>4.1.4. Closure Binding Expressions</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_fxbindable_properties"><a class="anchor" href="#_fxbindable_properties"></a>4.1.5. FXBindable Properties</h4>
+
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_controls"><a class="anchor" href="#_controls"></a>5. Controls</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_labels_and_text"><a class="anchor" href="#_labels_and_text"></a>5.1. Labels and Text</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_buttons_and_menus"><a class="anchor" href="#_buttons_and_menus"></a>5.2. Buttons and Menus</h3>
+<div class="sect3">
+<h4 id="_togglegroups"><a class="anchor" href="#_togglegroups"></a>5.2.1. ToggleGroups</h4>
+<div class="paragraph">
+<p>ToggleGroups are identified with an unique string across the SceneGraphBuilder context. To tie a toggle type button
+to a specific ToggleGroup, use the special attribute toggleGroup on the Toggle type button. Buttons with the same
+ToggleGroup names will be assigned the same ToggleGroup instance.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code class="groovy language-groovy">scene(<span class="key">fill</span>: hsb(<span class="integer">128</span>, <span class="float">0.5</span>, <span class="float">0.5</span>, <span class="float">0.5</span>), <span class="key">root</span>: group()) {
+    toggleButton (
+        <span class="key">layoutX</span>: <span class="integer">25</span>,
+        <span class="key">layoutY</span>: <span class="integer">300</span>,
+        <span class="key">font</span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">16pt Courier</span><span class="delimiter">&quot;</span></span>,
+        <span class="key">text</span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">One</span><span class="delimiter">&quot;</span></span>,
+        <span class="key">selected</span>: <span class="predefined-constant">true</span>,
+        <span class="key">toggleGroup</span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">Group1</span><span class="delimiter">&quot;</span></span>
+    )
+    toggleButton (
+        <span class="key">layoutX</span>: <span class="integer">125</span>,
+        <span class="key">layoutY</span>: <span class="integer">300</span>,
+        <span class="key">font</span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">16pt Courier</span><span class="delimiter">&quot;</span></span>,
+        <span class="key">text</span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">Two</span><span class="delimiter">&quot;</span></span>,
+        <span class="key">selected</span>: <span class="predefined-constant">false</span>,
+        <span class="key">toggleGroup</span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">Group1</span><span class="delimiter">&quot;</span></span>
+    )
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_actions"><a class="anchor" href="#_actions"></a>5.2.2. Actions</h4>
+<div class="paragraph">
+<p>GroovyFX provides an action abstraction inspired by <a href="http://docs.oracle.com/javase/6/docs/api/javax/swing/Action.html">javax.swing.Action</a>.
+All Action properties are fully observable.</p>
+</div>
+<div class="sect4">
+<h5 id="_javafx_components_supporting_action"><a class="anchor" href="#_javafx_components_supporting_action"></a>JavaFX Components Supporting Action</h5>
+<div class="paragraph">
+<p>All buttons and menuItems support <code>Actions</code> but only if their respective factories are used. In other words, if you manually
+create an instance of such controls then you must also bind Action properties manually.</p>
+</div>
+<div class="paragraph">
+<p>The following table describes the properties used by JavaFX components that support Actions.</p>
+</div>
+<table class="tableblock frame-all grid-all" style="width:100%; ">
+<caption class="title">Table 1. Mapping of Action properties to GroovyFX node properties</caption>
+<colgroup>
+<col style="width:33%;">
+<col style="width:33%;">
+<col style="width:33%;"> 
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Action Property</th>
+<th class="tableblock halign-left valign-top">Component Property</th>
+<th class="tableblock halign-left valign-top">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">onAction</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">onAction</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">if component supports onActionProperty()</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">text</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">if component supports textProperty()</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tooltip.text</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">if component supports tooltipProperty()</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">accelerator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">accelerator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">if component supports acceleratorProperty()</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">selected</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">selected</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">if component supports selectedProperty()</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">icon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">graphic</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">if component supports graphicProperty()</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enabled</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">disabled</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">negated value is mapped to component property</p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="paragraph">
+<p>Any of the Action&#8217;s properties may be skipped when using factory nodes, this avoids setting a text value on a toolbar button for example.
+In order to skip a property simply use the @skip@ prefix. The following example shows the usage of Actions in both menuItems and toolbar
+buttons; the menuItems will display both icons and text wehereas the toolbar buttons will only display the icons</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code class="groovy language-groovy">actions {
+    fxaction(<span class="key">id</span>: <span class="string"><span class="delimiter">'</span><span class="content">copyAction</span><span class="delimiter">'</span></span>,
+        <span class="key">icon</span>: <span class="string"><span class="delimiter">'</span><span class="content">icons/copy.png</span><span class="delimiter">'</span></span>,
+        <span class="key">onAction</span>: { <span class="comment">/* copy content */</span> }
+    fxaction(<span class="key">id</span>: <span class="string"><span class="delimiter">'</span><span class="content">cutyAction</span><span class="delimiter">'</span></span>,
+        <span class="key">icon</span>: <span class="string"><span class="delimiter">'</span><span class="content">icons/cut.png</span><span class="delimiter">'</span></span>,
+        <span class="key">onAction</span>: { <span class="comment">/* cut content */</span> }
+    fxaction(<span class="key">id</span>: <span class="string"><span class="delimiter">'</span><span class="content">pasteAction</span><span class="delimiter">'</span></span>,
+        <span class="key">icon</span>: <span class="string"><span class="delimiter">'</span><span class="content">icons/paste.png</span><span class="delimiter">'</span></span>,
+        <span class="key">onAction</span>: { <span class="comment">/* paste content */</span> }
+}
+
+meuBar {
+    menu(<span class="key">text</span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">Edit</span><span class="delimiter">&quot;</span></span>) {
+         menuItem(cutAction)
+         menuItem(copyAction)
+         menuItem(pasteAction)
+    }
+}
+
+toolBar {
+    button(cutAction,   <span class="key">skipName</span>: <span class="predefined-constant">true</span>)
+    button(copyAction,  <span class="key">skipName</span>: <span class="predefined-constant">true</span>)
+    button(pasteAction, <span class="key">skipName</span>: <span class="predefined-constant">true</span>)
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_choicebox_and_combobox"><a class="anchor" href="#_choicebox_and_combobox"></a>5.3. ChoiceBox and ComboBox</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_lists_tables_and_trees"><a class="anchor" href="#_lists_tables_and_trees"></a>5.4. Lists, Tables, and Trees</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_file_choosers"><a class="anchor" href="#_file_choosers"></a>5.5. File Choosers</h3>
+
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_layout"><a class="anchor" href="#_layout"></a>6. Layout</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_graphics_and_animation"><a class="anchor" href="#_graphics_and_animation"></a>7. Graphics and Animation</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_shapes_and_paths"><a class="anchor" href="#_shapes_and_paths"></a>7.1. Shapes and Paths</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_colors"><a class="anchor" href="#_colors"></a>7.2. Colors</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_gradients"><a class="anchor" href="#_gradients"></a>7.3. Gradients</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_effects"><a class="anchor" href="#_effects"></a>7.4. Effects</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_animation"><a class="anchor" href="#_animation"></a>7.5. Animation</h3>
+
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_charts"><a class="anchor" href="#_charts"></a>8. Charts</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_pie_charts"><a class="anchor" href="#_pie_charts"></a>8.1. Pie Charts</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_xy_charts"><a class="anchor" href="#_xy_charts"></a>8.2. XY Charts</h3>
+
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_writing_applications"><a class="anchor" href="#_writing_applications"></a>9. Writing Applications</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_structuring_groovyfx_applications"><a class="anchor" href="#_structuring_groovyfx_applications"></a>9.1. Structuring GroovyFX Applications</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_using_the_griffon_application_framework"><a class="anchor" href="#_using_the_griffon_application_framework"></a>9.2. Using the Griffon Application Framework</h3>
+
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Version 0.4.1-SNAPSHOT<br>
+Last updated 2014-06-22 19:40:43 MDT
+</div>
+</div>
+</body>
 </html>
