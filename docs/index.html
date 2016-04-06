@@ -1886,7 +1886,7 @@ span.line-numbers { border-right: 1px solid #E5E5E5; color: #999; display: inlin
 <div id="header">
 <h1>The GroovyFX Guide</h1>
 <span id="author" class="author">Dean Iverson, Dierk Koenig, Russel Winder, Andres Almiray</span><br>
-<span id="revnumber">version 0.4.1-SNAPSHOT</span>
+<span id="revnumber">version 8.0.0</span>
 <br><span id="revremark">The easiest way to write JavaFX 2.0 applications in Groovy</span>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
@@ -1905,6 +1905,7 @@ span.line-numbers { border-right: 1px solid #E5E5E5; color: #999; display: inlin
 <li><a href="#_getting_started">2. Getting Started</a></li>
 <li>
 <ul class="sectlevel2">
+<li><a href="#_what_s_new_in_version_0_4_0">2.1. What&#8217;s New in Version 8.0.0</a></li>
 <li><a href="#_what_s_new_in_version_0_4_0">2.1. What&#8217;s New in Version 0.4.0</a></li>
 <li><a href="#_what_s_new_in_version_0_2_0">2.2. What&#8217;s New in Version 0.2.0</a></li>
 <li>
@@ -2107,7 +2108,7 @@ with the power of JavaFX and Groovy.</p>
 <h4 id="_other_contributions"><a class="anchor" href="#_other_contributions"></a>1.1.1. Other Contributions</h4>
 <div class="paragraph">
 <p>We would also like to thank and recognize the following people who have
-contribtued pull requests to GroovyFX.</p>
+contributed pull requests to GroovyFX.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2123,6 +2124,13 @@ contribtued pull requests to GroovyFX.</p>
 <div class="sect1">
 <h2 id="_getting_started"><a class="anchor" href="#_getting_started"></a>2. Getting Started</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_what_s_new_in_version_8_0_0"><a class="anchor" href="#_what_s_new_in_version_8_0_0"></a>2.1. What&#8217;s New in Version 8.0.0</h3>
+<div class="paragraph">
+<p>GroovyFX version 8.0.0 includes support for Groovy 2.4, Java 8, and JavaFX 8 only. <strong>This version does not work with JavaFX 2</strong>.
+ It's strongly recommended to use Java8u60 as a minimum.</p>
+</div>
+</div>
 <div class="sect2">
 <h3 id="_what_s_new_in_version_0_4_0"><a class="anchor" href="#_what_s_new_in_version_0_4_0"></a>2.1. What&#8217;s New in Version 0.4.0</h3>
 <div class="paragraph">
@@ -2228,13 +2236,13 @@ projects.  The Maven coordinates are as follows</p>
 <div class="ulist">
 <ul>
 <li>
-<p><em>groupId</em>: org.codehaus.groovyfx</p>
+<p><em>groupId</em>: org.groovyfx</p>
 </li>
 <li>
 <p><em>artifactId</em>: groovyfx</p>
 </li>
 <li>
-<p><em>version</em>: 0.4.0</p>
+<p><em>version</em>: 8.0.0</p>
 </li>
 </ul>
 </div>
@@ -2246,7 +2254,7 @@ top of your script</p>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay"><code class="groovy language-groovy">Testing.groovy
-<span class="annotation">@Grab</span>(<span class="string"><span class="delimiter">'</span><span class="content">org.codehaus.groovyfx:groovyfx:0.4.0</span><span class="delimiter">'</span></span>)</code></pre>
+<span class="annotation">@Grab</span>(<span class="string"><span class="delimiter">'</span><span class="content">org.groovyfx:groovyfx:8.0.0</span><span class="delimiter">'</span></span>)</code></pre>
 </div>
 </div>
 </div>
@@ -2265,8 +2273,8 @@ project.ext.set(<span class="string"><span class="delimiter">'</span><span class
 repositories { mavenCentral() }
 
 dependencies {
-    groovy <span class="string"><span class="delimiter">'</span><span class="content">org.codehaus.groovy:groovy-all:1.8.6</span><span class="delimiter">'</span></span>
-    compile <span class="string"><span class="delimiter">'</span><span class="content">org.codehaus.groovyfx:groovyfx:0.4.0</span><span class="delimiter">'</span></span>
+    groovy <span class="string"><span class="delimiter">'</span><span class="content">org.codehaus.groovy:groovy-all:2.4.6</span><span class="delimiter">'</span></span>
+    compile <span class="string"><span class="delimiter">'</span><span class="content">org.groovyfx:groovyfx:8.0.0</span><span class="delimiter">'</span></span>
     compile files(<span class="string"><span class="delimiter">&quot;</span><span class="inline"><span class="inline-delimiter">${</span>javafxHome<span class="inline-delimiter">}</span></span><span class="content">/rt/lib/jfxrt.jar</span><span class="delimiter">&quot;</span></span>)
 }
 
@@ -2284,7 +2292,7 @@ task makeDirs(<span class="key">description</span>:<span class="string"><span cl
 }
 
 task wrap(<span class="key">type</span>:Wrapper, <span class="key">description</span>:<span class="string"><span class="delimiter">&quot;</span><span class="content">create a gradlew</span><span class="delimiter">&quot;</span></span>) {
-    gradleVersion = <span class="string"><span class="delimiter">'</span><span class="content">1.0-rc-3</span><span class="delimiter">'</span></span>
+    gradleVersion = <span class="string"><span class="delimiter">'</span><span class="content">2.12</span><span class="delimiter">'</span></span>
 }</code></pre>
 </div>
 </div>
@@ -2318,26 +2326,7 @@ GroovyFX repository using the following <a href="http://git-scm.com/">Git</a> co
 <div class="sect3">
 <h4 id="_installation_requirements_2"><a class="anchor" href="#_installation_requirements_2"></a>2.5.1. Installation Requirements</h4>
 <div class="paragraph">
-<p>If you are using a JDK prior to Java 7u4, you will need to install the JavaFX
-2.x SDK from
-<a href="http://www.oracle.com/technetwork/java/javafx/downloads/index.html">javafx.com</a>.
-Once you have downloaded and installed the SDK, set up an environment variable
-called JAVAFX_HOME pointing to the location of the JavaFX SDK.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="icon-note" title="Note"></i>
-</td>
-<td class="content">
-The JavaFX 2.1 SDK is included in Java 7u4 and above.  If you are using this
-version of the JDK, you do not need to install a separate SDK and set the
-JAVAFX_HOME environment unless you would like to use a different version of the
-JavaFX SDK than the one included in your JDK.
-</td>
-</tr>
-</table>
+<p>JDK8u60 is the minimum version recommended to build a working version of GroovyFX.</p>
 </div>
 </div>
 <div class="sect3">
@@ -2412,7 +2401,7 @@ Also, you may have to fix the location for the groovy-all jar file.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay"><code class="groovy language-groovy"><span class="annotation">@Grab</span>(<span class="string"><span class="delimiter">'</span><span class="content">org.codehaus.groovyfx:groovyfx:0.2</span><span class="delimiter">'</span></span>)
+<pre class="CodeRay"><code class="groovy language-groovy"><span class="annotation">@Grab</span>(<span class="string"><span class="delimiter">'</span><span class="content">org.groovyfx:groovyfx:8.0.0</span><span class="delimiter">'</span></span>)
 
 <span class="keyword">import</span> <span class="include">static</span> <span class="include">groovyx.javafx.GroovyFX.start</span>
 
